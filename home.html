@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LE CAP — Média d'Influence et d'Analyse Stratégique</title>
+    <meta name="description" content="Média d'élite pour la diaspora haïtienne et les décideurs. Analyse stratégique, géopolitique et prospective.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="sidebar-branding">
+            <div class="logo">
+                <a href="home.html">Le Cap.</a>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" class="active">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        ACCUEIL
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/><path d="M12 2a14.5 14.5 0 0 1 0 20 14.5 14.5 0 0 1 0-20"/></svg>
+                        INTERNATIONAL
+                    </a>
+                </li>
+                <li>
+                    <a href="#economie">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                        ÉCONOMIE
+                    </a>
+                </li>
+                <li>
+                    <a href="#societe">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        POLITIQUE
+                    </a>
+                </li>
+                <li>
+                    <a href="#culture">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                        CULTURE
+                    </a>
+                </li>
+                <li>
+                    <a href="#sport">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 2a8 8 0 0 1 2.37.38l-4.22 8.44-1.15-2.3L12.7 4.19A8 8 0 0 1 12 4z"/></svg>
+                        SPORT
+                    </a>
+                </li>
+                <li>
+                    <a href="#podcast">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        PODCAST
+                    </a>
+                </li>
+                <li>
+                    <a href="#plus">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                        PLUS
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <ul>
+                <li>
+                    <a href="#">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/><path d="M8 7h6"/><path d="M8 11h8"/></svg>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                        Documentaires
+                    </a>
+                </li>
+                <li>
+                    <a href="#podcast">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-actions-btn">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Rechercher
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="edition-selector">
+                <span>Édition française</span>
+                <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+        </div>
+    </aside>
+
+    <header class="mobile-header">
+        <div class="logo">
+            <a href="home.html">Le Cap.</a>
+        </div>
+        <div class="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="hero-article">
+            <div class="hero-image">
+                <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Architecture Institutionnelle" class="elite-image">
+            </div>
+            <div class="gridhero container">
+                <div class="hero-content">
+                    <span class="category">PROSPECTIVE</span>
+                    <h1>Haiti 2030 : Le Manifeste pour une Souveraineté Digitale</h1>
+                    <p class="lead">Face aux défis de la gouvernance traditionnelle, la diaspora émerge comme le premier vecteur d'innovation and de stabilité. Analyse d'un changement de paradigme global.</p>
+                    <div class="meta">PAR FENEL PÉLISSIER — ANALYSTE STRATÉGIQUE — 12 MIN DE LECTURE</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="standard-section redaction-articles-section">
+            <div class="reels-header">
+                <h2>LES ARTICLES DE LA RÉDACTION</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+            <div class="articles-grid">
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?q=80&w=400&auto=format&fit=crop" alt="Article 1">
+                        <span class="article-badge">Article</span>
+                    </div>
+                    <div class="article-info">
+                        <h4>Air Tahiti Nui aux côtés du requin, symbole du territoire...</h4>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=400&auto=format&fit=crop" alt="Article 2">
+                        <span class="article-badge">Article</span>
+                    </div>
+                    <div class="article-info">
+                        <h4>Scandale sexuel qui secoue l'Allemagne: enquête pour...</h4>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=400&auto=format&fit=crop" alt="Article 3">
+                        <span class="article-badge">Article</span>
+                    </div>
+                    <div class="article-info">
+                        <h4>Le policier qui a tué Olivio Gomes condamné à 10 ans de prison po...</h4>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <img src="assets/img/gims_justice_news_1774653887065.png" alt="Gims" class="elite-image">
+                        <span class="article-badge">Article</span>
+                    </div>
+                    <div class="article-info">
+                        <h4>Gims passe par la case juge d'instruction après la fin de sa garde ...</h4>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <img src="assets/img/justice_scales_minimalist_1774653913172.png" alt="Justice" class="elite-image">
+                        <span class="article-badge">Article</span>
+                    </div>
+                    <div class="article-info">
+                        <h4>La mère de deux bébés congelés condamnée à 25 ans de prison</h4>
+                    </div>
+                </article>
+                <article class="article-card">
+                    <div class="article-thumb">
+                        <img src="assets/img/bolsonaro_news_hospital_1774653902392.png" alt="Bolsonaro" class="elite-image">
+                        <span class="article-badge">Article</span>
+                    </div>
+                    <div class="article-info">
+                        <h4>Bolsonaro quitte l'hôpital pour sa résidence afin de purger sa peine à...</h4>
+                    </div>
+                </article>
+            </div>
+            <div class="grid-nav">
+                <button class="nav-btn prev">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="nav-btn next">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </section>
+
+
+        <section class="standard-section editor-selection">
+            <div class="reels-header">
+                <h2>A LA UNE</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+            <div class="selection-grid">
+                <div class="selection-main">
+                    <div class="image-wrapper">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Architecture Institutionnelle" class="elite-image">
+                    </div>
+                    <span class="tag-red">EN UNE</span>
+                    <h2>Le système de contrôle implacable de Krisla à Carrefour</h2>
+                    <div class="card-meta">📅 15 MARS 2026 — 💬 0 COMMENTAIRES</div>
+                </div>
+                <div class="selection-side">
+                    <article class="selection-card">
+                        <div class="image-thumb">
+                            <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Pharmacies" class="elite-image">
+                        </div>
+                        <span class="tag-red">EN UNE</span>
+                        <h4>De fausses pharmacies sans autorisation devant l'hôpital La Paix</h4>
+                        <div class="card-meta">📅 12 MARS 2026 — 💬 0</div>
+                    </article>
+                    <article class="selection-card">
+                        <div class="image-thumb">
+                            <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Bateaux" class="elite-image">
+                        </div>
+                        <span class="tag-red">EN UNE</span>
+                        <h4>Des bateaux paient les policiers de la garde côtière pour protection</h4>
+                        <div class="card-meta">📅 11 MARS 2026 — 💬 0</div>
+                    </article>
+                    <article class="selection-card">
+                        <div class="image-thumb">
+                            <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Commissariats" class="elite-image">
+                        </div>
+                        <span class="tag-red">EN UNE</span>
+                        <h4>Des commissariats collectent de l'argent en Haïti. C'est illégal.</h4>
+                        <div class="card-meta">📅 10 MARS 2026 — 💬 0</div>
+                    </article>
+                    <article class="selection-card">
+                        <div class="image-thumb">
+                            <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Epstein" class="elite-image">
+                        </div>
+                        <span class="tag-red">EN UNE</span>
+                        <h4>Des victimes haïtiennes « en danger » dans l'affaire Epstein</h4>
+                        <div class="card-meta">📅 9 MARS 2026 — 💬 0</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="standard-section videos-section">
+            <div class="reels-header">
+                <h2>NOS VIDÉOS</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Reel 1" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Le Capois en Immersion : Nouvelles dynamiques de la diaspora</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Reel 2" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Haiti 2030 : Le Manifeste pour une Souveraineté Digitale</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Reel 3" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Entretien Exclusif : La Vision d'un leader visionnaire</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Reel 4" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Analyse : Pourquoi la tech est l'avenir des institutions</h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="standard-section culture-section" id="culture">
+            <div class="reels-header">
+                <h2>CULTURE</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Culture 1" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>LAMA : « L'Architecture de la Renaissance : Le Musée d'Art Haïtien se réinvente »</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Culture 2" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Pourquoi le Prix Goncourt regarde vers Port-au-Prince</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Culture 3" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Le prochain chef-d'œuvre de Raoul Peck : Une vision qui bouscule</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Culture 4" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Le jazz haïtien s'invite au Lincoln Center : Une consécration</h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="standard-section sports-section" id="sport">
+            <div class="reels-header">
+                <h2>SPORT</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/sport_featured.png" alt="Sport 1" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Mohammed Sanhadji : « Je voulais devenir Pelé... » L'Architecte de la Performance</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Sport 2" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Pourquoi la Diaspora est le vivier de l'élite : Analyse d'un modèle innovant</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Sport 3" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Tennis : Standards d'excellence et capitaux privés vers une professionnalisation</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Sport 4" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Portrait : Le mental d'un champion sous pression face aux enjeux institutionnels</h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="standard-section economy-section" id="economie">
+            <div class="reels-header">
+                <h2>ÉCONOMIE</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Economy 1" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>L'Architecture de la Richesse : Nouveau Modèle Économique de Résilience</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Economy 2" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Fintech : L'Inclusion financière par le mobile banking transforme le quotidien</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Economy 3" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Géopolitique : L'Impact des sanctions internationales sur les routes financières</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/economy_side_1_1774469380233.png" alt="Economy 4" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Blockchain : Haïti et les CBDC entre souveraineté nationale et innovation</h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="standard-section politics-section" id="politique">
+            <div class="reels-header">
+                <h2>POLITIQUE</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/politics_complex_2_1774468872703.png" alt="Politics 1" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Le Captois : « On ne peut plus bâtir l'avenir sur les ruines du silence »</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Politics 2" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Le pacte secret anti-corruption : Enquête exclusive sur les réseaux d'influence</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Politics 3" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Les visages de la contestation 2026 : Analyse approfondie des forces en présence</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/politics_complex_1_1774468857473.png" alt="Politics 4" class="elite-image">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Diplomatie : Un final surréaliste et une nouvelle victoire de la coopération sud-sud</h4>
+                </article>
+            </div>
+        </section>
+
+        <section class="standard-section games-section" id="jeux">
+            <div class="reels-header">
+                <h2>JEUX DU CAP</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+            <div class="games-grid">
+                <div class="game-item">
+                    <div class="game-content">
+                        <span class="meta">Le quiz sport</span>
+                        <p>Répondez aux dix questions posées par la rédaction sur l'histoire du football haïtien.</p>
+                        <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                    </div>
+                    <div class="game-icon">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Quiz" class="elite-image">
+                    </div>
+                </div>
+                <div class="game-item">
+                    <div class="game-content">
+                        <span class="meta">La grille stratège</span>
+                        <p>Trouvez les neuf acteurs clés de la transition en fonction de leur influence et secteur.</p>
+                        <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                    </div>
+                    <div class="game-icon">
+                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Grille" class="elite-image">
+                    </div>
+                </div>
+                <div class="game-item">
+                    <div class="game-content">
+                        <span class="meta">Pronos Diplomatie</span>
+                        <p>Défiez vos collègues sur les scénarios de coopération internationale pour 2026.</p>
+                        <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">découvrir</a>
+                    </div>
+                    <div class="game-icon">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Pronos" class="elite-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="standard-section question-section" id="la-question">
+            <div class="reels-header">
+                <h2>LE REGARD DU CAP.</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Q1">
+                        <div class="question-overlay">
+                            <div class="yellow-box">C'est quoi</div>
+                            <div class="yellow-box">la pire bêtise que</div>
+                            <div class="yellow-box">vous ayez faite ?</div>
+                        </div>
+                    </div>
+                    <h4>VOTRE REGARD — Et vous, c'est quoi la pire bêtise que vous ayez faite ?</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Q2">
+                        <div class="question-overlay">
+                            <div class="yellow-box">Quel est ton</div>
+                            <div class="yellow-box">premier souvenir</div>
+                            <div class="yellow-box">du Tour de France ?</div>
+                        </div>
+                    </div>
+                    <h4>C'est quoi votre premier souvenir du Tour de France ?</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/politics_complex_1_1774468857473.png" alt="Q3">
+                        <div class="question-overlay">
+                            <div class="yellow-box">C'est quoi le</div>
+                            <div class="yellow-box">conseil que vous</div>
+                            <div class="yellow-box">donneriez à votre vous ?</div>
+                        </div>
+                    </div>
+                    <h4>Et vous, c'est quoi le conseil que vous donneriez à votre vous d'il y a 10 ans ?</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/politics_complex_2_1774468872703.png" alt="Q4">
+                        <div class="question-overlay">
+                            <div class="yellow-box">C'est quand</div>
+                            <div class="yellow-box">la dernière fois</div>
+                            <div class="yellow-box">que vous avez pleuré ?</div>
+                        </div>
+                    </div>
+                    <h4>VOTRE REGARD — C'est quand la dernière fois que vous avez pleuré ?</h4>
+                </article>
+            </div>
+        </section>
+        <section class="standard-section podcasts-section" id="podcasts">
+            <div class="reels-header">
+                <h2>PODCASTS</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+
+            <div class="podcasts-grid-v2">
+                <article class="podcast-card-v2">
+                    <div class="podcast-thumb-square">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Podcast 1">
+                        <div class="podcast-overlay">
+                            <div class="podcast-brut-label">Le Cap.<br>podcast</div>
+                            <div class="podcast-host-label">avec la rédaction<br>L'élite</div>
+                            <div class="podcast-main-label">L'interview<br>des gens<br>connus</div>
+                        </div>
+                    </div>
+                    <h3>L'interview des gens connus</h3>
+                    <p>« L'interview Le Cap. des gens connus », c'est le podcast où des personnalités se livrent au micro, comme vous ne les avez jamais entendues. Écoutez les récits et confidences d'acteurs, de leaders et d'artistes qui bousculent les standards de la culture, du sport ou de la politique.</p>
+                </article>
+
+                <article class="podcast-card-v2">
+                    <div class="podcast-thumb-square">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Podcast 2">
+                        <div class="podcast-overlay">
+                            <div class="podcast-brut-label">Le Cap.<br>podcast</div>
+                            <div class="podcast-host-label">avec Alexia<br>Duchêne</div>
+                            <div class="podcast-main-label">L'envers<br>de l'assiette</div>
+                        </div>
+                    </div>
+                    <h3>L'envers de l'assiette</h3>
+                    <p>Je suis Alexia Duchêne et en tant que cheffe à la télévision ou sur les réseaux sociaux, je me bats pour que l'on sache comment on cuisine et quel impact ça a. Manger, c'est des milliards de dollars de chiffre d'affaires et ça mérite de se demander vers quelles tendances on se dirige dans notre histoire.</p>
+                </article>
+
+                <article class="podcast-card-v2">
+                    <div class="podcast-thumb-square">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Podcast 3">
+                        <div class="podcast-overlay">
+                            <div class="podcast-brut-label">Le Cap.<br>podcast</div>
+                            <div class="podcast-host-label">avec Mina<br>Soundiram</div>
+                            <div class="podcast-main-label">C'est réel.</div>
+                        </div>
+                    </div>
+                    <h3>C'est réel</h3>
+                    <p>Je suis Mina Soundiram, journaliste chez Le Cap., et mon métier, c'est de raconter des histoires. Pour moi, un des meilleurs endroits pour les trouver, c'est les réseaux sociaux. Du voyage au bout du monde aux retrouvailles inattendues, je vous raconte ce qu'ils ont vécu derrière leur écran.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="standard-section ia-section" id="ia">
+            <div class="reels-header">
+                <h2>IA</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+            <div class="reels-grid">
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="IA 1">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>SAGAS. Barbe Noire, la vraie histoire du pirate légendaire par l'IA</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="IA 2">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Ravaillac : l'homme qui a tué le roi Henri IV — Épisode spécial</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="IA 3">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>La Peste noire, la maladie qui a décimé l'Europe — SAGAS Immersif</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="IA 4">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>De "suppositoire" à symbole de Paris : l'incroyable histoire de la Tour Eiffel</h4>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-centered-content">
+            <a href="home.html" class="footer-logo-large">Le Cap.</a>
+            
+            <div class="footer-sections-grid">
+                <div class="footer-section">
+                    <h4>Éditions</h4>
+                    <ul>
+                        <li><a href="#">Haïti</a></li>
+                        <li><a href="#">France</a></li>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">International</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#">Économie</a></li>
+                        <li><a href="#">Diplomatie</a></li>
+                        <li><a href="#">Société</a></li>
+                        <li><a href="#">Culture</a></li>
+                        <li><a href="#">Technologie</a></li>
+                        <li><a href="#">Sport</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="#">Annonceurs ↗</a></li>
+                        <li><a href="#">Équipe éditoriale</a></li>
+                        <li><a href="#">Flux RSS</a></li>
+                        <li><a href="#">Nous rejoindre ↗</a></li>
+                        <li><a href="#">Aide ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social-row-centered">
+                <a href="#" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg></a>
+                <a href="#" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="#" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="#" title="Snapchat"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.1c-.5 0-.9.1-1.3.2-1.3.4-2.2 1.5-2.2 2.8 0 .8.3 1.5.8 2.1-.8.1-1.4.3-1.9.6-.9.5-1.4 1.4-1.4 2.4s.5 1.9 1.4 2.4c.5.3 1.1.5 1.9.6.5.6.8 1.3.8 2.1-.1 1.3-1.2 2.4-2.5 2.4-.4 0-.8-.1-1.1-.3-1.1-.7-1.8-1.9-1.8-3.2 0-1.1.5-2.1 1.3-2.8.3-.3.4-.6.3-1-.1-.3-.4-.5-.7-.5-.9 0-1.7.4-2.2 1.1-.6.7-.9 1.6-.9 2.6s.3 1.9.9 2.6c.5.7 1.3 1.1 2.2 1.1.3 0 .6-.1.8-.2.9-.6 2.1-.9 3.2-.9s2.3.3 3.2.9c.2.1.5.2.8.2.9 0 1.7-.4 2.2-1.1.6-.7.9-1.6.9-2.6s-.3-1.9-.9-2.6c-.5-.7-1.3-1.1-2.2-1.1-.3 0-.6.2-.7.5-.1.4 0 .7.3 1 .8.7 1.3 1.7 1.3 2.8 0 1.3-.7 2.5-1.8 3.2-.3.2-.7.3-1.1.3-1.3 0-2.4-1.1-2.5-2.4 0-.8.3-1.5.8-2.1.8-.1 1.4-.3 1.9-.6.9-.5 1.4-1.4 1.4-2.4s-.5-1.9-1.4-2.4c-.5-.3-1.1-.5-1.9-.6.5-.6.8-1.3.8-2.1 0-1.3-.9-2.4-2.2-2.8-.4-.1-.8-.2-1.3-.2z"/></svg></a>
+                <a href="#" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.324v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+                <a href="#" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg></a>
+                <a href="#" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.208 24 24 23.227 24 22.271V1.729C24 .774 23.208 0 22.225 0z"/></svg></a>
+            </div>
+
+            <div class="footer-legal-centered">
+                <div class="copyright"><a href="home.html" style="color: inherit; text-decoration: none;">Le Cap.</a> © 2026</div>
+                <div class="footer-legal-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Mentions légales</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top">↑</a>
+</body>
+</html>
