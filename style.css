@@ -367,7 +367,6 @@ main {
     margin: 0 auto 30px; /* Centered */
     letter-spacing: -0.05em;
     color: var(--white);
-    text-transform: uppercase;
 }
 
 .hero-article .lead {
