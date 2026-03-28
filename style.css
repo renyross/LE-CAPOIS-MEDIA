@@ -45,6 +45,84 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0.5px solid #eee;
 }
 
+/* Override for modern asymmetric sections */
+.redaction-articles-section {
+    padding: 30px 60px; /* Less padding to allow 2 columns to breathe */
+}
+
+/* Asymmetric Articles Layout (Global) */
+.articles-asymmetric-container {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr; /* Two-column layout */
+    gap: 50px;
+    align-items: start;
+    width: 100%;
+}
+
+.secondary-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.article-card {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    width: 100%;
+}
+
+.article-thumb {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.secondary-column .article-thumb {
+    height: 240px;
+}
+
+.featured-column .article-thumb {
+    height: 520px;
+}
+
+.article-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.article-card:hover img {
+    transform: scale(1.05);
+}
+
+.article-info h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--black);
+    margin-bottom: 12px;
+}
+
+.article-card.featured .article-info h4 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.article-lead {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 #jeux.standard-section,
 #la-question.standard-section,
 #podcasts.standard-section,
@@ -2428,121 +2506,72 @@ main {
         text-align: center;
     }
 
-    /* Hero Redinement: Keep buttons hidden on mobile */
+    /* Asymmetric Articles Layout (Mobile Revert) */
+    @media (max-width: 991px) {
+        .redaction-articles-section {
+            padding: 30px 20px;
+        }
+
+        .articles-asymmetric-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+
+        .featured-column .article-thumb,
+        .secondary-column .article-thumb {
+            height: 220px;
+        }
+
+        .article-card.featured .article-info h4 {
+            font-size: 1.5rem;
+        }
+
+        .article-lead {
+            font-size: 1rem;
+        }
+    }
+
     .hero-nav-arrow, .hero-controls-extra {
         display: none !important;
     }
 
-    /* Brut-style Section Header (ALL CAPS STACKED) */
+    /* Standard Header Restoration */
     .section-header-brut {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 40px;
-        padding: 0 25px;
+        margin-bottom: 50px;
     }
 
-    .section-header-brut h2.all-caps-stacked {
-        font-size: 34px;
+    .all-caps-stacked {
+        font-size: 42px;
         font-weight: 950;
-        line-height: 0.9;
+        line-height: 0.85;
         letter-spacing: -0.05em;
         text-transform: uppercase;
     }
 
     .btn-tout-voir {
         display: flex;
-        flex-direction: row; /* Icon left, text stacked right */
+        flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 10px;
-        width: auto;
-        min-width: 100px;
-        height: 80px;
-        padding: 0 15px;
+        gap: 12px;
+        padding: 15px 25px;
         border: 1px solid #eee;
-        border-radius: 25px;
+        border-radius: 30px;
         color: #000;
         text-decoration: none;
         background: #fff;
+        height: auto;
     }
 
     .btn-tout-voir .arrow-icon {
-        font-size: 24px;
-        font-weight: 400;
-        color: #999;
+        font-size: 22px;
     }
 
-    .btn-tout-voir span:not(.arrow-icon) {
-        display: block;
-        font-size: 14px;
-        font-weight: 850;
-        line-height: 1.1;
-        text-align: left;
-    }
-
-    .articles-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        padding: 0 25px;
-    }
-
-    .article-card {
-        display: flex;
-        flex-direction: column; /* Image TOP, text BOTTOM */
-        gap: 15px;
-        align-items: flex-start;
-        border-bottom: none;
-        padding-bottom: 0;
-    }
-
-    .article-thumb {
-        width: 100%;
-        height: 220px;
-        flex-shrink: 0;
-        border-radius: 15px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .article-badge {
-        display: block !important;
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        background: #007AFF;
-        color: #fff;
-        font-size: 11px;
-        font-weight: 900;
-        padding: 6px 15px;
-        border-radius: 8px;
-        z-index: 10;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .article-info h4 {
-        font-size: 20px;
-        font-weight: 900;
-        line-height: 1.25;
-        color: #000;
-    }
-
-    /* General responsive improvements */
-    .container {
-        padding: 0 15px;
-    }
-
-    /* Back to Top for Mobile per screenshot */
-    .scroll-top {
-        width: 55px;
-        height: 55px;
-        bottom: 30px;
-        right: 25px;
-        border-radius: 0;
-        border: 1px solid #000;
-        background: #fff;
-        font-size: 20px;
-        z-index: 2000;
+    .btn-tout-voir span {
+        font-size: 16px;
+        font-weight: 800;
     }
 }
