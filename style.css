@@ -2427,4 +2427,93 @@ main {
     .footer-section {
         text-align: center;
     }
+
+    /* Brut-style Section Header (Refined for stacked look) */
+    .section-header-brut {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 40px;
+        padding: 0 25px;
+    }
+
+    .section-header-brut h2 {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        text-transform: none;
+    }
+
+    .btn-tout-voir {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        border: 1px solid #eee;
+        border-radius: 25px;
+        color: #000;
+        text-decoration: none;
+        background: #fff;
+    }
+
+    .btn-tout-voir span {
+        font-size: 15px;
+        font-weight: 800;
+        line-height: 1.2;
+    }
+
+    .articles-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 25px;
+    }
+
+    .article-card {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+
+    .article-thumb {
+        width: 140px;
+        height: 100px;
+        flex-shrink: 0;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .article-badge {
+        display: none !important; /* Hidden on mobile per screenshot */
+    }
+
+    .article-info h4 {
+        font-size: 16px;
+        font-weight: 850;
+        line-height: 1.25;
+        color: #000;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    /* Back to Top for Mobile per screenshot */
+    .scroll-top {
+        width: 60px;
+        height: 60px;
+        bottom: 30px;
+        right: 25px;
+        border-radius: 0;
+        border: 1px solid #000;
+        background: #fff;
+        font-size: 24px;
+        z-index: 2000;
+    }
 }
