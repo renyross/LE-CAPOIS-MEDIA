@@ -275,34 +275,28 @@ body.no-scroll {
 .sidebar-nav li a {
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 12px 40px;
+    gap: 18px;
+    padding: 14px 40px;
     text-decoration: none;
     color: var(--black);
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 800;
     transition: all 0.2s ease;
-    border-left: 4px solid transparent;
 }
 
 .sidebar-nav li a:hover, 
 .sidebar-nav li a.active {
-    background: #f9f9f9;
-}
-
-.sidebar-nav li a.social-icons svg:hover, .footer-socials svg:hover, .action-icon:hover {
-    color: var(--black);
+    background: #f8f8f8;
 }
 
 .sidebar-nav li a.active {
-    border-left-color: var(--black);
     color: var(--black);
 }
 
 .sidebar-icon {
-    width: 20px;
-    height: 20px;
-    opacity: 0.8;
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
 }
 
 .dot-gray {
@@ -314,45 +308,31 @@ body.no-scroll {
     margin-right: 8px;
 }
 
-.sidebar-footer {
-    padding: 20px 40px;
-    border-top: 0.5px solid var(--border-color);
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.sidebar-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 13px;
-    font-weight: 600;
-    cursor: pointer;
-    color: var(--black);
-}
-
-.sidebar-actions .action-icon {
-    width: 18px;
-    height: 18px;
+.sidebar-edition-container {
+    padding: 10px 40px;
 }
 
 .edition-selector {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 600;
-    color: #666;
-    padding: 10px 0;
+    color: #888;
     cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 10px 0;
+}
+
+.edition-selector:hover {
+    color: var(--black);
 }
 
 .sidebar-divider {
     height: 1px;
     background: var(--border-color);
     margin: 20px 40px;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 /* Mobile Header */
@@ -454,31 +434,6 @@ main {
         opacity: 1;
     }
 
-    .sidebar-social {
-        display: flex;
-        gap: 25px;
-        padding: 0 40px 40px;
-        align-items: center;
-    }
-    
-    .sidebar-social a {
-        display: block;
-        width: 24px;
-        height: 24px;
-        color: var(--black) !important;
-        opacity: 0.8;
-        transition: opacity 0.3s ease;
-    }
-    
-    .sidebar-social a:hover {
-        opacity: 1;
-    }
-    
-    .sidebar-social svg {
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
     
     .mobile-header {
         display: flex;
