@@ -427,10 +427,10 @@ main {
     }
     
     .sidebar-nav li a {
-        font-size: 20px;
-        font-weight: 900;
-        padding: 10px 40px;
-        gap: 20px;
+        font-size: 16px;
+        font-weight: 800;
+        padding: 8px 40px;
+        gap: 15px;
         color: var(--black);
         border-left: none;
         letter-spacing: -0.01em;
