@@ -418,12 +418,16 @@ main {
         width: 100%;
         max-width: 100%;
         background: var(--white);
-        padding-top: 100px;
+        padding-top: 80px;
         border-right: none;
+        overflow-y: auto !important;
+        height: 100vh !important;
+        position: fixed;
     }
     
     .sidebar-branding {
-        display: none;
+        display: block;
+        padding: 0 40px 30px;
     }
     
     .sidebar-nav li a {
@@ -448,6 +452,27 @@ main {
         height: 1px;
         background: #eee;
         opacity: 1;
+    }
+
+    .sidebar-social {
+        display: flex;
+        gap: 20px;
+        padding: 0 40px 40px;
+    }
+    
+    .sidebar-social a {
+        color: var(--black);
+        opacity: 0.7;
+        transition: opacity 0.3s ease;
+    }
+    
+    .sidebar-social a:hover {
+        opacity: 1;
+    }
+    
+    .sidebar-social svg {
+        width: 20px;
+        height: 20px;
     }
     
     .mobile-header {
@@ -2602,21 +2627,8 @@ main {
         width: 100%;
     }
 
-    .sidebar {
-        position: fixed;
-        left: -100%;
-        top: 0;
-        bottom: 0;
-        z-index: 1200;
-        width: 85%;
-        background: #fff;
-        transition: left 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-        box-shadow: 20px 0 50px rgba(0,0,0,0.1);
-        padding-top: 80px;
-        border-right: none;
-    }
-
     .sidebar.open {
+        transform: translateX(0);
         left: 0;
     }
 
