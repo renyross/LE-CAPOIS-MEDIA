@@ -125,18 +125,152 @@
 
     <main>
         <section class="hero-article">
-            <div class="hero-image">
-                <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Architecture Institutionnelle" class="elite-image">
-            </div>
-            <div class="gridhero container">
-                <div class="hero-content">
-                    <span class="category">PROSPECTIVE</span>
-                    <h1>Haiti 2030 : le manifeste pour <br>une souveraineté digitale</h1>
-                    <p class="lead">Face aux défis de la gouvernance traditionnelle, la diaspora émerge comme le premier vecteur d'innovation and de stabilité. Analyse d'un changement de paradigme global.</p>
-                    <div class="meta">PAR FENEL PÉLISSIER — ANALYSTE STRATÉGIQUE — 12 MIN DE LECTURE</div>
+            <div class="hero-slider">
+                <!-- Slide 1: Prospective (Tech) -->
+                <div class="hero-slide active">
+                    <div class="hero-image">
+                        <img src="assets/img/hero_tech.png" alt="Souveraineté Digitale" class="elite-image">
+                    </div>
+                    <div class="hero-content">
+                        <span class="category">PROSPECTIVE</span>
+                        <h1>Haiti 2030 : le manifeste pour <br>une souveraineté digitale</h1>
+                        <p class="lead">Face aux défis de la gouvernance traditionnelle, la diaspora émerge comme le premier vecteur d'innovation et de stabilité.</p>
+                        <div class="meta">PAR LA RÉDACTION — ANALYSE PROSPECTIVE — 12 MIN DE LECTURE</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2: Géopolitique -->
+                <div class="hero-slide">
+                    <div class="hero-image">
+                        <img src="assets/img/hero_geopolitique.png" alt="Influence Mondiale" class="elite-image">
+                    </div>
+                    <div class="hero-content">
+                        <span class="category">GÉOPOLITIQUE</span>
+                        <h1>Influence Haïtienne sur <br>l'Échiquier Mondial</h1>
+                        <p class="lead">Analyse des nouvelles alliances stratégiques et de la montée en puissance de la diplomatie caribéenne moderne.</p>
+                        <div class="meta">PAR FENEL PÉLISSIER — ANALYST STRATÉGIQUE — 8 MIN DE LECTURE</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3: Économie -->
+                <div class="hero-slide">
+                    <div class="hero-image">
+                        <img src="assets/img/hero_economie.png" alt="Capitaux Diaspora" class="elite-image">
+                    </div>
+                    <div class="hero-content">
+                        <span class="category">ÉCONOMIE</span>
+                        <h1>Les Capitaux de la Diaspora <br>en Levier de Croissance</h1>
+                        <p class="lead">Transformer les transferts de fonds en investissements productifs pour le développement durable des institutions.</p>
+                        <div class="meta">PAR MARIE-CLAUDE JEAN — EXPERTE ÉCONOMISTE — 10 MIN DE LECTURE</div>
+                    </div>
+                </div>
+
+                <!-- Slide 4: Culture -->
+                <div class="hero-slide">
+                    <div class="hero-image">
+                        <img src="assets/img/hero_culture.png" alt="Renaissance Arts" class="elite-image">
+                    </div>
+                    <div class="hero-content">
+                        <span class="category">CULTURE</span>
+                        <h1>La Renaissance des Arts <br>comme Vecteur de Soft Power</h1>
+                        <p class="lead">Le génie créatif haïtien s'impose mondialement, redéfinissant l'image de la nation par l'excellence artistique.</p>
+                        <div class="meta">PAR YVES MARCELIN — DIRECTEUR ARTISTIQUE — 7 MIN DE LECTURE</div>
+                    </div>
+                </div>
+
+                <!-- Slide 5: Original Hero -->
+                <div class="hero-slide">
+                    <div class="hero-image">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Architecture Institutionnelle" class="elite-image">
+                    </div>
+                    <div class="hero-content">
+                        <span class="category">PROSPECTIVE</span>
+                        <h1>Le Capois : L'Architecture <br>d'une Renaissance</h1>
+                        <p class="lead">Analyse d'un changement de paradigme global où l'élite intellectuelle reprend les rênes de l'avenir institutionnel.</p>
+                        <div class="meta">PAR LA RÉDACTION — ÉDITION SPÉCIALE — 15 MIN DE LECTURE</div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Carousel Controls -->
+            <button class="hero-nav-arrow hero-nav-prev" onclick="moveSlide(-1)">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <button class="hero-nav-arrow hero-nav-next" onclick="moveSlide(1)">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+
+            <div class="hero-pagination">
+                <span class="pagination-dot active" onclick="setSlide(0)"></span>
+                <span class="pagination-dot" onclick="setSlide(1)"></span>
+                <span class="pagination-dot" onclick="setSlide(2)"></span>
+                <span class="pagination-dot" onclick="setSlide(3)"></span>
+                <span class="pagination-dot" onclick="setSlide(4)"></span>
+            </div>
+
+            <div class="hero-controls-extra">
+                <button class="pause-toggle" id="carouselToggle" onclick="toggleAutoPlay()">
+                    <svg id="pauseIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                    <svg id="playIcon" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </button>
+            </div>
         </section>
+
+        <script>
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.hero-slide');
+            const dots = document.querySelectorAll('.pagination-dot');
+            const pauseIcon = document.getElementById('pauseIcon');
+            const playIcon = document.getElementById('playIcon');
+            let autoPlayInterval;
+            let isPaused = false;
+
+            function showSlide(index) {
+                slides[currentSlide].classList.remove('active');
+                dots[currentSlide].classList.remove('active');
+                
+                currentSlide = (index + slides.length) % slides.length;
+                
+                slides[currentSlide].classList.add('active');
+                dots[currentSlide].classList.add('active');
+            }
+
+            function moveSlide(step) {
+                showSlide(currentSlide + step);
+                resetAutoPlay();
+            }
+
+            function setSlide(index) {
+                showSlide(index);
+                resetAutoPlay();
+            }
+
+            function startAutoPlay() {
+                autoPlayInterval = setInterval(() => {
+                    if (!isPaused) {
+                        showSlide(currentSlide + 1);
+                    }
+                }, 5000);
+            }
+
+            function resetAutoPlay() {
+                clearInterval(autoPlayInterval);
+                startAutoPlay();
+            }
+
+            function toggleAutoPlay() {
+                isPaused = !isPaused;
+                if (isPaused) {
+                    pauseIcon.style.display = 'none';
+                    playIcon.style.display = 'block';
+                } else {
+                    pauseIcon.style.display = 'block';
+                    playIcon.style.display = 'none';
+                }
+            }
+
+            startAutoPlay();
+        </script>
 
         <section class="standard-section redaction-articles-section">
             <div class="reels-header">

@@ -299,20 +299,34 @@ main {
     margin-bottom: 80px;
     position: relative;
     background: var(--black);
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    min-height: 80vh; /* Slightly taller for carousel */
+    display: block; /* Change from flex to block to contain slides */
     overflow: hidden;
 }
 
-.gridhero {
+.hero-slider {
+    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; /* Center horizontally */
+    min-height: 80vh;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 1s;
+    z-index: 1;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 2;
 }
 
 .hero-image {
@@ -324,67 +338,104 @@ main {
     z-index: 1;
 }
 
-.elite-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
 .hero-content {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
     color: var(--white);
-    text-align: center; /* Center text */
-    padding: 40px 0; /* Vertical only, horizontal from .container */
+    text-align: center;
+    padding: 60px 40px;
     width: 100%;
-    background: rgba(0,0,0,0.5); /* Symmetrical overlay */
+    max-width: 1200px;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
 }
 
-.hero-content p.lead {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.hero-slide:not(.active) .hero-content {
+    transform: translate(-50%, -40%);
+    opacity: 0;
 }
 
-.hero-content .category {
-    display: inline-block;
-    background: var(--white);
-    color: var(--black);
-    padding: 6px 15px;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 0.2em;
-    margin-bottom: 30px;
-    text-transform: uppercase;
+/* Carousel Controls */
+.hero-nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
-.hero-article h1 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 900;
-    font-size: 42px;
-    line-height: 0.95;
-    max-width: 1100px;
-    margin: 0 auto 30px; /* Centered */
-    letter-spacing: -0.05em;
-    color: var(--white);
+.hero-nav-arrow:hover {
+    background: rgba(255,255,255,0.3);
+    border-color: white;
 }
 
-.hero-article .lead {
-    font-size: 20px;
-    max-width: 700px;
-    margin: 0 auto 40px; /* Centered */
-    opacity: 0.9;
-    font-weight: 400;
-    color: var(--white);
+.hero-nav-prev { left: 40px; }
+.hero-nav-next { right: 40px; }
+
+.hero-pagination {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-.hero-article .meta {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    opacity: 0.6;
-    text-transform: uppercase;
-    color: var(--white);
+.pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-dot.active {
+    background: white;
+    transform: scale(1.5);
+    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+}
+
+.hero-controls-extra {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 100;
+}
+
+.pause-toggle {
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .hero-image:hover .elite-image {
