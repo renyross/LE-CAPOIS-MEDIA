@@ -299,8 +299,7 @@ main {
     margin-bottom: 80px;
     position: relative;
     background: var(--black);
-    min-height: 80vh; /* Slightly taller for carousel */
-    display: block; /* Change from flex to block to contain slides */
+    height: 85vh; /* Fixed height for better control */
     overflow: hidden;
 }
 
@@ -308,25 +307,16 @@ main {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 80vh;
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
 }
 
 .hero-slide {
-    position: absolute;
-    top: 0;
-    left: 0;
+    flex: 0 0 100%;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 1s ease-in-out, visibility 1s;
-    z-index: 1;
-}
-
-.hero-slide.active {
-    opacity: 1;
-    visibility: visible;
-    z-index: 2;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero-image {
@@ -338,21 +328,73 @@ main {
     z-index: 1;
 }
 
+.hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.7));
+    z-index: 2;
+}
+
+.elite-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 .hero-content {
     position: absolute;
-    top: 50%;
+    top: 55%; /* Slightly lower */
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 5;
-    color: var(--white);
+    z-index: 10;
+    color: var(--white) !important; /* Force white */
     text-align: center;
     padding: 60px 40px;
     width: 100%;
     max-width: 1200px;
-    background: rgba(0,0,0,0.4);
-    backdrop-filter: blur(5px);
-    border-radius: 20px;
-    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.hero-article h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 56px; /* Larger for better impact */
+    line-height: 1.1;
+    margin: 0 auto 30px;
+    letter-spacing: -0.04em;
+    color: var(--white) !important; /* Ensure it is never black */
+    text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.hero-article .lead {
+    font-size: 22px;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    opacity: 0.95;
+    color: var(--white);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-article .category {
+    background: var(--white);
+    color: var(--black);
+    padding: 8px 20px;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 0.25em;
+    margin-bottom: 30px;
+    display: inline-block;
+}
+
+/* Slide active animations */
+.hero-slide.active .hero-content {
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 .hero-slide:not(.active) .hero-content {
@@ -366,80 +408,79 @@ main {
     top: 50%;
     transform: translateY(-50%);
     z-index: 100;
-    background: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
     color: white;
-    border: 1px solid rgba(255,255,255,0.2);
-    width: 60px;
-    height: 60px;
+    border: 1px solid rgba(255,255,255,0.3);
+    width: 65px;
+    height: 65px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    backdrop-filter: blur(15px);
 }
 
 .hero-nav-arrow:hover {
-    background: rgba(255,255,255,0.3);
-    border-color: white;
+    background: var(--white);
+    color: var(--black);
+    transform: translateY(-50%) scale(1.1);
 }
 
-.hero-nav-prev { left: 40px; }
-.hero-nav-next { right: 40px; }
+.hero-nav-prev { left: 50px; }
+.hero-nav-next { right: 50px; }
 
 .hero-pagination {
     position: absolute;
-    bottom: 40px;
+    bottom: 50px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
     display: flex;
-    gap: 15px;
-    align-items: center;
+    gap: 12px;
 }
 
 .pagination-dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: rgba(255,255,255,0.3);
+    width: 35px; /* Pill shape for premium feel */
+    height: 4px;
+    background: rgba(255,255,255,0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
+    border-radius: 2px;
 }
 
 .pagination-dot.active {
     background: white;
-    transform: scale(1.5);
-    box-shadow: 0 0 15px rgba(255,255,255,0.5);
+    width: 60px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.4);
 }
 
 .hero-controls-extra {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: 50px;
+    right: 50px;
     z-index: 100;
 }
 
 .pause-toggle {
     background: rgba(255,255,255,0.1);
-    border: none;
+    border: 1px solid rgba(255,255,255,0.2);
     color: white;
     cursor: pointer;
-    font-size: 14px;
-    padding: 10px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    width: 44px;
-    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.3s ease;
 }
 
-.hero-image:hover .elite-image {
-    transform: scale(1.05);
+.pause-toggle:hover {
+    background: rgba(255,255,255,0.2);
+    transform: scale(1.1);
 }
 
 /* Unified Section Grid (Economy Style) */
