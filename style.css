@@ -409,12 +409,6 @@ main {
     margin-left: 260px;
 }
 
-@media (min-width: 1200px) {
-    main {
-        margin-right: 260px;
-    }
-}
-
 /* Footer and Sidebar encounter is handled in the main footer section below */
 
 /* Responsive adjustments */
@@ -544,6 +538,12 @@ main {
     width: 100%;
     max-width: 1200px;
     transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+@media (min-width: 1200px) {
+    .hero-content {
+        left: calc(50% - 130px);
+    }
 }
 
 .hero-article h1 {
@@ -2457,7 +2457,7 @@ main {
 
 @media (min-width: 1200px) {
     .redaction-articles-section {
-        padding-right: 260px !important;
+        padding-right: 400px !important; /* 140 base + 260 symmetry spacer */
     }
 }
 
