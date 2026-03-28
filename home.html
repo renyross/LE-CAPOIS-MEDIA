@@ -3,17 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LE CAP — Média d'Influence et d'Analyse Stratégique</title>
+    <title>POST. — Média d'Influence et d'Analyse Stratégique</title>
     <meta name="description" content="Média d'élite pour la diaspora haïtienne et les décideurs. Analyse stratégique, géopolitique et prospective.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/img/logo.png">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="mobile-header">
-        <div class="mobile-logo">LE CAP.</div>
+        <div class="mobile-logo">POST.</div>
         <button class="menu-toggle" onclick="toggleMobileMenu()">
             <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
@@ -27,7 +26,7 @@
     <aside class="sidebar">
         <div class="sidebar-branding">
             <div class="logo">
-                <a href="home.html">Le Cap.</a>
+                <a href="home.html">Post.</a>
             </div>
         </div>
         
@@ -125,7 +124,7 @@
 
     <header class="mobile-header">
         <div class="logo">
-            <a href="home.html">Le Cap.</a>
+            <a href="home.html">Post.</a>
         </div>
         <div class="burger-menu">
             <span></span>
@@ -302,53 +301,6 @@
             startAutoPlay();
         </script>
 
-        <section class="standard-section redaction-articles-section">
-            <div class="section-header-brut container">
-                <h2 class="all-caps-stacked">LES<br>ARTICLES<br>DE LA<br>RÉDACTION</h2>
-                <a href="#" class="btn-tout-voir"><span class="arrow-icon">›</span><span>Tout</span><span>voir</span></a>
-            </div>
-            <div class="articles-asymmetric-container">
-                <div class="secondary-column">
-                    <article class="article-card">
-                        <div class="article-thumb">
-                            <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?q=80&w=400&auto=format&fit=crop" alt="Article 1">
-                        </div>
-                        <div class="article-info">
-                            <h4>Air Tahiti Nui aux côtés du requin, symbole du territoire...</h4>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <div class="article-thumb">
-                            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=400&auto=format&fit=crop" alt="Article 2">
-                        </div>
-                        <div class="article-info">
-                            <h4>Scandale sexuel qui secoue l'Allemagne: enquête pour...</h4>
-                        </div>
-                    </article>
-                </div>
-                <div class="featured-column">
-                    <article class="article-card featured">
-                        <div class="article-thumb">
-                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600&auto=format&fit=crop" alt="Article 3">
-                        </div>
-                        <div class="article-info">
-                            <h4>Le policier qui a tué Olivio Gomes condamné à 10 ans de prison ce jeudi</h4>
-                            <p class="article-lead">Le suspect, Cédric Prizzon, arrêté au Portugal et soupçonné d'avoir tué sa compagne et son ex-compagne sera présenté à un juge jeudi après-midi au tribunal de Vila Nova de Foz Côa (nord-est), ont indiqué deux sources judiciaires portugaises à l'AFP.</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            <div class="grid-nav">
-                <button class="nav-btn prev">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-                </button>
-                <button class="nav-btn next">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </button>
-            </div>
-        </section>
-
-
         <section class="standard-section editor-selection">
             <div class="reels-header">
                 <h2>A LA UNE</h2>
@@ -400,79 +352,251 @@
             </div>
         </section>
 
+        <section class="standard-section redaction-articles-section">
+            <div class="reels-header">
+                <h2>LES ARTICLES DE LA RÉDACTION</h2>
+                <a href="#" class="btn-all-reels">Tout voir</a>
+            </div>
+            <div class="articles-horizontal-grid">
+                <!-- Article 1 -->
+                <article class="article-horizontal-card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1534067783941-51c9c23ecefd?q=80&w=400&auto=format&fit=crop" alt="Article 1">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-blue">Article</span>
+                        <h4>Air Tahiti Nui aux côtés du requin, symbole du territoire...</h4>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-horizontal-card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=400&auto=format&fit=crop" alt="Article 2">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-blue">Article</span>
+                        <h4>Scandale sexuel qui secoue l'Allemagne: enquête pour...</h4>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-horizontal-card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=600&auto=format&fit=crop" alt="Article 3">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-blue">Article</span>
+                        <h4>Le policier qui a tué Olivio Gomes condamné à 10 ans de prison po...</h4>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-horizontal-card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop" alt="Article 4">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-blue">Article</span>
+                        <h4>Gims passe par la case juge d'instruction après la fin de sa garde ...</h4>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-horizontal-card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=400&auto=format&fit=crop" alt="Article 5">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-blue">Article</span>
+                        <h4>La mère de deux bébés congelés condamnée à 25 ans de prison</h4>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-horizontal-card">
+                    <div class="card-thumb">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=400&auto=format&fit=crop" alt="Article 6">
+                    </div>
+                    <div class="card-content">
+                        <span class="badge-blue">Article</span>
+                        <h4>Bolsonaro quitte l'hôpital pour sa résidence afin de purger sa peine à...</h4>
+                    </div>
+                </article>
+            </div>
+            <div class="grid-nav-brut">
+                <button class="nav-btn-round prev-brut">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="nav-btn-round next-brut">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+        </section>
+
         <section class="standard-section videos-section">
             <div class="reels-header">
                 <h2>NOS VIDÉOS</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="reels-grid">
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Reel 1" class="elite-image">
+            <div class="videos-carousel-grid">
+                <!-- Video 1 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=400&auto=format&fit=crop" alt="Video 1">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Le Capois en Immersion : Nouvelles dynamiques de la diaspora</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Reel 2" class="elite-image">
+
+                <!-- Video 2 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=400&auto=format&fit=crop" alt="Video 2">
                         <div class="reel-play-overlay">▶</div>
                     </div>
-                    <h4>Haiti 2030 : Le Manifeste pour une Souveraineté Digitale</h4>
+                    <h4>Analyse Stratégique : Les enjeux du canal de la Rivière du Massacre</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Reel 3" class="elite-image">
+
+                <!-- Video 3 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=400&auto=format&fit=crop" alt="Video 3">
                         <div class="reel-play-overlay">▶</div>
                     </div>
-                    <h4>Entretien Exclusif : La Vision d'un leader visionnaire</h4>
+                    <h4>Prospective 2030 : Quel avenir pour l'économie haïtienne ?</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Reel 4" class="elite-image">
+
+                <!-- Video 4 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=400&auto=format&fit=crop" alt="Video 4">
                         <div class="reel-play-overlay">▶</div>
                     </div>
-                    <h4>Analyse : Pourquoi la tech est l'avenir des institutions</h4>
+                    <h4>Culture & Héritage : La renaissance des arts capois</h4>
+                </article>
+
+                <!-- Video 5 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1540573133985-87b6da6d54a9?q=80&w=400&auto=format&fit=crop" alt="Video 5">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Première mondiale : un singe doré est né au zoo de Beauval.</h4>
+                </article>
+
+                <!-- Video 6 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop" alt="Video 6">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Alexandra Rosenfeld porte plainte contre le chef Jean Imbert pour violences.</h4>
+                </article>
+
+                <!-- Video 7 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=400&auto=format&fit=crop" alt="Video 7">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>BRUT. DEMAIN — Ils soignent les doudous des enfants</h4>
+                </article>
+
+                <!-- Video 8 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="https://images.unsplash.com/photo-1514525253344-f81bad3b7c2a?q=80&w=400&auto=format&fit=crop" alt="Video 8">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>La garde à vue de Gims est prolongée. Voici ce que l'on sait...</h4>
                 </article>
             </div>
         </section>
 
         <section class="standard-section culture-section" id="culture">
             <div class="reels-header">
-                <h2>CULTURE</h2>
+                <h2 class="section-logo-brut">CULTURE</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="reels-grid">
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Culture 1" class="elite-image">
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="videos-carousel-grid">
+                    <!-- Culture 1 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_culture.png" alt="Culture 1">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>LAMA : « L'Architecture de la Renaissance : Le Musée d'Art Haïtien se réinvente »</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Culture 2" class="elite-image">
+
+                <!-- Culture 2 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Culture 2">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Pourquoi le Prix Goncourt regarde vers Port-au-Prince</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Culture 3" class="elite-image">
+
+                <!-- Culture 3 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Culture 3">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Le prochain chef-d'œuvre de Raoul Peck : Une vision qui bouscule</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Culture 4" class="elite-image">
+
+                <!-- Culture 4 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Culture 4">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Le jazz haïtien s'invite au Lincoln Center : Une consécration</h4>
                 </article>
+
+                <!-- Culture 5 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_tech.png" alt="Culture 5">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Exposition: "Terres de Miracles" à la Galerie Capoise.</h4>
+                </article>
+
+                <!-- Culture 6 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_economie.png" alt="Culture 6">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Cinéma : "Les Enfants du Nord", un film qui brise les tabous.</h4>
+                </article>
+
+                <!-- Culture 7 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_geopolitique.png" alt="Culture 7">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Musique : La nouvelle scène Afro-Haïtienne en pleine explosion.</h4>
+                </article>
+
+                <!-- Culture 8 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/sport_featured.png" alt="Culture 8">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Littérature : "Le Chant des Collines" primé à l'international.</h4>
+                </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
@@ -482,35 +606,82 @@
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="reels-grid">
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/sport_featured.png" alt="Sport 1" class="elite-image">
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="videos-carousel-grid">
+                    <!-- Sport 1 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/sport_featured.png" alt="Sport 1">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Mohammed Sanhadji : « Je voulais devenir Pelé... » L'Architecte de la Performance</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Sport 2" class="elite-image">
+
+                <!-- Sport 2 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Sport 2">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Pourquoi la Diaspora est le vivier de l'élite : Analyse d'un modèle innovant</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Sport 3" class="elite-image">
+
+                <!-- Sport 3 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Sport 3">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Tennis : Standards d'excellence et capitaux privés vers une professionnalisation</h4>
                 </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Sport 4" class="elite-image">
+
+                <!-- Sport 4 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Sport 4">
                         <div class="reel-play-overlay">▶</div>
                     </div>
                     <h4>Portrait : Le mental d'un champion sous pression face aux enjeux institutionnels</h4>
                 </article>
+
+                <!-- Sport 5 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_tech.png" alt="Sport 5">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Football : La Grenadière Melchie Dumornay domine l'Europe.</h4>
+                </article>
+
+                <!-- Sport 6 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_economie.png" alt="Sport 6">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Basketball : Vers une ligue professionnelle en Haïti ?</h4>
+                </article>
+
+                <!-- Sport 7 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_geopolitique.png" alt="Sport 7">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Athlétisme : Les nouveaux espoirs de la diaspora pour 2028.</h4>
+                </article>
+
+                <!-- Sport 8 -->
+                <article class="video-reel-card">
+                    <div class="video-thumb-tall">
+                        <img src="assets/img/hero_culture.png" alt="Sport 8">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Infrastructures : Le défi de la reconstruction des stades nationaux.</h4>
+                </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
@@ -520,35 +691,75 @@
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="reels-grid">
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Economy 1" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>L'Architecture de la Richesse : Nouveau Modèle Économique de Résilience</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Economy 2" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Fintech : L'Inclusion financière par le mobile banking transforme le quotidien</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Economy 3" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Géopolitique : L'Impact des sanctions internationales sur les routes financières</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/economy_side_1_1774469380233.png" alt="Economy 4" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Blockchain : Haïti et les CBDC entre souveraineté nationale et innovation</h4>
-                </article>
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="videos-carousel-grid">
+                    <!-- Economy 1 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/economy_color_premium_1774478629301.png" alt="Economy 1">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>L'Architecture de la Richesse : Nouveau Modèle Économique de Résilience</h4>
+                    </article>
+                    <!-- Economy 2 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Economy 2">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Fintech : L'Inclusion financière par le mobile banking transforme le quotidien</h4>
+                    </article>
+                    <!-- Economy 3 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Economy 3">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Géopolitique : L'Impact des sanctions internationales sur les routes financières</h4>
+                    </article>
+                    <!-- Economy 4 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/economy_side_1_1774469380233.png" alt="Economy 4">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Blockchain : Haïti et les CBDC entre souveraineté nationale et innovation</h4>
+                    </article>
+                    <!-- Economy 5 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_economie.png" alt="Economy 5">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Investissement : Pourquoi le capital-risque s'intéresse au Cap-Haïtien</h4>
+                    </article>
+                    <!-- Economy 6 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_tech.png" alt="Economy 6">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Solaire : L'indépendance énergétique, moteur de la croissance locale</h4>
+                    </article>
+                    <!-- Economy 7 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Economy 7">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Tourisme : Les enjeux économiques de la restauration du patrimoine</h4>
+                    </article>
+                    <!-- Economy 8 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_geopolitique.png" alt="Economy 8">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Agriculture : La filière cacao, nouvel or brun de la région Nord</h4>
+                    </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
@@ -558,127 +769,265 @@
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="reels-grid">
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/politics_complex_2_1774468872703.png" alt="Politics 1" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Le Captois : « On ne peut plus bâtir l'avenir sur les ruines du silence »</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Politics 2" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Le pacte secret anti-corruption : Enquête exclusive sur les réseaux d'influence</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Politics 3" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Les visages de la contestation 2026 : Analyse approfondie des forces en présence</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/politics_complex_1_1774468857473.png" alt="Politics 4" class="elite-image">
-                        <div class="reel-play-overlay">▶</div>
-                    </div>
-                    <h4>Diplomatie : Un final surréaliste et une nouvelle victoire de la coopération sud-sud</h4>
-                </article>
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="videos-carousel-grid">
+                    <!-- Politics 1 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/politics_complex_2_1774468872703.png" alt="Politics 1">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Le Captois : « On ne peut plus bâtir l'avenir sur les ruines du silence »</h4>
+                    </article>
+                    <!-- Politics 2 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Politics 2">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Le pacte secret anti-corruption : Enquête exclusive sur les réseaux d'influence</h4>
+                    </article>
+                    <!-- Politics 3 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Politics 3">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Les visages de la contestation 2026 : Analyse approfondie des forces en présence</h4>
+                    </article>
+                    <!-- Politics 4 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/politics_complex_1_1774468857473.png" alt="Politics 4">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Diplomatie : Un final surréaliste et une nouvelle victoire de la coopération sud-sud</h4>
+                    </article>
+                    <!-- Politics 5 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_geopolitique.png" alt="Politics 5">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Souveraineté : L'indépendance de la justice, socle de la nouvelle république</h4>
+                    </article>
+                    <!-- Politics 6 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_culture.png" alt="Politics 6">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Droit de vote : La diaspora, un acteur politique incontournable en 2026</h4>
+                    </article>
+                    <!-- Politics 7 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Politics 7">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Décentralisation : Quand les mairies du Nord prennent leur destin en main</h4>
+                    </article>
+                    <!-- Politics 8 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_economie.png" alt="Politics 8">
+                            <div class="reel-play-overlay">▶</div>
+                        </div>
+                        <h4>Éducation : Les enjeux de la réforme scolaire face aux députés</h4>
+                    </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
         <section class="standard-section games-section" id="jeux">
             <div class="reels-header">
-                <h2>JEUX DU CAP</h2>
+                <h2>JEUX DU POST</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
-            <div class="games-grid">
-                <div class="game-item">
-                    <div class="game-content">
-                        <span class="meta">Le quiz sport</span>
-                        <p>Répondez aux dix questions posées par la rédaction sur l'histoire du football haïtien.</p>
-                        <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="videos-carousel-grid">
+                    <!-- Game 1 -->
+                    <div class="game-item">
+                        <div class="game-content">
+                            <span class="meta">Le quiz sport</span>
+                            <p>Répondez aux dix questions posées par la rédaction sur l'histoire du football haïtien.</p>
+                            <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                        </div>
+                        <div class="game-icon">
+                            <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Quiz" class="elite-image">
+                        </div>
                     </div>
-                    <div class="game-icon">
-                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Quiz" class="elite-image">
+                    <!-- Game 2 -->
+                    <div class="game-item">
+                        <div class="game-content">
+                            <span class="meta">La grille stratège</span>
+                            <p>Trouvez les neuf acteurs clés de la transition en fonction de leur influence et secteur.</p>
+                            <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                        </div>
+                        <div class="game-icon">
+                            <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Grille" class="elite-image">
+                        </div>
+                    </div>
+                    <!-- Game 3 -->
+                    <div class="game-item">
+                        <div class="game-content">
+                            <span class="meta">Pronos Diplomatie</span>
+                            <p>Défiez vos collègues sur les scénarios de coopération internationale pour 2026.</p>
+                            <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">découvrir</a>
+                        </div>
+                        <div class="game-icon">
+                            <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Pronos" class="elite-image">
+                        </div>
+                    </div>
+                    <!-- Game 4 -->
+                    <div class="game-item">
+                        <div class="game-content">
+                            <span class="meta">Mots Fléchés</span>
+                            <p>La grille quotidienne des Capois pour tester votre culture générale Nordiste.</p>
+                            <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                        </div>
+                        <div class="game-icon">
+                            <img src="assets/img/hero_culture.png" alt="Mots" class="elite-image">
+                        </div>
+                    </div>
+                    <!-- Game 5 -->
+                    <div class="game-item">
+                        <div class="game-content">
+                            <span class="meta">Puzzle Patrimoine</span>
+                            <p>Reconstituez la Citadelle Laferrière pièce par pièce dans ce défi chronométré.</p>
+                            <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                        </div>
+                        <div class="game-icon">
+                            <img src="assets/img/hero_geopolitique.png" alt="Puzzle" class="elite-image">
+                        </div>
+                    </div>
+                    <!-- Game 6 -->
+                    <div class="game-item">
+                        <div class="game-content">
+                            <span class="meta">Le Juste Prix</span>
+                            <p>Estimez le coût des denrées au marché du Cap pour gagner des badges Élite.</p>
+                            <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
+                        </div>
+                        <div class="game-icon">
+                            <img src="assets/img/hero_economie.png" alt="Prix" class="elite-image">
+                        </div>
                     </div>
                 </div>
-                <div class="game-item">
-                    <div class="game-content">
-                        <span class="meta">La grille stratège</span>
-                        <p>Trouvez les neuf acteurs clés de la transition en fonction de leur influence et secteur.</p>
-                        <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">jouer</a>
-                    </div>
-                    <div class="game-icon">
-                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Grille" class="elite-image">
-                    </div>
-                </div>
-                <div class="game-item">
-                    <div class="game-content">
-                        <span class="meta">Pronos Diplomatie</span>
-                        <p>Défiez vos collègues sur les scénarios de coopération internationale pour 2026.</p>
-                        <a href="#" class="btn-premium" style="width: fit-content; padding: 6px 25px; border: 0.5px solid #000; border-radius: 20px;">découvrir</a>
-                    </div>
-                    <div class="game-icon">
-                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Pronos" class="elite-image">
-                    </div>
-                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
         <section class="standard-section question-section" id="la-question">
             <div class="reels-header">
-                <h2>LE REGARD DU CAP.</h2>
+                <h2>VOS REPONSES DU POST</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
-            <div class="reels-grid">
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Q1">
-                        <div class="question-overlay">
-                            <div class="yellow-box">C'est quoi</div>
-                            <div class="yellow-box">la pire bêtise que</div>
-                            <div class="yellow-box">vous ayez faite ?</div>
+
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="videos-carousel-grid">
+                    <!-- Q1 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Q1">
+                            <div class="question-overlay">
+                                <div class="yellow-box">C'est quoi</div>
+                                <div class="yellow-box">la pire bêtise que</div>
+                                <div class="yellow-box">vous ayez faite ?</div>
+                            </div>
                         </div>
-                    </div>
-                    <h4>VOTRE REGARD — Et vous, c'est quoi la pire bêtise que vous ayez faite ?</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Q2">
-                        <div class="question-overlay">
-                            <div class="yellow-box">Quel est ton</div>
-                            <div class="yellow-box">premier souvenir</div>
-                            <div class="yellow-box">du Tour de France ?</div>
+                        <h4>VOTRE REGARD — Et vous, c'est quoi la pire bêtise que vous ayez faite ?</h4>
+                    </article>
+                    <!-- Q2 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Q2">
+                            <div class="question-overlay">
+                                <div class="yellow-box">Quel est ton</div>
+                                <div class="yellow-box">premier souvenir</div>
+                                <div class="yellow-box">du Tour de France ?</div>
+                            </div>
                         </div>
-                    </div>
-                    <h4>C'est quoi votre premier souvenir du Tour de France ?</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/politics_complex_1_1774468857473.png" alt="Q3">
-                        <div class="question-overlay">
-                            <div class="yellow-box">C'est quoi le</div>
-                            <div class="yellow-box">conseil que vous</div>
-                            <div class="yellow-box">donneriez à votre vous ?</div>
+                        <h4>C'est quoi votre premier souvenir du Tour de France ?</h4>
+                    </article>
+                    <!-- Q3 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/politics_complex_1_1774468857473.png" alt="Q3">
+                            <div class="question-overlay">
+                                <div class="yellow-box">C'est quoi le</div>
+                                <div class="yellow-box">conseil que vous</div>
+                                <div class="yellow-box">donneriez à votre vous ?</div>
+                            </div>
                         </div>
-                    </div>
-                    <h4>Et vous, c'est quoi le conseil que vous donneriez à votre vous d'il y a 10 ans ?</h4>
-                </article>
-                <article class="reel-card">
-                    <div class="reel-thumb-container">
-                        <img src="assets/img/politics_complex_2_1774468872703.png" alt="Q4">
-                        <div class="question-overlay">
-                            <div class="yellow-box">C'est quand</div>
-                            <div class="yellow-box">la dernière fois</div>
-                            <div class="yellow-box">que vous avez pleuré ?</div>
+                        <h4>Et vous, c'est quoi le conseil que vous donneriez à votre vous d'il y a 10 ans ?</h4>
+                    </article>
+                    <!-- Q4 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/politics_complex_2_1774468872703.png" alt="Q4">
+                            <div class="question-overlay">
+                                <div class="yellow-box">C'est quand</div>
+                                <div class="yellow-box">la dernière fois</div>
+                                <div class="yellow-box">que vous avez pleuré ?</div>
+                            </div>
                         </div>
-                    </div>
-                    <h4>VOTRE REGARD — C'est quand la dernière fois que vous avez pleuré ?</h4>
-                </article>
+                        <h4>VOTRE REGARD — C'est quand la dernière fois que vous avez pleuré ?</h4>
+                    </article>
+                    <!-- Q5 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_culture.png" alt="Q5">
+                            <div class="question-overlay">
+                                <div class="yellow-box">Si vous étiez</div>
+                                <div class="yellow-box">un livre, lequel</div>
+                                <div class="yellow-box">seriez-vous ?</div>
+                            </div>
+                        </div>
+                        <h4>VOTRE REGARD — Si vous étiez un livre, lequel seriez-vous ?</h4>
+                    </article>
+                    <!-- Q6 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_tech.png" alt="Q6">
+                            <div class="question-overlay">
+                                <div class="yellow-box">Votre plus</div>
+                                <div class="yellow-box">grande fierté</div>
+                                <div class="yellow-box">haïtienne ?</div>
+                            </div>
+                        </div>
+                        <h4>VOTRE REGARD — Quelle est votre plus grande fierté haïtienne ?</h4>
+                    </article>
+                    <!-- Q7 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_geopolitique.png" alt="Q7">
+                            <div class="question-overlay">
+                                <div class="yellow-box">Cap-Haïtien</div>
+                                <div class="yellow-box">en trois mots</div>
+                                <div class="yellow-box">pour vous ?</div>
+                            </div>
+                        </div>
+                        <h4>VOTRE REGARD — Le Cap-Haïtien en trois mots pour vous ?</h4>
+                    </article>
+                    <!-- Q8 -->
+                    <article class="video-reel-card">
+                        <div class="video-thumb-tall">
+                            <img src="assets/img/hero_economie.png" alt="Q8">
+                            <div class="question-overlay">
+                                <div class="yellow-box">Votre rêve</div>
+                                <div class="yellow-box">pour Haïti</div>
+                                <div class="yellow-box">en 2030 ?</div>
+                            </div>
+                        </div>
+                        <h4>VOTRE REGARD — Quel est votre rêve pour Haïti en 2030 ?</h4>
+                    </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
         <section class="standard-section podcasts-section" id="podcasts">
@@ -687,25 +1036,27 @@
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="podcasts-grid-v2">
-                <article class="podcast-card-v2">
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="podcasts-grid-v2">
+                    <article class="podcast-card-v2">
                     <div class="podcast-thumb-square">
                         <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Podcast 1">
                         <div class="podcast-overlay">
-                            <div class="podcast-brut-label">Le Cap.<br>podcast</div>
+                            <div class="podcast-brut-label">Post.<br>podcast</div>
                             <div class="podcast-host-label">avec la rédaction<br>L'élite</div>
                             <div class="podcast-main-label">L'interview<br>des gens<br>connus</div>
                         </div>
                     </div>
                     <h3>L'interview des gens connus</h3>
-                    <p>« L'interview Le Cap. des gens connus », c'est le podcast où des personnalités se livrent au micro, comme vous ne les avez jamais entendues. Écoutez les récits et confidences d'acteurs, de leaders et d'artistes qui bousculent les standards de la culture, du sport ou de la politique.</p>
+                    <p>« L'interview Post. des gens connus », c'est le podcast où des personnalités se livrent au micro, comme vous ne les avez jamais entendues. Écoutez les récits et confidences d'acteurs, de leaders et d'artistes qui bousculent les standards de la culture, du sport ou de la politique.</p>
                 </article>
 
                 <article class="podcast-card-v2">
                     <div class="podcast-thumb-square">
                         <img src="assets/img/economy_color_premium_1774478629301.png" alt="Podcast 2">
                         <div class="podcast-overlay">
-                            <div class="podcast-brut-label">Le Cap.<br>podcast</div>
+                            <div class="podcast-brut-label">Post.<br>podcast</div>
                             <div class="podcast-host-label">avec Alexia<br>Duchêne</div>
                             <div class="podcast-main-label">L'envers<br>de l'assiette</div>
                         </div>
@@ -718,14 +1069,55 @@
                     <div class="podcast-thumb-square">
                         <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Podcast 3">
                         <div class="podcast-overlay">
-                            <div class="podcast-brut-label">Le Cap.<br>podcast</div>
+                            <div class="podcast-brut-label">Post.<br>podcast</div>
                             <div class="podcast-host-label">avec Mina<br>Soundiram</div>
                             <div class="podcast-main-label">C'est réel.</div>
                         </div>
                     </div>
                     <h3>C'est réel</h3>
-                    <p>Je suis Mina Soundiram, journaliste chez Le Cap., et mon métier, c'est de raconter des histoires. Pour moi, un des meilleurs endroits pour les trouver, c'est les réseaux sociaux. Du voyage au bout du monde aux retrouvailles inattendues, je vous raconte ce qu'ils ont vécu derrière leur écran.</p>
+                    <p>Je suis Mina Soundiram, journaliste chez Post., et mon métier, c'est de raconter des histoires. Pour moi, un des meilleurs endroits pour les trouver, c'est les réseaux sociaux. Du voyage au bout du monde aux retrouvailles inattendues, je vous raconte ce qu'ils ont vécu derrière leur écran.</p>
                 </article>
+
+                <article class="podcast-card-v2">
+                    <div class="podcast-thumb-square">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Podcast 4">
+                        <div class="podcast-overlay">
+                            <div class="podcast-brut-label">Post.<br>podcast</div>
+                            <div class="podcast-host-label">avec la rédaction<br>L'élite</div>
+                            <div class="podcast-main-label">Les coulisses<br>du pouvoir</div>
+                        </div>
+                    </div>
+                    <h3>Les coulisses du pouvoir</h3>
+                    <p>Découvrez ce qui se passe vraiment derrière les portes closes des ministères et grandes institutions du pays.</p>
+                </article>
+
+                <article class="podcast-card-v2">
+                    <div class="podcast-thumb-square">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="Podcast 5">
+                        <div class="podcast-overlay">
+                            <div class="podcast-brut-label">Post.<br>podcast</div>
+                            <div class="podcast-host-label">avec Jean<br>Baptiste</div>
+                            <div class="podcast-main-label">Économie<br>locale</div>
+                        </div>
+                    </div>
+                    <h3>Économie locale</h3>
+                    <p>Plongeon au cœur du marché haïtien pour comprendre les défis quotidiens des entrepreneurs et producteurs.</p>
+                </article>
+
+                <article class="podcast-card-v2">
+                    <div class="podcast-thumb-square">
+                        <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Podcast 6">
+                        <div class="podcast-overlay">
+                            <div class="podcast-brut-label">Post.<br>podcast</div>
+                            <div class="podcast-host-label">avec Sarah<br>Léger</div>
+                            <div class="podcast-main-label">Tech &<br>Avenir</div>
+                        </div>
+                    </div>
+                    <h3>Tech & Avenir</h3>
+                    <p>Comment l'intelligence artificielle et la digitalisation transforment aujourd'hui le tissu social du Grand Nord.</p>
+                </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
@@ -734,8 +1126,10 @@
                 <h2>IA</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
-            <div class="reels-grid">
-                <article class="reel-card">
+            <div class="carousel-wrapper">
+                <button class="carousel-nav-btn prev">‹</button>
+                <div class="reels-grid">
+                    <article class="reel-card">
                     <div class="reel-thumb-container">
                         <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="IA 1">
                         <div class="reel-play-overlay">▶</div>
@@ -763,6 +1157,36 @@
                     </div>
                     <h4>De "suppositoire" à symbole de Paris : l'incroyable histoire de la Tour Eiffel</h4>
                 </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="IA 5">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>L'Égypte Antique reconstituée : Les mystères des Pyramides</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="IA 6">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Voyage sur Mars : Simulation IA de la première colonie humaine</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/economy_color_premium_1774478629301.png" alt="IA 7">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>Les dinosaures, l'ère jurassique comme si vous y étiez</h4>
+                </article>
+                <article class="reel-card">
+                    <div class="reel-thumb-container">
+                        <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="IA 8">
+                        <div class="reel-play-overlay">▶</div>
+                    </div>
+                    <h4>L'évolution de Port-au-Prince à travers les siècles : Vision IA</h4>
+                </article>
+                </div>
+                <button class="carousel-nav-btn next">›</button>
             </div>
         </section>
 
@@ -770,7 +1194,7 @@
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
-            <a href="home.html" class="footer-logo-large">Le Cap.</a>
+            <a href="home.html" class="footer-logo-large">Post.</a>
             
             <div class="footer-sections-grid">
                 <div class="footer-section">
@@ -816,7 +1240,7 @@
             </div>
 
             <div class="footer-legal-centered">
-                <div class="copyright"><a href="home.html" style="color: inherit; text-decoration: none;">Le Cap.</a> © 2026</div>
+                <div class="copyright"><a href="home.html" style="color: inherit; text-decoration: none;">Post.</a> © 2026</div>
                 <div class="footer-legal-links">
                     <a href="#">Politique de confidentialité</a>
                     <a href="#">Mentions légales</a>
@@ -826,6 +1250,33 @@
         </div>
     </footer>
 
-    <a href="#" class="scroll-top">↑</a>
+    <script>
+        document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+            const grid = wrapper.querySelector('.videos-carousel-grid, .podcasts-grid-v2, .reels-grid');
+            const prevBtn = wrapper.querySelector('.carousel-nav-btn.prev');
+            const nextBtn = wrapper.querySelector('.carousel-nav-btn.next');
+
+            if (grid && prevBtn && nextBtn) {
+                const scrollStep = 400;
+
+                nextBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: scrollStep, behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+                });
+
+                // Optional: Hide buttons when at edges
+                grid.addEventListener('scroll', () => {
+                    prevBtn.disabled = grid.scrollLeft <= 5;
+                    nextBtn.disabled = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 5;
+                });
+
+                // Initial state
+                prevBtn.disabled = true;
+            }
+        });
+    </script>
 </body>
 </html>
