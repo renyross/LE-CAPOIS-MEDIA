@@ -11,16 +11,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="mobile-header">
-        <div class="mobile-logo">POST.</div>
-        <button class="menu-toggle" onclick="toggleMobileMenu()">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </button>
-    </div>
     <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
 
     <aside class="sidebar">
@@ -126,7 +116,7 @@
         <div class="logo">
             <a href="home.html">Post.</a>
         </div>
-        <div class="burger-menu">
+        <div class="burger-menu" onclick="toggleMobileMenu()">
             <span></span>
             <span></span>
             <span></span>
@@ -146,7 +136,7 @@
                         <span class="category">PROSPECTIVE</span>
                         <h1>Haiti 2030 : le manifeste pour <br>une souveraineté digitale</h1>
                         <p class="lead">Face aux défis de la gouvernance traditionnelle, la diaspora émerge comme le premier vecteur d'innovation et de stabilité.</p>
-                        <div class="meta">PAR LA RÉDACTION — ANALYSE PROSPECTIVE — 12 MIN DE LECTURE</div>
+                        <div class="meta">PAR L. — ANALYSE PROSPECTIVE — 12 MIN DE LECTURE</div>
                     </div>
                 </div>
 
@@ -159,7 +149,7 @@
                         <span class="category">GÉOPOLITIQUE</span>
                         <h1>Influence Haïtienne sur <br>l'Échiquier Mondial</h1>
                         <p class="lead">Analyse des nouvelles alliances stratégiques et de la montée en puissance de la diplomatie caribéenne moderne.</p>
-                        <div class="meta">PAR FENEL PÉLISSIER — ANALYST STRATÉGIQUE — 8 MIN DE LECTURE</div>
+                        <div class="meta">PAR F. — ANALYST STRATÉGIQUE — 8 MIN DE LECTURE</div>
                     </div>
                 </div>
 
@@ -172,7 +162,7 @@
                         <span class="category">ÉCONOMIE</span>
                         <h1>Les Capitaux de la Diaspora <br>en Levier de Croissance</h1>
                         <p class="lead">Transformer les transferts de fonds en investissements productifs pour le développement durable des institutions.</p>
-                        <div class="meta">PAR MARIE-CLAUDE JEAN — EXPERTE ÉCONOMISTE — 10 MIN DE LECTURE</div>
+                        <div class="meta">PAR M. — EXPERTE ÉCONOMISTE — 10 MIN DE LECTURE</div>
                     </div>
                 </div>
 
@@ -185,7 +175,7 @@
                         <span class="category">CULTURE</span>
                         <h1>La Renaissance des Arts <br>comme Vecteur de Soft Power</h1>
                         <p class="lead">Le génie créatif haïtien s'impose mondialement, redéfinissant l'image de la nation par l'excellence artistique.</p>
-                        <div class="meta">PAR YVES MARCELIN — DIRECTEUR ARTISTIQUE — 7 MIN DE LECTURE</div>
+                        <div class="meta">PAR Y. — DIRECTEUR ARTISTIQUE — 7 MIN DE LECTURE</div>
                     </div>
                 </div>
 
@@ -198,7 +188,7 @@
                         <span class="category">PROSPECTIVE</span>
                         <h1>Le Capois : L'Architecture <br>d'une Renaissance</h1>
                         <p class="lead">Analyse d'un changement de paradigme global où l'élite intellectuelle reprend les rênes de l'avenir institutionnel.</p>
-                        <div class="meta">PAR LA RÉDACTION — ÉDITION SPÉCIALE — 15 MIN DE LECTURE</div>
+                        <div class="meta">PAR L. — ÉDITION SPÉCIALE — 15 MIN DE LECTURE</div>
                     </div>
                 </div>
             </div>
@@ -293,9 +283,19 @@
 
             function toggleMobileMenu() {
                 document.querySelector('.sidebar').classList.toggle('open');
+                document.querySelector('.burger-menu').classList.toggle('open');
                 document.querySelector('.menu-overlay').classList.toggle('active');
                 document.body.classList.toggle('no-scroll');
             }
+
+            // Close menu on link click
+            document.querySelectorAll('.sidebar-nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    if (document.querySelector('.sidebar').classList.contains('open')) {
+                        toggleMobileMenu();
+                    }
+                });
+            });
 
             // Initial call
             startAutoPlay();
@@ -354,7 +354,7 @@
 
         <section class="standard-section redaction-articles-section">
             <div class="reels-header">
-                <h2>LES ARTICLES DE LA RÉDACTION</h2>
+                <h2>NOS SELECTIONS</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
             <div class="articles-horizontal-grid">
@@ -923,7 +923,7 @@
 
         <section class="standard-section question-section" id="la-question">
             <div class="reels-header">
-                <h2>VOS REPONSES DU POST</h2>
+                <h2>NOS QUESTIONS</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
