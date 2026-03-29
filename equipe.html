@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équipe Éditoriale — POST</title>
+    <meta name="description" content="Découvrez l'équipe agile et créative derrière POST, le média d'influence et d'analyse stratégique.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
+    <link rel="stylesheet" href="style.css?v=2">
+    <style>
+        .team-intro {
+            max-width: 800px;
+            margin-bottom: 60px;
+        }
+        .team-intro h1 {
+            font-size: 48px;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+        .team-intro p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #555;
+            font-weight: 500;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+        .team-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        .team-card:last-child {
+            border-bottom: none;
+        }
+        .team-card .member-info h2 {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .team-card .member-info .role {
+            font-size: 14px;
+            font-weight: 800;
+            color: #FFB800;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .team-card .member-info .desc {
+            font-size: 15px;
+            line-height: 1.5;
+            color: #666;
+        }
+        .team-closing {
+            max-width: 800px;
+            margin-top: 60px;
+            padding: 40px;
+            background: #fafafa;
+            border: 1px solid #eee;
+            border-radius: 4px;
+        }
+        .team-closing p {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+        @media (max-width: 1024px) {
+            .team-intro h1 { font-size: 32px; }
+            .team-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-branding">
+            <div class="logo">
+                <a href="home.html">Post</a>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="home.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#international">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        International
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#economie">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 20h3v-4H4v4zm6 0h3v-9h-3v9zm6 0h3v-14h-3v14z"/></svg>
+                        Économie
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#politique">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        Politique
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#culture">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Culture
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#sport">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Sport
+                    </a>
+                </li>
+                <li>
+                    <a href="home.html#podcast">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
+                <li>
+                    <a href="equipe.html" class="active">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        Équipe
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <div class="sidebar-edition-container">
+                <div class="edition-selector">
+                    <span>Édition française</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <header class="mobile-header">
+        <div class="logo">
+            <a href="home.html">Post</a>
+        </div>
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="standard-section">
+            <div class="team-intro">
+                <h1>Équipe Éditoriale POST</h1>
+                <p>Derrière POST, une équipe agile, créative et orientée performance. Chaque rôle est pensé pour transformer l’information en contenu impactant, scalable et monétisable. Notre objectif : délivrer l’information en un temps record, générer un impact réel et construire un média durable à l’échelle mondiale.</p>
+            </div>
+
+            <div class="team-grid">
+                <!-- Renel ROSENE -->
+                <article class="team-card">
+                    <div class="member-info">
+                        <h2>Renel ROSENE</h2>
+                        <span class="role">CEO & Publishing Director</span>
+                        <p class="desc">Vision stratégique, direction globale, positionnement du média et développement des partenariats.</p>
+                    </div>
+                </article>
+
+                <!-- Vertho Cadet -->
+                <article class="team-card">
+                    <div class="member-info">
+                        <h2>Vertho Cadet</h2>
+                        <span class="role">Chief Content & Strategy Officer</span>
+                        <p class="desc">Responsable de la stratégie éditoriale, choix des sujets, angles et planification des contenus.</p>
+                    </div>
+                </article>
+
+                <!-- Juniro Saint Juste -->
+                <article class="team-card">
+                    <div class="member-info">
+                        <h2>Juniro Saint Juste</h2>
+                        <span class="role">Managing Editor – International</span>
+                        <p class="desc">Coordination des équipes éditoriales à l’international, suivi des projets et adaptation des contenus aux marchés globaux.</p>
+                    </div>
+                </article>
+
+                <!-- John Wathson PIERRE -->
+                <article class="team-card">
+                    <div class="member-info">
+                        <h2>John Wathson PIERRE</h2>
+                        <span class="role">Content Performance Analyst</span>
+                        <p class="desc">Analyse des performances, suivi des KPIs et optimisation des contenus pour maximiser l’impact et la monétisation.</p>
+                    </div>
+                </article>
+
+                <!-- Rosene Renald -->
+                <article class="team-card">
+                    <div class="member-info">
+                        <h2>Rosene Renald</h2>
+                        <span class="role">CO‑FOUNDER & Head of Video / Image Production</span>
+                        <p class="desc">Création et supervision des contenus visuels : vidéo, image et storytelling visuel pour engager et captiver les audiences.</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="team-closing">
+                <p>POST s’appuie sur une approche qui allie rapidité, efficacité et durabilité, pour construire un média innovant capable de toucher le monde entier.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-centered-content">
+            <a href="home.html" class="footer-logo-large">Post</a>
+            
+            <div class="footer-sections-grid">
+                <div class="footer-section">
+                    <h4>Éditions</h4>
+                    <ul>
+                        <li><a href="#">Haïti</a></li>
+                        <li><a href="#">France</a></li>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">International</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="equipe.html">Équipe éditoriale</a></li>
+                        <li><a href="#">Flux RSS</a></li>
+                        <li><a href="#">Nous rejoindre ↗</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social-row-centered">
+                <a href="#" title="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg></a>
+                <a href="#" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            </div>
+
+            <div class="footer-legal-centered">
+                <div class="copyright">Post © 2026</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.burger-menu').classList.toggle('open');
+            document.querySelector('.menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+    </script>
+</body>
+</html>
