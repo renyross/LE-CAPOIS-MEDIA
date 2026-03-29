@@ -967,9 +967,9 @@ main {
 }
 
 .selection-side {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 .selection-main {
@@ -987,12 +987,26 @@ main {
     border-radius: 4px;
 }
 
-.selection-card .image-thumb {
+.selection-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 25px;
+    border-bottom: 0.5px solid #eee;
     width: 100%;
-    aspect-ratio: 16/9;
+    cursor: pointer;
+}
+
+.selection-card:last-child {
+    border-bottom: none;
+}
+
+.selection-card .image-thumb {
+    flex: 0 0 160px;
+    height: 90px;
     background: var(--off-white);
     overflow: hidden;
-    margin-bottom: 15px;
     border: 0.5px solid var(--border-color);
     border-radius: 4px;
 }
@@ -1004,31 +1018,21 @@ main {
     line-height: 1;
     letter-spacing: -0.04em;
     margin: 20px 0;
-    text-transform: none; /* In image it is mixed case */
-}
-
-
-.side-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-
-.selection-card .image-thumb {
-    width: 100%;
-    aspect-ratio: 16/9;
-    background: var(--off-white);
-    overflow: hidden;
-    margin-bottom: 15px;
-    border: 0.5px solid var(--border-color);
+    text-transform: none;
 }
 
 .selection-card h4 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
     font-weight: 800 !important;
-    font-size: 16px !important;
-    line-height: 1.3;
-    letter-spacing: -0.02em;
+    font-size: 20px !important; /* Larger for better impact like in selection */
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .tag-red {
