@@ -1305,7 +1305,7 @@ main {
 
 /* Cinematic Video Section */
 .videos-section-cinematic {
-    padding: 60px 0;
+    padding: 60px 140px;
     margin-bottom: 80px;
 }
 
@@ -1435,6 +1435,7 @@ main {
 }
 
 @media (max-width: 1024px) {
+    .videos-section-cinematic { padding: 40px 20px; }
     .video-featured-content h3 { font-size: 26px; }
     .video-secondary-grid { grid-template-columns: 1fr; gap: 20px; }
     .video-featured-img { aspect-ratio: 4/3; }
