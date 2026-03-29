@@ -22,7 +22,7 @@
 body {
     background-color: var(--white);
     color: #555; /* Normal paragraph text in grey */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Gotham', 'Montserrat', sans-serif;
     line-height: 1.7;
     font-size: 17px;
     -webkit-font-smoothing: antialiased;
@@ -527,7 +527,7 @@ main {
 
 
 .hero-article h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Gotham', 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 56px; /* Larger for better impact */
     line-height: 1.1;
@@ -750,7 +750,7 @@ main {
 }
 
 .insight-item h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Gotham', 'Montserrat', sans-serif;
     font-size: 17px;
     line-height: 1.25;
     font-weight: 800;
@@ -796,7 +796,7 @@ main {
 }
 
 .capture-box h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Gotham', 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 48px;
     margin-bottom: 25px;

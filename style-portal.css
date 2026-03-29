@@ -14,7 +14,7 @@
 body {
     background-color: var(--black);
     color: var(--white);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Gotham', 'Montserrat', sans-serif;
     height: 100vh;
     display: flex;
     align-items: center;
