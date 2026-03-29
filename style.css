@@ -98,7 +98,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #0066FF; /* Brut-like vibrant blue */
     color: #fff;
     font-size: 11px;
-    font-weight: 800;
+    font-weight: 800 !important;
     border-radius: 6px;
     text-transform: capitalize;
 }
@@ -106,7 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 .card-content h4 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 800 !important;
     line-height: 1.3;
     color: var(--black);
     margin: 0;
@@ -2743,4 +2743,16 @@ main {
     .hero-nav-arrow, .hero-controls-extra {
         display: none !important;
     }
+}
+
+.footer-logo-large {
+    font-family: 'Gotham', 'Montserrat', sans-serif !important;
+    font-size: 120px;
+    font-weight: 800;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: -0.06em;
+    display: block;
+    margin-bottom: 40px;
+    line-height: 0.8;
 }
