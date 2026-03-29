@@ -51,24 +51,32 @@ h1, h2, h3, h4, h5, h6 {
 /* Articles Horizontal Grid (Brut Style) */
 .articles-horizontal-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 40px;
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .article-horizontal-card {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
     gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #efefef;
     cursor: pointer;
     width: 100%;
 }
 
+.article-horizontal-card:last-child,
+.article-horizontal-card:nth-last-child(2) {
+    border-bottom: none;
+}
+
 .card-thumb {
     flex: 0 0 160px;
-    height: 160px;
-    border-radius: 12px;
+    height: 90px;
+    border-radius: 4px; /* Flatter radius for this specific style */
     overflow: hidden;
     background: #f0f0f0;
 }
@@ -91,28 +99,36 @@ h1, h2, h3, h4, h5, h6 {
     gap: 10px;
 }
 
+.card-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 4px;
+}
+
+.label-dot {
+    width: 8px;
+    height: 8px;
+    background: #FFB800; /* Yellow dot like in image */
+    border-radius: 50%;
+}
+
 .badge-blue {
-    display: inline-block;
-    align-self: flex-start;
-    padding: 5px 12px;
-    background: #0066FF; /* Brut-like vibrant blue */
-    color: #fff;
-    font-size: 11px;
-    font-weight: 800 !important;
-    border-radius: 6px;
-    text-transform: capitalize;
+    display: none; /* Hide old labels in this section */
 }
 
 .card-content h4 {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 800 !important;
-    line-height: 1.3;
+    line-height: 1.25;
     color: var(--black);
     margin: 0;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
-    line-clamp: 4;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -664,7 +680,7 @@ main {
     aspect-ratio: 16/9;
     background: #000;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .grid-featured-item h2 {
@@ -693,7 +709,7 @@ main {
     width: 100%;
     aspect-ratio: 16/9;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 4px;
     background: #f5f5f5;
     display: block;
 }
@@ -968,7 +984,7 @@ main {
     background: var(--black);
     overflow: hidden;
     margin-bottom: 25px;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .selection-card .image-thumb {
@@ -978,7 +994,7 @@ main {
     overflow: hidden;
     margin-bottom: 15px;
     border: 0.5px solid var(--border-color);
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .selection-main h2 {
@@ -1176,7 +1192,7 @@ main {
     position: relative;
     width: 100%;
     aspect-ratio: 9/16;
-    border-radius: 15px;
+    border-radius: 4px;
     overflow: hidden;
     background: var(--black);
 }
@@ -1218,7 +1234,7 @@ main {
     width: 100%;
     aspect-ratio: 9/16;
     background: #000;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
     border: 0.5px solid #eee;
@@ -1300,7 +1316,7 @@ main {
     background: var(--black);
     overflow: hidden;
     position: relative;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .play-overlay {
@@ -1365,7 +1381,7 @@ main {
     background: var(--black);
     overflow: hidden;
     margin-bottom: 15px;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .mini-play {
@@ -1628,7 +1644,7 @@ main {
     background: var(--black);
     overflow: hidden;
     margin-bottom: 30px;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .dual-column-side-item .thumb {
@@ -1637,7 +1653,7 @@ main {
     background: #000;
     overflow: hidden;
     flex-shrink: 0;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .featured-sport h2 {
@@ -1730,7 +1746,7 @@ main {
     background: var(--black);
     margin-bottom: 25px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .dual-column-main-feature h2 {
@@ -1765,7 +1781,7 @@ main {
     background: var(--gray-light);
     overflow: hidden;
     position: relative;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .news-card-h .content {
@@ -1867,7 +1883,7 @@ main {
     overflow: hidden;
     border: 0.5px solid var(--border-color);
     position: relative;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .play-mini-overlay {
@@ -1956,7 +1972,7 @@ main {
     width: 80px;
     height: 80px;
     flex-shrink: 0;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     background: #f5f5f5;
 }
@@ -2011,7 +2027,7 @@ main {
     width: 100%;
     aspect-ratio: 1/1;
     position: relative;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     background: #000;
 }
@@ -2418,7 +2434,7 @@ main {
     aspect-ratio: 16/9;
     background: #f5f5f5;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 4px;
 }
 
 .eco-side-item .content {
@@ -2467,7 +2483,7 @@ main {
     position: relative;
     width: 100%;
     aspect-ratio: 16/10;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     background: #f0f0f0;
 }
@@ -2731,8 +2747,9 @@ main {
         }
 
         .card-thumb {
-            flex: 0 0 120px;
-            height: 120px;
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
         }
 
         .card-content h4 {
@@ -2755,4 +2772,166 @@ main {
     display: block;
     margin-bottom: 40px;
     line-height: 0.8;
+}
+
+/* Featured Videos Section (Brut Style) */
+.featured-videos-section {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 80px 140px;
+    margin: 0 auto;
+}
+
+.video-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 60px;
+}
+
+.video-hero-player {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #111;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-hero-player img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.badge-yellow {
+    background: #FFD700;
+    color: var(--black);
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 800;
+    border-radius: 4px;
+    width: fit-content;
+    text-transform: none;
+}
+
+.video-hero-content h1 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 800 !important;
+    line-height: 1.1;
+    color: var(--white) !important;
+    letter-spacing: -0.04em;
+}
+
+.video-hero-content p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
+    -webkit-line-clamp: 15;
+    line-clamp: 15;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.video-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.video-card-mini {
+    position: relative;
+    height: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #111;
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.card-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6) blur(2px);
+    transition: transform 0.5s ease;
+}
+
+.video-card-mini:hover .card-bg img {
+    transform: scale(1.05);
+    filter: brightness(0.7) blur(0);
+}
+
+.card-overlay-content {
+    position: relative;
+    z-index: 2;
+    padding: 40px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(0,0,0,0.8));
+}
+
+.card-overlay-content h3 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 28px !important;
+    font-weight: 800 !important;
+    color: var(--white) !important;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.btn-video {
+    background: var(--white);
+    color: var(--black);
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+    border-radius: 50px;
+    width: fit-content;
+    margin-top: auto;
+    transition: all 0.3s ease;
+}
+
+.btn-video:hover {
+    background: #FFD700;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .featured-videos-section {
+        padding: 40px 20px;
+    }
+    .video-hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .video-hero-content h1 {
+        font-size: 32px !important;
+    }
+    .video-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .video-card-mini {
+        height: 300px;
+    }
 }
