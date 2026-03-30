@@ -1546,11 +1546,12 @@ main {
 }
 
 @media (max-width: 1024px) {
-    .brut-featured-card { height: auto; }
+    .brut-featured-card { height: auto; padding: 0; } /* Remove padding for edge-to-edge feel if desired, or keep minimal */
     .brut-card-inner { flex-direction: column; text-align: center; }
-    .brut-thumb-v-large { width: 100%; height: 400px; }
-    .brut-content-large { align-items: center; text-align: center; padding-top: 20px; }
-    .brut-content-large h3 { font-size: 24px; }
+    .brut-thumb-h-large { width: 100%; aspect-ratio: 16/9; }
+    .brut-content-large { align-items: center; text-align: center; padding: 25px 20px; }
+    .brut-content-large h3 { font-size: 24px; margin-bottom: 15px; }
+    .brut-content-large p { font-size: 16px; margin-bottom: 20px; }
 }
 
 .brut-video-card {
