@@ -1531,7 +1531,6 @@ main {
     line-height: 1;
     color: #fff;
     margin-bottom: 25px;
-    text-transform: uppercase;
     letter-spacing: -0.04em;
 }
 
@@ -1639,7 +1638,6 @@ main {
     font-weight: 800;
     font-size: 24px; /* Large as in image */
     margin-bottom: 12px;
-    text-transform: uppercase;
 }
 
 .brut-content-large .live-tag {
@@ -1647,7 +1645,6 @@ main {
     font-weight: 800;
     font-size: 26px;
     margin-bottom: 15px;
-    text-transform: uppercase;
     display: block;
 }
 
