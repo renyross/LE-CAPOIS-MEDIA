@@ -1435,6 +1435,16 @@ main {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
+.video-section-brut {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.video-section-brut .reels-header {
+    padding: 0 140px;
+    margin-bottom: 30px;
+}
+
 /* Brut Style Video Cards */
 .video-brut-grid {
     display: grid;
