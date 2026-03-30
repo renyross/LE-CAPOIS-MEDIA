@@ -1600,6 +1600,32 @@ main {
     object-fit: cover;
 }
 
+.brut-video-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Anchor button to bottom */
+    height: 100%;
+    text-align: left;
+    padding: 5px 0;
+}
+
+.brut-video-info .brut-category {
+    font-size: 20px; /* Larger as per model */
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.brut-video-info h4 {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 850;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: auto; /* Push content apart */
+    letter-spacing: -0.02em;
+}
+
 .brut-thumb-v-mini::after, .brut-thumb-h-large::after {
     content: '';
     position: absolute;
