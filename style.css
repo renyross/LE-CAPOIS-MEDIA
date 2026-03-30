@@ -1449,38 +1449,25 @@ main {
     margin-top: 20px;
 }
 
-/* Featured Brut Card (Landscape Style) */
-.brut-featured-card.landscape-style {
-    height: 400px; /* Reduced height for landscape feel */
+/* Featured Brut Card */
+.brut-featured-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 400px;
+    background: #000;
+    margin-bottom: 20px;
 }
 
 .brut-thumb-h-large {
     flex-shrink: 0;
-    width: 600px; /* Wider for 16:9 */
-    height: 100%;
+    width: 600px; /* Landscape width */
+    aspect-ratio: 16/9;
+    background: #111;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
     position: relative;
-}
-
-.brut-thumb-h-large::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background: rgba(255,255,255,0.2);
-    backdrop-filter: blur(4px);
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: 50%;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5v14l11-7z' fill='white'/%3E%3C/svg%3E");
-    background-size: 32px;
-    background-position: center 55%;
-    background-repeat: no-repeat;
-    pointer-events: none;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
 }
 
 .brut-thumb-h-large img {
@@ -1489,9 +1476,23 @@ main {
     object-fit: cover;
 }
 
-@media (max-width: 1024px) {
-    .brut-featured-card.landscape-style { height: auto; }
-    .brut-thumb-h-large { width: 100%; height: 300px; aspect-ratio: 16/9; }
+/* Play button for landscape */
+.brut-thumb-h-large::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 50%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5v14l11-7z' fill='white'/%3E%3C/svg%3E");
+    background-size: 32px;
+    background-position: center 55%;
+    background-repeat: no-repeat;
 }
 
 .brut-content-large {
@@ -1500,6 +1501,14 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: left;
+    padding-left: 10px;
+}
+
+@media (max-width: 1100px) {
+    .brut-featured-card { padding: 40px 20px; height: auto; }
+    .brut-card-inner { flex-direction: column; text-align: center; }
+    .brut-thumb-h-large { width: 100%; }
+    .brut-content-large { padding-left: 0; padding-top: 30px; align-items: center; text-align: center; }
 }
 
 .brut-content-large h3 {
