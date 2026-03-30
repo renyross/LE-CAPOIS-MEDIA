@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Nav Buttons at bottom right */
 .grid-nav-brut {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     gap: 15px;
     margin-top: 30px;
     max-width: 1100px;
