@@ -1435,16 +1435,6 @@ main {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-.video-section-brut {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-}
-
-.video-section-brut .reels-header {
-    padding: 0 140px;
-    margin-bottom: 30px;
-}
-
 /* Brut Style Video Cards */
 .video-brut-grid {
     display: grid;
@@ -1468,6 +1458,11 @@ main {
     min-height: 320px; /* Reduced from 350px */
     background: #000;
     margin-bottom: 20px;
+}
+
+.brut-featured-card .brut-card-inner {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .brut-featured-card .brut-card-bg {
@@ -1525,7 +1520,8 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding-left: 10px;
+    padding-left: 30px; /* Space from video */
+    padding-right: 40px; /* Right margin for breathing room */
 }
 
 @media (max-width: 1100px) {
