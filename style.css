@@ -1453,7 +1453,7 @@ main {
 /* Featured Brut Card */
 .brut-featured-card {
     position: relative;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     min-height: 400px;
     background: #000;
@@ -1478,7 +1478,7 @@ main {
     width: 600px; /* Landscape width */
     aspect-ratio: 16/9;
     background: #111;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     position: relative;
     box-shadow: 0 15px 40px rgba(0,0,0,0.6);
@@ -1553,7 +1553,7 @@ main {
 
 .brut-video-card {
     position: relative;
-    border-radius: 12px;
+    border-radius: 4px;
     overflow: hidden;
     height: 320px;
     background: #000;
@@ -1589,7 +1589,7 @@ main {
     flex-shrink: 0;
     width: 160px;
     height: 100%;
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     position: relative;
