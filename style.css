@@ -1463,6 +1463,7 @@ main {
 .brut-featured-card .brut-card-inner {
     padding-left: 0;
     padding-right: 0;
+    gap: 40px; /* Increased margin to the right of video */
 }
 
 .brut-featured-card .brut-card-bg {
@@ -1520,7 +1521,7 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: left;
-    padding-left: 30px; /* Space from video */
+    padding-left: 10px; /* Decreased slightly per request */
     padding-right: 40px; /* Right margin for breathing room */
 }
 
