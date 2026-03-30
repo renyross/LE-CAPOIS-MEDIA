@@ -105,8 +105,32 @@
             font-size: 18px;
             transition: background 0.3s ease;
         }
-        .btn-contact:hover {
-            background: #b00;
+        .bullet-list-brut {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+        }
+        .bullet-list-brut li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .bullet-list-brut li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 10px;
+            width: 8px;
+            height: 8px;
+            background: #d00;
+        }
+        .bullet-list-brut li strong {
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 16px;
+            margin-right: 5px;
         }
         @media (max-width: 768px) {
             .rejoindre-header h1 { font-size: 38px; }
@@ -121,7 +145,7 @@
     <aside class="sidebar">
         <div class="sidebar-branding">
             <div class="logo">
-                <a href="home.html">Post</a>
+                <a href="home.html">Post.</a>
             </div>
         </div>
         
@@ -184,7 +208,7 @@
 
     <header class="mobile-header">
         <div class="logo">
-            <a href="home.html">Post</a>
+            <a href="home.html">Post.</a>
         </div>
         <div class="burger-menu" onclick="toggleMobileMenu()">
             <span></span>
@@ -196,11 +220,6 @@
     <main>
         <section class="standard-section">
             <div class="rejoindre-content">
-                <div class="rejoindre-header">
-                    <h1>Rejoindre POST</h1>
-                    <p>Construisons un média qui compte. Ensemble.</p>
-                </div>
-
                 <div class="section-block">
                     <h2>Découvrir POST</h2>
                     <h3>Qui sommes-nous ?</h3>
@@ -211,63 +230,38 @@
                 </div>
 
                 <div class="section-block">
-                    <h2>Travailler chez POST</h2>
                     <h3>Notre vision</h3>
                     <p>Nous croyons en un monde où l’information est claire, accessible et digne de confiance. Un monde où les contenus ne sont pas seulement consommés, mais compris, partagés et utilisés pour faire évoluer les idées.</p>
                     
                     <h3>Notre mission</h3>
-                    <p>Développer un média moderne, performant et crédible, capable de :</p>
-                    <ul class="reasons-list">
-                        <li class="reason-item">Rendre les sujets complexes accessibles</li>
-                        <li class="reason-item">Produire des contenus à forte valeur ajoutée</li>
-                        <li class="reason-item">Engager des communautés actives et conscientes</li>
-                        <li class="reason-item">Utiliser la data pour amplifier la portée et l’impact</li>
+                    <ul class="bullet-list-brut">
+                        <li>Rendre les sujets complexes accessibles</li>
+                        <li>Produire des contenus à forte valeur ajoutée</li>
+                        <li>Engager des communautés actives et conscientes</li>
+                        <li>Utiliser la data pour amplifier la portée et l’impact</li>
                     </ul>
 
                     <h3>Nos valeurs</h3>
-                    <div class="values-list">
-                        <div class="value-item">
-                            <strong>Clarté</strong>
-                            Simplifier sans dénaturer
-                        </div>
-                        <div class="value-item">
-                            <strong>Exigence</strong>
-                            Produire un contenu précis et pertinent
-                        </div>
-                        <div class="value-item">
-                            <strong>Innovation</strong>
-                            Tester, analyser, optimiser en continu
-                        </div>
-                        <div class="value-item">
-                            <strong>Responsabilité</strong>
-                            Traiter l’information avec rigueur
-                        </div>
-                        <div class="value-item">
-                            <strong>Impact</strong>
-                            Créer du contenu qui laisse une trace
-                        </div>
-                    </div>
-                </div>
-
-                <div class="section-block">
-                    <h2>Pourquoi rejoindre POST ?</h2>
-                    <h3>Environnement de travail</h3>
-                    <p>Un environnement agile, en constante évolution, où chaque idée peut devenir un projet. Organisation flexible avec possibilité de travail à distance selon les missions.</p>
+                    <ul class="bullet-list-brut">
+                        <li><strong>Clarté :</strong> Simplifier sans dénaturer</li>
+                        <li><strong>Exigence :</strong> Produire un contenu précis et pertinent</li>
+                        <li><strong>Innovation :</strong> Tester, analyser, optimiser en continu</li>
+                        <li><strong>Responsabilité :</strong> Traiter l’information avec rigueur</li>
+                        <li><strong>Impact :</strong> Créer du contenu qui laisse une trace</li>
+                    </ul>
 
                     <h3>Développement professionnel</h3>
-                    <p>Rejoindre POST, c’est évoluer rapidement dans un environnement qui valorise l’apprentissage :</p>
-                    <ul class="reasons-list">
-                        <li class="reason-item">Montée en compétences sur les outils et plateformes</li>
-                        <li class="reason-item">Culture test & learn</li>
-                        <li class="reason-item">Prise de responsabilités rapide</li>
+                    <ul class="bullet-list-brut">
+                        <li>Montée en compétences sur les outils et plateformes</li>
+                        <li>Culture test & learn</li>
+                        <li>Prise de responsabilités rapide</li>
                     </ul>
 
                     <h3>Impact réel</h3>
-                    <p>Chez POST, chaque contenu est conçu pour générer un impact mesurable :</p>
-                    <ul class="reasons-list">
-                        <li class="reason-item">Audience large et engagée</li>
-                        <li class="reason-item">Influence sur les conversations</li>
-                        <li class="reason-item">Contribution à une meilleure compréhension des enjeux</li>
+                    <ul class="bullet-list-brut">
+                        <li>Audience large et engagée</li>
+                        <li>Influence sur les conversations</li>
+                        <li>Contribution à une meilleure compréhension des enjeux</li>
                     </ul>
 
                     <h3>Opportunités</h3>
@@ -285,7 +279,7 @@
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
-            <a href="home.html" class="footer-logo-large">Post</a>
+            <a href="home.html" class="footer-logo-large">Post.</a>
             
             <div class="footer-sections-grid">
                 <div class="footer-section">
@@ -293,6 +287,7 @@
                     <ul>
                         <li><a href="#">Haïti</a></li>
                         <li><a href="#">France</a></li>
+                        <li><a href="#">Canada</a></li>
                         <li><a href="#">USA</a></li>
                         <li><a href="#">International</a></li>
                     </ul>
