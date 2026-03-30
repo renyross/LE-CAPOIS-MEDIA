@@ -1434,11 +1434,6 @@ main {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-@media (max-width: 1024px) {
-    .videos-section-cinematic { padding: 40px 20px; }
-    .video-featured-content h3 { font-size: 26px; }
-    .video-secondary-grid, .video-brut-grid { grid-template-columns: 1fr; gap: 20px; }
-    .video-featured-img { aspect-ratio: 4/3; }
 }
 
 /* Brut Style Video Cards */
@@ -1447,6 +1442,13 @@ main {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+    .videos-section-cinematic { padding: 40px 20px; }
+    .video-featured-content h3 { font-size: 26px; }
+    .video-secondary-grid, .video-brut-grid { grid-template-columns: 1fr; gap: 20px; }
+    .video-featured-img { aspect-ratio: 4/3; }
 }
 
 /* Featured Brut Card */
