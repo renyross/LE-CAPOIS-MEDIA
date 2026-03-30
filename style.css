@@ -1634,7 +1634,7 @@ main {
 }
 
 .brut-category {
-    color: #fff;
+    color: var(--yellow);
     font-weight: 800;
     font-size: 24px; /* Large as in image */
     margin-bottom: 12px;
