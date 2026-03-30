@@ -28,37 +28,35 @@
             color: #444;
             font-weight: 500;
         }
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px 80px;
-            margin-bottom: 100px;
-        }
-        .team-card {
+        .team-list {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 40px;
+            margin-bottom: 100px;
         }
-        .team-card .member-info h2 {
-            font-size: 26px;
+        .team-item {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid #eee;
+        }
+        .team-item:last-child {
+            border-bottom: none;
+        }
+        .team-item h2 {
+            font-size: 24px;
             font-weight: 900;
-            margin-bottom: 8px;
+            margin-bottom: 0;
             letter-spacing: -0.02em;
         }
-        .team-card .member-info .role {
-            font-size: 12px;
+        .team-item .role {
+            font-size: 13px;
             font-weight: 800;
             color: #d00;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            margin-bottom: 15px;
+            letter-spacing: 0.12em;
             display: block;
-        }
-        .team-card .member-info .desc {
-            font-size: 15px;
-            line-height: 1.6;
-            color: #555;
-            font-weight: 500;
         }
         .team-closing {
             max-width: 700px;
@@ -165,46 +163,36 @@
                 <p>Derrière POST, une équipe agile, créative et orientée performance.</p>
             </div>
 
-            <div class="team-grid">
+            <div class="team-list">
                 <!-- Renel ROSENE -->
-                <article class="team-card">
-                    <div class="member-info">
-                        <h2>Renel ROSENE</h2>
-                        <span class="role">CEO & Publishing Director</span>
-                    </div>
-                </article>
+                <div class="team-item">
+                    <h2>Renel ROSENE</h2>
+                    <span class="role">CEO & Publishing Director</span>
+                </div>
 
                 <!-- Vertho CADET -->
-                <article class="team-card">
-                    <div class="member-info">
-                        <h2>Vertho CADET</h2>
-                        <span class="role">Chief Content & Strategy Officer</span>
-                    </div>
-                </article>
+                <div class="team-item">
+                    <h2>Vertho CADET</h2>
+                    <span class="role">Chief Content & Strategy Officer</span>
+                </div>
 
                 <!-- Juniro SAINT JUSTE -->
-                <article class="team-card">
-                    <div class="member-info">
-                        <h2>Juniro SAINT JUSTE</h2>
-                        <span class="role">Managing Editor – International</span>
-                    </div>
-                </article>
+                <div class="team-item">
+                    <h2>Juniro SAINT JUSTE</h2>
+                    <span class="role">Managing Editor – International</span>
+                </div>
 
                 <!-- John Wathson PIERRE -->
-                <article class="team-card">
-                    <div class="member-info">
-                        <h2>John Wathson PIERRE</h2>
-                        <span class="role">Content Performance Analyst</span>
-                    </div>
-                </article>
+                <div class="team-item">
+                    <h2>John Wathson PIERRE</h2>
+                    <span class="role">Content Performance Analyst</span>
+                </div>
 
-                <!-- ROSENE Renald -->
-                <article class="team-card">
-                    <div class="member-info">
-                        <h2>ROSENE Renald</h2>
-                        <span class="role">CO‑FOUNDER & Head of Video / Image Production</span>
-                    </div>
-                </article>
+                <!-- Renald ROSENE -->
+                <div class="team-item">
+                    <h2>Renald ROSENE</h2>
+                    <span class="role">CO‑FOUNDER & Head of Video / Image Production</span>
+                </div>
             </div>
 
             <div class="team-closing">
