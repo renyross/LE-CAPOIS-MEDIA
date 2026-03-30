@@ -1554,7 +1554,7 @@ main {
     position: relative;
     border-radius: 4px;
     overflow: hidden;
-    height: 320px;
+    height: 200px; /* Reduced from 320px */
     background: #000;
 }
 
@@ -1566,7 +1566,7 @@ main {
     height: 100%;
     background-size: cover;
     background-position: center;
-    filter: blur(40px) brightness(0.7);
+    filter: blur(40px) brightness(0.6);
     transform: scale(1.2);
     z-index: 1;
 }
@@ -1579,22 +1579,22 @@ main {
     z-index: 2;
     display: flex;
     height: 100%;
-    padding: 30px;
-    gap: 30px;
+    padding: 20px; /* Reduced from 30px */
+    gap: 20px; /* Reduced from 30px */
     align-items: center;
 }
 
-.brut-thumb-v {
+.brut-thumb-h-mini {
     flex-shrink: 0;
-    width: 160px;
-    height: 100%;
+    width: 240px; /* Landscape width */
+    aspect-ratio: 16/9;
     border-radius: 4px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     position: relative;
 }
 
-.brut-thumb-v::after, .brut-thumb-v-large::after {
+.brut-thumb-h-mini::after, .brut-thumb-h-large::after {
     content: '';
     position: absolute;
     top: 50%;
