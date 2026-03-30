@@ -1435,8 +1435,6 @@ main {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-}
-
 /* Brut Style Video Cards */
 .video-brut-grid {
     display: grid;
