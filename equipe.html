@@ -31,15 +31,39 @@
         .team-list {
             display: flex;
             flex-direction: column;
-            gap: 40px;
+            gap: 30px;
             margin-bottom: 100px;
+            position: relative;
+            padding-left: 30px;
+        }
+        .team-list::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 15px;
+            bottom: 30px;
+            width: 2px;
+            background: #e2e2e2;
         }
         .team-item {
             display: flex;
             flex-direction: column;
             gap: 5px;
             padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
+            position: relative;
+            border-bottom: 1px solid #f9f9f9;
+        }
+        .team-item::before {
+            content: '';
+            position: absolute;
+            left: -29px;
+            top: 8px;
+            width: 10px;
+            height: 10px;
+            background: #d00;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            z-index: 1;
         }
         .team-item:last-child {
             border-bottom: none;
