@@ -1614,6 +1614,7 @@ main {
     font-size: 20px; /* Larger as per model */
     font-weight: 900;
     margin-bottom: 5px;
+    color: var(--yellow);
 }
 
 .brut-video-info h4 {
@@ -1707,10 +1708,20 @@ main {
 }
 
 @media (max-width: 1200px) {
-    .brut-video-card { height: auto; }
-    .brut-card-inner { flex-direction: column; text-align: center; }
-    .brut-thumb-v { width: 100%; height: 300px; }
-    .brut-content { align-items: center; }
+    .brut-video-card { height: 220px; }
+    .brut-video-card .brut-card-inner { flex-direction: row; text-align: left; gap: 15px; }
+    .brut-thumb-v-mini { width: 110px; }
+    .brut-video-info h4 { font-size: 20px; }
+    .brut-video-info .brut-category { font-size: 16px; }
+}
+
+@media (max-width: 768px) {
+    .brut-video-card { height: 180px; }
+    .brut-video-card .brut-card-inner { padding: 10px; gap: 12px; }
+    .brut-thumb-v-mini { width: 90px; }
+    .brut-video-info h4 { font-size: 16px; }
+    .brut-video-info .brut-category { font-size: 14px; }
+    .btn-brut-pill { padding: 6px 15px; font-size: 12px; }
 }
 
 .featured-video:hover .play-overlay {
