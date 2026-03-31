@@ -14,7 +14,7 @@
 body {
     background-color: var(--black);
     color: var(--white);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     height: 100vh;
     display: flex;
@@ -38,7 +38,7 @@ body {
 }
 
 .logo-portal {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 120px;
     font-weight: 800;
     letter-spacing: -0.06em;
@@ -49,6 +49,33 @@ body {
 .logo-portal a {
     color: var(--white);
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* --- REUSABLE LOGO COMPONENT (Portal Theme) --- */
+.logo-play-o {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.56em;
+    height: 0.56em;
+    background: #fff; /* White circle for dark theme */
+    border-radius: 50%;
+    margin-left: 0.02em;
+    margin-right: 0.04em;
+    position: relative;
+    top: 0.04em;
+}
+
+.logo-play-o::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0.15em solid transparent;
+    border-bottom: 0.15em solid transparent;
+    border-left: 0.22em solid #000; /* Black triangle */
+    margin-left: 0.06em;
 }
 
 .portal-grid {

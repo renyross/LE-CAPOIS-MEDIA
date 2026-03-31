@@ -7,9 +7,9 @@
     <meta name="description" content="Média d'élite pour la diaspora haïtienne et les décideurs. Analyse stratégique, géopolitique et prospective.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
@@ -17,7 +17,7 @@
     <aside class="sidebar">
         <div class="sidebar-branding">
             <div class="logo">
-                <a href="home.html">Post.</a>
+                <a href="home.html">P<span class="logo-play-o"></span>st</a>
             </div>
         </div>
         
@@ -109,7 +109,7 @@
 
     <header class="mobile-header">
         <div class="logo">
-            <a href="home.html">Post.</a>
+            <a href="home.html">P<span class="logo-play-o"></span>st</a>
         </div>
         <div class="burger-menu" onclick="toggleMobileMenu()">
             <span></span>
@@ -302,17 +302,17 @@
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
             <div class="selection-grid">
-                <div class="selection-main">
+                <a href="article-krisla.html" class="selection-main" style="text-decoration: none; color: inherit; display: block;">
                     <div class="image-wrapper">
-                        <img src="assets/img/selection_main_color_premium_1774478611922.png" alt="Architecture Institutionnelle" class="elite-image">
+                        <img src="assets/img/krisla-hero.png" alt="Contrôle à Carrefour" class="elite-image">
                     </div>
                     <div class="card-label">
                         <span class="label-dot"></span>
                         <span>EN UNE</span>
                     </div>
                     <h2>Le système de contrôle implacable de Krisla à Carrefour</h2>
-                    <div class="card-meta"></div>
-                </div>
+                    <div class="card-meta">PAR LA RÉDACTION — 10 MIN DE LECTURE</div>
+                </a>
                 <div class="selection-side">
                     <article class="selection-card">
                         <div class="image-thumb">
@@ -553,58 +553,88 @@
             </div> <!-- End carousel-wrapper -->
         </section>
 
-        <section class="standard-section videos-section-cinematic">
-            <div class="reels-header">
-                <h2>Nos vidéos</h2>
+        <section class="standard-section selection-soir-section">
+            <div class="selection-soir-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+                <h2 style="font-size: 20px; margin: 0;">Nos vidéos</h2>
                 <a href="#" class="btn-all-reels">Tout voir</a>
             </div>
 
-            <div class="video-featured-brut">
-                <div class="brut-featured-card">
-                    <div class="brut-card-bg" style="background-image: url('assets/img/video_featured_color_1774871672937.png');"></div>
-                    <div class="brut-card-inner">
-                        <div class="brut-thumb-h-large">
-                            <img src="assets/img/video_featured_color_1774871672937.png" alt="Décryptage Featured">
-                        </div>
-                        <div class="brut-content-large">
-                            <span class="live-tag">Décryptage</span>
-                            <h3>Post en immersion : Reportage sur les nouvelles dynamiques de la <br>diaspora</h3>
-                            <p>Un voyage analytique au cœur des réseaux d'influence qui façonnent l'avenir d'Haïti depuis l'étranger. Une production exclusive POST.</p>
-                            <a href="#" class="btn-brut-pill">Voir la vidéo</a>
-                        </div>
+            <div class="selection-soir-grid">
+                <!-- Main Featured Item (Left) -->
+                <a href="article-krisla.html" class="selection-large-card">
+                    <div class="img-container" style="position:relative;">
+                        <img src="assets/img/krisla-hero.png" alt="Woodland Victory">
+                        <div class="reel-play-overlay" style="width:60px; height:60px; font-size:24px; opacity:1;">▶</div>
                     </div>
-                </div>
-            </div>
+                    <div class="selection-meta">
+                        <span class="meta-dot" style="background: #ffcc00;"></span>
+                        Sécurité, Analyse Stratégique
+                    </div>
+                    <h3>Le système de contrôle implacable de Krisla à Carrefour</h3>
+                </a>
 
-            <div class="video-brut-grid">
-                <!-- Card 1: Reportage -->
-                <div class="brut-video-card reportage">
-                    <div class="brut-card-bg" style="background-image: url('assets/img/video_brut_reportage_1774828793739.png');"></div>
-                    <div class="brut-card-inner">
-                        <div class="brut-thumb-v-mini">
-                            <img src="assets/img/video_brut_reportage_1774828793739.png" alt="Reportage">
+                <!-- Sidebar List (Right) -->
+                <div class="selection-list">
+                    <!-- Item 1 -->
+                    <a href="#" class="selection-item">
+                        <div class="thumb" style="position:relative;">
+                            <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Pharmacies">
+                            <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
                         </div>
-                        <div class="brut-video-info">
-                            <span class="brut-category">Reportage</span>
-                            <h4>Sur le terrain — Économie : Explorer l'avenir des échanges commerciaux en Caraïbe</h4>
-                            <a href="#" class="btn-brut-pill">Voir la vidéo</a>
+                        <div class="selection-item-content">
+                            <div class="selection-meta">
+                                <span class="meta-dot" style="background: #0066cc;"></span>
+                                Santé, Société
+                            </div>
+                            <h4>De fausses pharmacies sans autorisation devant l'hôpital La Paix</h4>
                         </div>
-                    </div>
-                </div>
+                    </a>
 
-                <!-- Card 2: Interview -->
-                <div class="brut-video-card interview">
-                    <div class="brut-card-bg" style="background-image: url('assets/img/video_brut_interview_1774828840296.png');"></div>
-                    <div class="brut-card-inner">
-                        <div class="brut-thumb-v-mini">
-                            <img src="assets/img/video_brut_interview_1774828840296.png" alt="Interview">
+                    <!-- Item 2 -->
+                    <a href="#" class="selection-item">
+                        <div class="thumb" style="position:relative;">
+                            <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" alt="Maritime">
+                            <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
                         </div>
-                        <div class="brut-video-info">
-                            <span class="brut-category">Interview</span>
-                            <h4>Face à Face — Stratégie régionale : Entretien exclusif avec un analyste géopolitique</h4>
-                            <a href="#" class="btn-brut-pill">Voir la vidéo</a>
+                        <div class="selection-item-content">
+                            <div class="selection-meta">
+                                <span class="meta-dot" style="background: #cc0000;"></span>
+                                Sécurité, Maritime
+                            </div>
+                            <h4>Des bateaux paient les policiers de la garde côtière pour protection</h4>
                         </div>
-                    </div>
+                    </a>
+
+                    <!-- Item 3 -->
+                    <a href="#" class="selection-item">
+                        <div class="thumb" style="position:relative;">
+                            <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Commissariats">
+                            <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
+                        </div>
+                        <div class="selection-item-content">
+                            <div class="selection-meta">
+                                <span class="meta-dot" style="background: #ffcc00;"></span>
+                                Justice, Sécurité
+                            </div>
+                            <h4>Des commissariats collectent des fonds illégaux en Haïti</h4>
+                        </div>
+                    </a>
+
+                    <!-- Item 4 -->
+                    <a href="#" class="selection-item">
+                        <div class="thumb" style="position:relative;">
+                            <img src="assets/img/video_latest_4_climate_1774831643509.png" alt="Environnement">
+                            <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
+                        </div>
+                        <div class="selection-item-content">
+                            <div class="selection-meta">
+                                <span class="meta-dot" style="background: #ffcc00;"></span>
+                                Climat, Environnement
+                            </div>
+                            <h4>L'urgence environnementale face au déclin de la biodiversité</h4>
+                        </div>
+                    </a>
+
                 </div>
             </div>
         </section>
@@ -1319,7 +1349,7 @@
 
                 nextBtn.addEventListener('click', () => {
                     if (isArticlesGrid && window.innerWidth <= 991) {
-                        grid.scrollBy({ top: 780, behavior: 'smooth' });
+                        grid.scrollBy({ left: grid.offsetWidth, behavior: 'smooth' });
                     } else {
                         grid.scrollBy({ left: 400, behavior: 'smooth' });
                     }
@@ -1327,20 +1357,15 @@
 
                 prevBtn.addEventListener('click', () => {
                     if (isArticlesGrid && window.innerWidth <= 991) {
-                        grid.scrollBy({ top: -780, behavior: 'smooth' });
+                        grid.scrollBy({ left: -grid.offsetWidth, behavior: 'smooth' });
                     } else {
                         grid.scrollBy({ left: -400, behavior: 'smooth' });
                     }
                 });
 
                 grid.addEventListener('scroll', () => {
-                    if (isArticlesGrid && window.innerWidth <= 991) {
-                        prevBtn.disabled = grid.scrollTop <= 5;
-                        nextBtn.disabled = grid.scrollTop + grid.offsetHeight >= grid.scrollHeight - 5;
-                    } else {
-                        prevBtn.disabled = grid.scrollLeft <= 5;
-                        nextBtn.disabled = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 5;
-                    }
+                    prevBtn.disabled = grid.scrollLeft <= 5;
+                    nextBtn.disabled = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 5;
                 });
 
                 // Initial state

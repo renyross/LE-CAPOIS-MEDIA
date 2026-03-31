@@ -7,7 +7,7 @@
     <meta name="description" content="Rejoignez POST, le média digital conçu pour une génération connectée. Découvrez nos opportunités et nos valeurs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
     <link rel="stylesheet" href="style.css?v=2">
     <style>
@@ -137,15 +137,125 @@
             .values-list, .reasons-list { grid-template-columns: 1fr; }
             .section-block h2 { font-size: 26px; }
         }
+        .burger-menu {
+            display: none !important;
+        }
+
+        /* No Sidebar Layout */
+        body.no-sidebar-page .sidebar,
+        body.no-sidebar-page .mobile-header {
+            display: none !important;
+        }
+        body.no-sidebar-page main {
+            margin-left: 0 !important;
+            padding-top: 0 !important;
+        }
+
+        /* Premium Sections Styling */
+        .premium-sections {
+            background: #fff;
+            color: #000;
+        }
+        .premium-section {
+            padding: 140px 80px;
+            border-bottom: 0.5px solid #eee;
+        }
+        .premium-section:last-of-type {
+            border-bottom: none;
+        }
+        .premium-section.bg-light {
+            background-color: #f9f9f9;
+        }
+        .premium-section-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 120px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .premium-section-title {
+            position: sticky;
+            top: 60px;
+            height: fit-content;
+        }
+        .section-number {
+            display: block;
+            font-size: 14px;
+            font-weight: 900;
+            margin-bottom: 25px;
+            letter-spacing: 0.25em;
+            color: #888;
+        }
+        .premium-section-title h2 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1;
+            text-transform: uppercase;
+            letter-spacing: -0.05em;
+            margin: 0;
+            color: #000;
+        }
+        .premium-section-content p.lead-text {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 50px;
+            color: #000;
+            letter-spacing: -0.03em;
+        }
+        .premium-section-content .detailed-text p {
+            font-size: 20px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        .premium-section-content h3 {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: block;
+            letter-spacing: 0.1em;
+            color: #000;
+        }
+        
+        .premium-grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 40px;
+        }
+        .premium-feature-item {
+            padding: 30px;
+            background: #fdfdfd;
+            border: 1px solid #eee;
+        }
+        .premium-feature-item strong {
+            display: block;
+            font-size: 16px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            color: #d00;
+        }
+
+        @media (max-width: 1100px) {
+            .premium-section { padding: 100px 40px; }
+            .premium-section-grid { grid-template-columns: 1fr; gap: 60px; }
+            .premium-section-title { position: static; }
+            .premium-section-title h2 { font-size: 42px; }
+            .premium-section-content p.lead-text { font-size: 28px; }
+            .premium-grid-2col { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
-<body>
+<body class="no-sidebar-page">
     <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
 
     <aside class="sidebar">
         <div class="sidebar-branding">
             <div class="logo">
-                <a href="home.html">Post.</a>
+                <a href="home.html">P<span class="logo-play-o"></span>st</a>
             </div>
         </div>
         
@@ -208,7 +318,7 @@
 
     <header class="mobile-header">
         <div class="logo">
-            <a href="home.html">Post.</a>
+            <a href="home.html">P<span class="logo-play-o"></span>st</a>
         </div>
         <div class="burger-menu" onclick="toggleMobileMenu()">
             <span></span>
@@ -218,68 +328,116 @@
     </header>
 
     <main>
-        <section class="standard-section">
-            <div class="rejoindre-content">
-                <div class="section-block">
-                    <h2>Découvrir Post.</h2>
-                    <h3>Qui sommes-nous ?</h3>
-                    <p>POST est un média digital conçu pour une génération connectée, exigeante et en quête de sens. Nous produisons des contenus courts, longs et immersifs qui permettent non seulement de suivre l’actualité, mais surtout de la comprendre.</p>
-                    <p>À la croisée du storytelling, de la technologie et de la data, POST développe des formats pensés pour les usages d’aujourd’hui : mobiles, rapides et engageants.</p>
-                    <p>Notre ambition est simple : créer un média capable de capter l’attention, de la retenir et de la transformer en compréhension.</p>
-                    <p>POST est également un terrain d’expression pour les talents, les créateurs et les voix qui veulent avoir un impact réel.</p>
-                </div>
-
-                <div class="section-block">
-                    <h3>Notre vision</h3>
-                    <p>Nous croyons en un monde où l’information est claire, accessible et digne de confiance. Un monde où les contenus ne sont pas seulement consommés, mais compris, partagés et utilisés pour faire évoluer les idées.</p>
-                    
-                    <h3>Notre mission</h3>
-                    <ul class="bullet-list-brut">
-                        <li>Rendre les sujets complexes accessibles</li>
-                        <li>Produire des contenus à forte valeur ajoutée</li>
-                        <li>Engager des communautés actives et conscientes</li>
-                        <li>Utiliser la data pour amplifier la portée et l’impact</li>
-                    </ul>
-
-                    <h3>Nos valeurs</h3>
-                    <ul class="bullet-list-brut">
-                        <li><strong>Clarté :</strong> Simplifier sans dénaturer</li>
-                        <li><strong>Exigence :</strong> Produire un contenu précis et pertinent</li>
-                        <li><strong>Innovation :</strong> Tester, analyser, optimiser en continu</li>
-                        <li><strong>Responsabilité :</strong> Traiter l’information avec rigueur</li>
-                        <li><strong>Impact :</strong> Créer du contenu qui laisse une trace</li>
-                    </ul>
-
-                    <h3>Développement professionnel</h3>
-                    <ul class="bullet-list-brut">
-                        <li>Montée en compétences sur les outils et plateformes</li>
-                        <li>Culture test & learn</li>
-                        <li>Prise de responsabilités rapide</li>
-                    </ul>
-
-                    <h3>Impact réel</h3>
-                    <ul class="bullet-list-brut">
-                        <li>Audience large et engagée</li>
-                        <li>Influence sur les conversations</li>
-                        <li>Contribution à une meilleure compréhension des enjeux</li>
-                    </ul>
-
-                    <h3>Opportunités</h3>
-                    <p>POST est en construction permanente. Nous recherchons des profils capables de penser, créer et exécuter...</p>
-                </div>
-
-                <div class="contact-block">
-                    <h2>Nous contacter</h2>
-                    <p>Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
-                    <a href="mailto:contact@post.media" class="btn-contact">Parlons-en</a>
+        <section class="rejoindre-hero">
+            <div class="rejoindre-hero-overlay"></div>
+            <div class="rejoindre-hero-content">
+                <h1>Découvrir P<span class="logo-play-o"></span>st</h1>
+                <div class="hero-btn-group">
+                    <a href="#" class="btn-hero btn-hero-blue">Se connecter</a>
+                    <a href="#" class="btn-hero btn-hero-white">Offres d'emploi</a>
                 </div>
             </div>
+            <div class="hero-arrow-down">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
         </section>
+        
+        <div class="premium-sections">
+            <!-- Section 01: Qui sommes-nous ? -->
+            <section class="premium-section" id="about">
+                <div class="premium-section-grid">
+                    <div class="premium-section-title">
+                        <span class="section-number">01</span>
+                        <h2>Qui sommes-nous ?</h2>
+                    </div>
+                    <div class="premium-section-content">
+                        <p class="lead-text">POST est un média digital conçu pour une génération connectée, exigeante et en quête de sens.</p>
+                        <div class="detailed-text">
+                            <p>Nous produisons des contenus courts, longs et immersifs qui permettent non seulement de suivre l’actualité, mais surtout de la comprendre.</p>
+                            <p>À la croisée du storytelling, de la technologie et de la data, POST développe des formats pensés pour les usages d’aujourd’hui : mobiles, rapides et engageants.</p>
+                            <p>Notre ambition est simple : créer un média capable de capter l’attention, de la retenir et de la transformer en compréhension.</p>
+                            <p>POST est également un terrain d’expression pour les talents, les créateurs et les voix qui veulent avoir un impact réel.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 02: Vision & Mission -->
+            <section class="premium-section bg-light" id="vision">
+                <div class="premium-section-grid">
+                    <div class="premium-section-title">
+                        <span class="section-number">02</span>
+                        <h2>Impact & Vision</h2>
+                    </div>
+                    <div class="premium-section-content">
+                        <p class="lead-text">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
+                        <h3>Notre mission</h3>
+                        <ul class="bullet-list-brut">
+                            <li>Rendre les sujets complexes accessibles</li>
+                            <li>Produire des contenus à forte valeur ajoutée</li>
+                            <li>Engager des communautés actives et conscientes</li>
+                            <li>Utiliser la data pour amplifier la portée et l’impact</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 03: Valeurs -->
+            <section class="premium-section" id="values">
+                <div class="premium-section-grid">
+                    <div class="premium-section-title">
+                        <span class="section-number">03</span>
+                        <h2>Nos Valeurs</h2>
+                    </div>
+                    <div class="premium-section-content">
+                        <div class="premium-grid-2col">
+                            <div class="premium-feature-item">
+                                <strong>Clarté</strong>
+                                <p>Simplifier sans dénaturer la complexité du monde.</p>
+                            </div>
+                            <div class="premium-feature-item">
+                                <strong>Exigence</strong>
+                                <p>Produire un contenu précis, vérifié et pertinent.</p>
+                            </div>
+                            <div class="premium-feature-item">
+                                <strong>Innovation</strong>
+                                <p>Tester, analyser et optimiser en continu nos formats.</p>
+                            </div>
+                            <div class="premium-feature-item">
+                                <strong>Responsabilité</strong>
+                                <p>Traiter l’information avec rigueur et intégrité.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 04: Opportunités -->
+            <section class="premium-section bg-light" id="opportunities">
+                <div class="premium-section-grid">
+                    <div class="premium-section-title">
+                        <span class="section-number">04</span>
+                        <h2>Rejoindre l'équipe</h2>
+                    </div>
+                    <div class="premium-section-content">
+                        <p class="lead-text">POST est en construction permanente. Nous recherchons des profils capables de penser, créer et exécuter.</p>
+                        <div class="detailed-text">
+                            <p>Que vous soyez créateur de contenu, data analyst, designer ou développeur, votre talent a sa place chez nous.</p>
+                        </div>
+                        <div class="contact-block">
+                            <h2>Nous contacter</h2>
+                            <p>Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
+                            <a href="mailto:contact@post.media" class="btn-contact">Envoyer un message</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
-            <a href="home.html" class="footer-logo-large">Post.</a>
+            <a href="home.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
             
             <div class="footer-sections-grid">
                 <div class="footer-section">

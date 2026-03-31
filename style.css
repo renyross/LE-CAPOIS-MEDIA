@@ -23,7 +23,7 @@
 body {
     background-color: var(--white);
     color: #555; /* Normal paragraph text in grey */
-    font-family: 'Montserrat', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 400 !important;
     line-height: 1.7;
     font-size: 17px;
@@ -33,7 +33,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--black); /* Standard Titles in black */
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
 }
 
@@ -130,7 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-content h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     font-weight: 800 !important;
     line-height: 1.25;
@@ -146,7 +146,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Nav Buttons at bottom right */
 .grid-nav-brut {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     gap: 15px;
     margin-top: 30px;
     max-width: 1100px;
@@ -263,13 +263,14 @@ body.no-scroll {
 
 .sidebar-branding .logo a {
     color: var(--black);
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 52px;
     font-weight: 800;
     letter-spacing: -0.05em;
     text-decoration: none;
     line-height: 1;
-    display: block;
+    display: inline-flex;
+    align-items: center;
     margin-bottom: 20px;
 }
 
@@ -377,11 +378,13 @@ body.no-scroll {
 }
 
 .mobile-header .logo a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 800;
     color: var(--black);
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
 }
 
 .burger-menu {
@@ -553,7 +556,7 @@ main {
 
 
 .hero-article h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 800 !important;
     font-size: 56px; /* Larger for better impact */
     line-height: 1.1;
@@ -719,7 +722,7 @@ main {
 }
 
 .news-card-v h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.25;
@@ -778,7 +781,7 @@ main {
 }
 
 .insight-item h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17px;
     line-height: 1.25;
     font-weight: 800;
@@ -824,7 +827,7 @@ main {
 }
 
 .capture-box h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 48px;
     margin-bottom: 25px;
@@ -850,7 +853,7 @@ main {
     width: 450px;
     padding: 20px;
     border: 0.5px solid var(--black);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 11px;
     letter-spacing: 0.15em;
     background: transparent;
@@ -935,7 +938,7 @@ main {
 }
 
 .insight-card h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 24px;
     margin: 20px 0;
@@ -954,6 +957,7 @@ main {
 /* Editor's Selection (Ayibo 1+4 Grid) */
 .editor-selection {
     width: 100%;
+    padding-top: 5px !important;
 }
 
 .selection-grid {
@@ -1016,7 +1020,7 @@ main {
 }
 
 .selection-main h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 56px;
     line-height: 1;
@@ -1026,7 +1030,7 @@ main {
 }
 
 .selection-card h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-weight: 800 !important;
     font-size: 20px !important; /* Larger for better impact like in selection */
     line-height: 1.2;
@@ -1072,7 +1076,7 @@ main {
 .reels-header h2 {
     font-size: 20px !important;
     font-weight: 800 !important;
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     /* removed text-transform */
     letter-spacing: -0.02em;
     display: flex;
@@ -1096,19 +1100,23 @@ main {
 }
 
 .btn-all-reels {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--black);
+    font-size: 11px;
+    font-weight: 800;
+    color: #fff;
+    background: #1a1a1a;
     text-decoration: none;
-    padding: 8px 18px;
-    border: 1px solid #ddd;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 40px;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btn-all-reels:hover {
-    background: #f5f5f5;
-    border-color: #bbb;
+    background: #000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .reels-grid {
@@ -1374,7 +1382,7 @@ main {
 }
 
 .footer-logo-large {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 80px;
     color: #fff !important;
@@ -1529,7 +1537,7 @@ main {
 }
 
 .brut-content-large h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 950;
     font-size: 38px;
     line-height: 1;
@@ -1550,11 +1558,11 @@ main {
     .brut-featured-card { height: auto; margin-bottom: 30px; }
     .brut-featured-card .brut-card-inner { 
         flex-direction: column !important; 
-        padding: 0 !important; 
+        padding: 20px 20px 0 20px !important; 
     }
     .brut-thumb-h-large { width: 100% !important; aspect-ratio: 16/9; }
     .brut-content-large { 
-        padding: 30px 20px 40px 20px !important; 
+        padding: 30px 0 40px 0 !important; 
         text-align: left !important; 
         align-items: flex-start !important; 
     }
@@ -1630,7 +1638,7 @@ main {
 }
 
 .brut-video-info h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 18px; /* Decreased from 24px */
     font-weight: 850;
     line-height: 1.1;
@@ -1750,7 +1758,7 @@ main {
 }
 
 .video-info h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 36px;
     line-height: 1.2;
@@ -1802,7 +1810,7 @@ main {
 }
 
 .video-card h4 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 800;
     font-size: 16px;
     line-height: 1.3;
@@ -2052,7 +2060,7 @@ main {
 }
 
 .featured-sport h2 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-size: 42px;
     line-height: 1.1;
@@ -2102,7 +2110,7 @@ main {
 }
 
 .dual-column-title {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 900;
     font-style: italic;
     font-size: 28px;
@@ -2490,7 +2498,7 @@ main {
 }
 
 .podcast-card-v2 h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 900;
     color: var(--black);
@@ -2526,7 +2534,7 @@ main {
     width: fit-content;
     line-height: 1.2;
     box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     transform: rotate(-1deg);
 }
 
@@ -3178,6 +3186,10 @@ main {
             padding: 40px 20px;
         }
 
+        .editor-selection.standard-section {
+            padding-top: 10px !important;
+        }
+
         .selection-grid {
             grid-template-columns: 1fr;
             gap: 40px;
@@ -3192,18 +3204,18 @@ main {
         }
 
         .articles-horizontal-grid {
-            display: flex !important;
-            flex-direction: column !important;
-            grid-template-columns: none !important;
-            overflow-x: hidden !important;
-            overflow-y: auto !important; /* Allow internal scrolling */
-            max-height: 780px !important; /* Approx 130px * 6 */
-            gap: 0 !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            scroll-snap-type: y mandatory;
+            display: grid !important;
+            grid-template-rows: repeat(4, min-content) !important;
+            grid-auto-flow: column !important;
+            grid-auto-columns: 100% !important;
+            gap: 0 20px !important;
+            overflow-x: auto !important;
+            overflow-y: hidden !important;
+            scroll-snap-type: x mandatory !important;
             scrollbar-width: none;
             -webkit-overflow-scrolling: touch;
+            padding: 0 !important;
+            margin: 0 !important;
         }
 
         .articles-horizontal-grid::-webkit-scrollbar {
@@ -3215,13 +3227,14 @@ main {
             grid-template-columns: 130px 1fr !important;
             gap: 20px !important;
             background: #fff !important;
-            padding: 20px 0 !important;
+            padding: 15px 0 !important;
             border-bottom: 1px solid #efefef !important;
-            border-radius: 0 !important;
-            border: none !important;
             width: 100% !important;
-            flex: none !important;
             scroll-snap-align: start;
+        }
+
+        .article-horizontal-card:nth-child(4n) {
+            border-bottom: none !important;
         }
 
         .card-thumb {
@@ -3312,7 +3325,7 @@ main {
 }
 
 .video-hero-content h1 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-size: 48px !important;
     font-weight: 800 !important;
     line-height: 1.1;
@@ -3380,7 +3393,7 @@ main {
 }
 
 .card-overlay-content h3 {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
     font-size: 28px !important;
     font-weight: 800 !important;
     color: var(--white) !important;
@@ -3423,4 +3436,351 @@ main {
     .video-card-mini {
         height: 300px;
     }
+}
+
+/* Rejoindre Page Hero Section */
+.rejoindre-hero {
+    position: relative;
+    width: 100%;
+    height: 700px;
+    background: url('assets/img/coworking_post_hero.png') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 60px;
+    overflow: hidden;
+}
+
+.rejoindre-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.rejoindre-hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+.rejoindre-hero .logo-top {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Roboto', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    letter-spacing: -5px;
+    color: #fff;
+    z-index: 10;
+}
+
+.rejoindre-hero h1 {
+    font-size: 96px !important;
+    font-weight: 900 !important;
+    margin-bottom: 40px !important;
+    letter-spacing: -3px !important;
+    color: #fff !important;
+    text-transform: none !important;
+}
+
+.hero-btn-group {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+}
+
+.btn-hero {
+    padding: 20px 50px;
+    font-size: 18px;
+    font-weight: 800;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease;
+}
+
+.btn-hero-blue {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-hero-white {
+    background: #fff;
+    color: #000;
+}
+
+.btn-hero:hover {
+    transform: scale(1.08);
+}
+
+.hero-arrow-down {
+    position: absolute;
+    bottom: 40px;
+    z-index: 10;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-10px);}
+    60% {transform: translateY(-5px);}
+}
+
+@media (max-width: 991px) {
+    .rejoindre-hero h1 {
+        font-size: 56px !important;
+    }
+    .rejoindre-hero .logo-top {
+        font-size: 60px;
+    }
+    .hero-btn-group {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/* --- ARTICLE LAYOUT (NEW) --- */
+.article-header { margin-bottom: 50px; padding-top: 20px; }
+.article-category { font-size: 11px; font-weight: 900; letter-spacing: 0.25em; color: #888; margin-bottom: 20px; display: inline-block; border-bottom: 2px solid var(--black); padding-bottom: 8px; text-transform: uppercase; }
+.article-title { font-size: 64px; line-height: 1.0; font-weight: 800; letter-spacing: -0.05em; margin-bottom: 25px; color: var(--black); }
+.article-subtitle { font-size: 26px; line-height: 1.3; font-weight: 500; color: #555; margin-bottom: 40px; max-width: 900px; }
+.article-meta { font-size: 12px; font-weight: 700; color: #999; border-top: 1px solid #eee; padding-top: 25px; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 0.1em; }
+.article-hero-img { margin-bottom: 40px; width: 100%; border-radius: 4px; overflow: hidden; }
+.article-hero-img img { width: 100%; height: auto; display: block; object-fit: cover; }
+.article-caption { font-size: 13px; color: #999; margin-top: 15px; margin-bottom: 60px; font-style: italic; }
+.article-content-wrapper { display: grid; grid-template-columns: 2.2fr 1fr; gap: 60px; max-width: 1100px; margin: 0 auto; align-items: start; }
+.article-main-body { font-size: 20px; line-height: 1.8; color: #333; }
+.article-main-body h3 { font-size: 32px; font-weight: 800; margin: 60px 0 30px; letter-spacing: -0.02em; }
+.article-lead { font-size: 26px; font-weight: 800; line-height: 1.5; color: var(--black); margin-bottom: 50px; display: block; }
+.pull-quote { font-size: 38px; font-weight: 800; line-height: 1.1; margin: 80px 0; padding-left: 40px; border-left: 6px solid var(--black); color: var(--black); letter-spacing: -0.04em; }
+
+@media (max-width: 1024px) {
+    .article-header { padding: 0 5px; }
+    .article-hero-img { padding: 0 5px; }
+    .article-content-wrapper { padding: 0 5px; grid-template-columns: 1fr; gap: 60px; }
+    .article-title { font-size: 48px; }
+    .article-main-body { font-size: 18px; }
+    .article-lead { font-size: 22px; }
+    .pull-quote { font-size: 28px; margin: 60px 0; padding-left: 20px; }
+}
+
+/* --- Section: La Sélection du Soir --- */
+.selection-soir-section {
+    background: #fff;
+    padding: 80px 20px;
+}
+
+.selection-soir-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    max-width: 1100px;
+    margin: 0 auto 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.selection-soir-header h2 {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    font-family: 'Roboto', sans-serif !important;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: var(--black);
+}
+
+.selection-soir-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.selection-large-card {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+.selection-large-card .img-container {
+    width: 100%;
+    aspect-ratio: 1/1.1; 
+    overflow: hidden;
+    margin-bottom: 25px;
+    background: #000;
+    border-radius: 4px;
+}
+
+.selection-large-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.selection-large-card:hover img {
+    transform: scale(1.02);
+}
+
+.selection-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #888;
+}
+
+.meta-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.selection-large-card h3 {
+    font-size: 42px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    letter-spacing: -0.04em;
+    color: var(--black);
+}
+
+.selection-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+.selection-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 0.5px solid #eee;
+    text-decoration: none;
+    color: inherit;
+}
+
+.selection-item:last-child {
+    border-bottom: none;
+}
+
+.selection-item .thumb {
+    flex: 0 0 180px;
+    height: 101px; /* 16:9 approx */
+    border-radius: 4px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.selection-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.selection-item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.selection-item h4 {
+    font-size: 18px !important;
+    font-weight: 800;
+    line-height: 1.25;
+    margin: 0;
+    color: var(--black);
+    letter-spacing: -0.01em;
+}
+
+.selection-item-footer {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+}
+
+.btn-selections-prev {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-selections-prev:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+    .selection-soir-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .selection-soir-header {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .selection-large-card .img-container {
+        aspect-ratio: 16/9; /* Standard landscape on mobile */
+    }
+    .selection-large-card h3 {
+        font-size: 32px;
+    }
+    .selection-item .thumb {
+        flex: 0 0 120px;
+        height: 80px;
+    }
+    .selection-item-footer {
+        justify-content: center;
+        width: 100%;
+        margin-top: 25px;
+    }
+}
+/* --- REUSABLE LOGO COMPONENT --- */
+.logo-play-o {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.56em;
+    height: 0.56em;
+    background: currentColor;
+    border-radius: 50%;
+    margin-left: 0.02em;
+    margin-right: 0.04em;
+    position: relative;
+    top: 0.04em;
+}
+
+.logo-play-o::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-top: 0.15em solid transparent;
+    border-bottom: 0.15em solid transparent;
+    border-left: 0.22em solid #fff;
+    margin-left: 0.06em;
+}
+
+.footer-logo-large {
+    display: inline-flex !important;
+    align-items: center;
 }
