@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santé — Les Dossiers de POST</title>
+    <meta name="description" content="Informations et analyses sur la santé publique, le bien-être et les avancées médicales.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
+    <link rel="stylesheet" href="style.css?v=6">
+</head>
+<body class="page-sante">
+    <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-branding">
+            <div class="logo">
+                <a href="index.html">P<span class="logo-play-o"></span>st</a>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" class="sidebar-actions-btn">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Rechercher
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="international.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        International
+                    </a>
+                </li>
+                <li>
+                    <a href="haiti.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 20h3v-4H4v4zm6 0h3v-9h-3v9zm6 0h3v-14h-3v14z"/></svg>
+                        Haiti
+                    </a>
+                </li>
+                <li>
+                    <a href="politique.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        Politique
+                    </a>
+                </li>
+                <li>
+                    <a href="culture.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Culture
+                    </a>
+                </li>
+                <li>
+                    <a href="sport.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Sport
+                    </a>
+                </li>
+                <li class="has-dropdown">
+                    <a href="javascript:void(0)" class="active">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                        Plus
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="sante.html" class="active">Santé</a></li>
+                        <li><a href="technologie.html">Technologie</a></li>
+                        <li><a href="nature.html">Nature</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <ul>
+                <li>
+                    <a href="articles.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="podcast.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
+                <li>
+                    <a href="documentaires.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                        Documentaires
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+            
+            <div class="sidebar-edition-container">
+                <div class="edition-selector">
+                    <span>Édition française</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <header class="mobile-header">
+        <div class="logo">
+            <a href="index.html">P<span class="logo-play-o"></span>st</a>
+        </div>
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="articles-page-wrapper">
+            <header class="section-header-brut">
+                <div class="header-left">
+                    <h1>Santé</h1>
+                    <p>› Les défis de la santé publique et les découvertes qui changent nos vies.</p>
+                </div>
+            </header>
+
+            <!-- À la une Section -->
+            <section class="standard-section selection-soir-section" id="a-la-une" style="margin-top: 0; padding-top: 0;">
+                <div class="selection-soir-grid">
+                    <!-- Main Featured Article -->
+                    <a href="#" class="selection-large-card">
+                        <div class="img-container">
+                            <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?q=80&w=1200&auto=format&fit=crop" alt="Santé Feature">
+                        </div>
+                        <div class="selection-meta">
+                            <span class="meta-dot" style="background: #e74c3c;"></span>
+                            ENQUÊTE • SANTÉ PUBLIQUE
+                        </div>
+                        <h3>Système de santé : Urgence d'une réforme structurelle en Haïti</h3>
+                    </a>
+
+                    <!-- Sidebar List -->
+                    <div class="selection-list">
+                        <a href="#" class="selection-item">
+                            <div class="thumb">
+                                <img src="https://images.unsplash.com/photo-1505751172107-573225a94ce0?q=80&w=300&auto=format&fit=crop" alt="Nutrition">
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">NUTRITION • PRÉVENTION</div>
+                                <h4>Les nouveaux enjeux de la sécurité alimentaire locale</h4>
+                            </div>
+                        </a>
+                        <a href="#" class="selection-item">
+                            <div class="thumb">
+                                <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=300&auto=format&fit=crop" alt="Médecine">
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">TECHNOLOGIE • MÉDECINE</div>
+                                <h4>La télémédecine : Un pont vers les zones reculées</h4>
+                            </div>
+                        </a>
+                        <a href="#" class="selection-item">
+                            <div class="thumb">
+                                <img src="https://images.unsplash.com/photo-1523206489230-c012c64b2b48?q=80&w=300&auto=format&fit=crop" alt="Santé Mentale">
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">PSYCHOLOGIE • BIEN-ÊTRE</div>
+                                <h4>Santé mentale : Briser le tabou du traumatisme collectif</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Portraits & Témoignages Section -->
+            <section class="standard-section story-accent-section">
+                <div class="reels-header">
+                    <h2 style="font-size: 20px; font-weight: 800;">Portraits & Témoignages</h2>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
+                </div>
+                <div class="carousel-wrapper">
+                    <div class="videos-carousel-grid">
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1559839734-2b71f1536783?q=80&w=400&auto=format&fit=crop" alt="Dr Jean">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <h4>D<sup>r</sup> Jean : 30 ans au service des provinces</h4>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1590105577767-e21a46b53b45?q=80&w=400&auto=format&fit=crop" alt="Infirmière">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <h4>Les anges blancs du Cap-Haïtien</h4>
+                        </article>
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2ad46?q=80&w=400&auto=format&fit=crop" alt="Innovation">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <h4>Innovations : Le futur de la chirurgie locale</h4>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tous nos articles -->
+            <section class="standard-section">
+                <div class="reels-header">
+                    <h2 style="font-size: 20px; font-weight: 800;">Dernières publications</h2>
+                </div>
+                <div class="articles-horizontal-grid">
+                    <article class="article-card-horizontal">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1504813184591-01592fd03cfd?q=80&w=800&auto=format&fit=crop" alt="Vaccination">
+                        </div>
+                        <div class="card-content">
+                            <span class="selection-meta">PRÉVENTION • CAMPAGNE</span>
+                            <h3>Vaccination : Le défi de l'immunité collective</h3>
+                            <p>Retour sur les grandes étapes de la campagne nationale de sensibilisation.</p>
+                            <a href="#" class="read-more">LIRE L'ARTICLE</a>
+                        </div>
+                    </article>
+                    <article class="article-card-horizontal">
+                        <div class="card-image-wrap">
+                            <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b85461?q=80&w=800&auto=format&fit=crop" alt="Labo">
+                        </div>
+                        <div class="card-content">
+                            <span class="selection-meta">SCIENCE • RECHERCHE</span>
+                            <h3>Antibiorésistance : Le combat invisible</h3>
+                            <p>Pourquoi l'usage abusif des antibiotiques devient une menace mondiale.</p>
+                            <a href="#" class="read-more">LIRE L'ARTICLE</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-centered-content">
+            <a href="index.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
+            <div class="footer-legal-centered">
+                <div class="copyright">P<span class="logo-play-o"></span>st © 2026</div>
+                <div class="footer-legal-links">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.burger-menu').classList.toggle('open');
+            document.querySelector('.menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+    </script>
+</body>
+</html>

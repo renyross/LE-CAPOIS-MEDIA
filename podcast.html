@@ -2,107 +2,69 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équipe Éditoriale — POST</title>
-    <meta name="description" content="Découvrez l'équipe agile et créative derrière POST, le média d'influence et d'analyse stratégique.">
+    <meta name= "viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast — Les Dossiers de POST</title>
+    <meta name="description" content="Écoutez les analyses, entretiens et récits audio exclusifs de la rédaction de POST.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=5">
     <style>
-        .team-intro {
-            max-width: 800px;
-            margin-bottom: 80px;
+        .podcast-hero {
+            background: #000;
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
         }
-        .team-intro h1 {
-            font-size: 42px;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-        .team-intro p {
-            font-size: 19px;
-            line-height: 1.6;
-            color: #444;
-            font-weight: 500;
-        }
-        .team-list {
-            display: flex;
-            flex-direction: column;
+        .podcast-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 100px;
-            position: relative;
-            padding-left: 30px;
+            margin-top: 40px;
         }
-        .team-list::before {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 15px;
-            bottom: 30px;
-            width: 2px;
-            background: #e2e2e2;
+        .podcast-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
         }
-        .team-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding-bottom: 25px;
-            position: relative;
-            border-bottom: 1px solid #f9f9f9;
+        .podcast-card:hover {
+            transform: translateY(-5px);
         }
-        .team-item::before {
-            content: '';
-            position: absolute;
-            left: -29px;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            background: #d00;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            z-index: 1;
+        .podcast-card img {
+            width: 100%;
+            aspect-ratio: 1;
+            object-fit: cover;
         }
-        .team-item:last-child {
-            border-bottom: none;
+        .podcast-info {
+            padding: 20px;
         }
-        .team-item h2 {
-            font-size: 24px;
-            font-weight: 900;
-            margin-bottom: 0;
-            letter-spacing: -0.02em;
+        .podcast-info h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
         }
-        .team-item .role {
-            font-size: 13px;
-            font-weight: 800;
-            color: #d00;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            display: block;
-        }
-        .team-closing {
-            max-width: 700px;
-            margin-top: 80px;
-            border-top: 1px solid #eee;
-            padding-top: 40px;
-        }
-        .team-closing p {
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 1.7;
+        .podcast-info p {
             color: #666;
-            margin: 0;
-            font-style: italic;
+            font-size: 14px;
+            margin-bottom: 20px;
         }
-        @media (max-width: 768px) {
-            .team-intro h1 { font-size: 32px; }
-            .team-grid { grid-template-columns: 1fr; gap: 40px; }
+        .play-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
         }
     </style>
 </head>
-<body>
+<body class="page-podcast">
     <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
 
     <aside class="sidebar">
@@ -156,6 +118,12 @@
                         Sport
                     </a>
                 </li>
+                <li>
+                    <a href="podcast.html" class="active">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
                 <li class="has-dropdown">
                     <a href="index.html#plus">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
@@ -179,7 +147,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="podcast.html">
+                    <a href="podcast.html" class="active">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
                         Podcast
                     </a>
@@ -214,94 +182,86 @@
         </div>
     </header>
 
-    <main>
-        <section class="standard-section">
-            <div class="team-intro">
-                <h1>Équipe éditoriale P<span class="logo-play-o"></span>st</h1>
-                <p>Derrière POST, une équipe agile, créative et orientée performance.</p>
-            </div>
-
-            <div class="team-list">
-                <!-- Renel ROSENE -->
-                <div class="team-item">
-                    <h2>Renel ROSENE</h2>
-                    <span class="role">CEO & Publishing Director</span>
+    <main class="main-content">
+        <div class="articles-page-wrapper">
+            <header class="section-header-brut">
+                <div class="header-left">
+                    <h1>Podcast</h1>
+                    <p>› L'information à écouter, où que vous soyez.</p>
                 </div>
+            </header>
 
-                <!-- Renald ROSENE -->
-                <div class="team-item">
-                    <h2>Renald ROSENE</h2>
-                    <span class="role">CO‑FOUNDER & Head of Video / Image Production</span>
+            <section class="standard-section">
+                <div class="podcast-grid">
+                    <!-- Podcast 1 -->
+                    <article class="podcast-card">
+                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=600&auto=format&fit=crop" alt="Podcast Analysis">
+                        <div class="podcast-info">
+                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : ANALYSE HEBDO</span>
+                            <h3>Le Grand Décryptage : Épisode 12</h3>
+                            <p>Cette semaine, nous revenons sur les enjeux de la transition politique en Haïti avec nos invités.</p>
+                            <a href="#" class="play-btn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                ÉCOUTER MAINTENANT
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Podcast 2 -->
+                    <article class="podcast-card">
+                        <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=600&auto=format&fit=crop" alt="Podcast Interview">
+                        <div class="podcast-info">
+                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : VOIX DU TERRAIN</span>
+                            <h3>Grand Sud : Paroles de Citoyens</h3>
+                            <p>Une immersion sonore au cœur des initiatives locales pour le développement durable.</p>
+                            <a href="#" class="play-btn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                ÉCOUTER MAINTENANT
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Podcast 3 -->
+                    <article class="podcast-card">
+                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=600&auto=format&fit=crop" alt="Podcast Culture">
+                        <div class="podcast-info">
+                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : CULTURE & ARTS</span>
+                            <h3>L'Art de la Résilience</h3>
+                            <p>Entretien avec des artistes qui utilisent leur talent pour témoigner de la réalité haïtienne.</p>
+                            <a href="#" class="play-btn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                ÉCOUTER MAINTENANT
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Podcast 4 -->
+                    <article class="podcast-card">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" alt="Podcast Tech">
+                        <div class="podcast-info">
+                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : TECH & FUTUR</span>
+                            <h3>Demain, le Digital</h3>
+                            <p>Quelles opportunités pour la jeunesse haïtienne dans le secteur des nouvelles technologies ?</p>
+                            <a href="#" class="play-btn">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                ÉCOUTER MAINTENANT
+                            </a>
+                        </div>
+                    </article>
                 </div>
-
-                <!-- Vertho CADET -->
-                <div class="team-item">
-                    <h2>Vertho CADET</h2>
-                    <span class="role">Chief Content & Strategy Officer</span>
-                </div>
-
-                <!-- Juniro SAINT JUSTE -->
-                <div class="team-item">
-                    <h2>Juniro SAINT JUSTE</h2>
-                    <span class="role">Managing Editor – International</span>
-                </div>
-
-                <!-- John Wathson PIERRE -->
-                <div class="team-item">
-                    <h2>John Wathson PIERRE</h2>
-                    <span class="role">Content Performance Analyst</span>
-                </div>
-            </div>
-
-            <div class="team-closing">
-                <p>POST s’appuie sur une approche qui allie rapidité, efficacité et durabilité, pour construire un média innovant capable de toucher le monde entier.</p>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
             <a href="index.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
-            
-            <div class="footer-sections-grid">
-                <div class="footer-section">
-                    <h4>Éditions</h4>
-                    <ul>
-                        <li><a href="#">Haïti</a></li>
-                        <li><a href="#">France</a></li>
-                        <li><a href="#">Canada</a></li>
-                        <li><a href="#">USA</a></li>
-                        <li><a href="#">International</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Catégories</h4>
-                    <ul>
-                        <li><a href="index.html">International</a></li>
-                        <li><a href="index.html#haiti-en-image">Haiti</a></li>
-                        <li><a href="index.html#societe">Politique</a></li>
-                        <li><a href="index.html#culture">Culture</a></li>
-                        <li><a href="sport.html">Sport</a></li>
-                        <li><a href="index.html#podcast">Podcast</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Corporate</h4>
-                    <ul>
-                        <li><a href="equipe.html">Équipe éditoriale</a></li>
-                        <li><a href="rejoindre.html">Nous rejoindre ↗</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-social-row-centered">
-                <a href="#" title="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg></a>
-                <a href="#" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-            </div>
-
             <div class="footer-legal-centered">
                 <div class="copyright">P<span class="logo-play-o"></span>st © 2026</div>
+                <div class="footer-legal-links">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
             </div>
         </div>
     </footer>

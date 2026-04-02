@@ -3,106 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Équipe Éditoriale — POST</title>
-    <meta name="description" content="Découvrez l'équipe agile et créative derrière POST, le média d'influence et d'analyse stratégique.">
+    <title>Documentaires — Les Dossiers de POST</title>
+    <meta name="description" content="Découvrez nos grands formats documentaires, enquêtes au long cours et récits visuels exclusifs.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=5">
     <style>
-        .team-intro {
-            max-width: 800px;
-            margin-bottom: 80px;
-        }
-        .team-intro h1 {
-            font-size: 42px;
-            font-weight: 900;
-            letter-spacing: -0.04em;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-        }
-        .team-intro p {
-            font-size: 19px;
-            line-height: 1.6;
-            color: #444;
-            font-weight: 500;
-        }
-        .team-list {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            margin-bottom: 100px;
+        .doc-hero {
+            background: #000;
+            color: #fff;
+            padding: 100px 0;
             position: relative;
-            padding-left: 30px;
+            overflow: hidden;
         }
-        .team-list::before {
-            content: '';
-            position: absolute;
-            left: 5px;
-            top: 15px;
-            bottom: 30px;
-            width: 2px;
-            background: #e2e2e2;
+        .doc-featured-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 40px;
         }
-        .team-item {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            padding-bottom: 25px;
+        .doc-card-large {
             position: relative;
-            border-bottom: 1px solid #f9f9f9;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #111;
         }
-        .team-item::before {
-            content: '';
+        .doc-card-large img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.6;
+            transition: all 0.5s ease;
+        }
+        .doc-card-large:hover img {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+        .doc-content-overlay {
             position: absolute;
-            left: -29px;
-            top: 8px;
-            width: 10px;
-            height: 10px;
-            background: #d00;
-            border-radius: 50%;
-            border: 3px solid #fff;
-            z-index: 1;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 60px 40px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+            color: #fff;
         }
-        .team-item:last-child {
-            border-bottom: none;
-        }
-        .team-item h2 {
-            font-size: 24px;
-            font-weight: 900;
-            margin-bottom: 0;
-            letter-spacing: -0.02em;
-        }
-        .team-item .role {
-            font-size: 13px;
+        .doc-tag {
+            background: #ffcc00;
+            color: #000;
+            padding: 4px 12px;
+            font-size: 12px;
             font-weight: 800;
-            color: #d00;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
-            display: block;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
-        .team-closing {
-            max-width: 700px;
-            margin-top: 80px;
-            border-top: 1px solid #eee;
-            padding-top: 40px;
+        .doc-grid-standard {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
         }
-        .team-closing p {
-            font-size: 17px;
-            font-weight: 500;
-            line-height: 1.7;
-            color: #666;
-            margin: 0;
-            font-style: italic;
+        .doc-card {
+            cursor: pointer;
+        }
+        .doc-card .img-wrap {
+            width: 100%;
+            aspect-ratio: 16/9;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 20px;
+            position: relative;
+            background: #eee;
+        }
+        .doc-card .img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .doc-card:hover .img-wrap img {
+            transform: scale(1.08);
+        }
+        .play-icon-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        .doc-card:hover .play-icon-overlay {
+            background: #ffcc00;
+            transform: translate(-50%, -50%) scale(1.1);
         }
         @media (max-width: 768px) {
-            .team-intro h1 { font-size: 32px; }
-            .team-grid { grid-template-columns: 1fr; gap: 40px; }
+            .doc-card-large { height: 350px; }
+            .doc-grid-standard { grid-template-columns: 1fr; }
         }
     </style>
 </head>
-<body>
+<body class="page-documentaires">
     <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
 
     <aside class="sidebar">
@@ -166,7 +180,7 @@
                         <li><a href="technologie.html">Technologie</a></li>
                         <li><a href="nature.html">Nature</a></li>
                     </ul>
-                </li>
+                 </li>
             </ul>
 
             <div class="sidebar-divider"></div>
@@ -185,7 +199,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="documentaires.html">
+                    <a href="documentaires.html" class="active">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
                         Documentaires
                     </a>
@@ -214,94 +228,75 @@
         </div>
     </header>
 
-    <main>
-        <section class="standard-section">
-            <div class="team-intro">
-                <h1>Équipe éditoriale P<span class="logo-play-o"></span>st</h1>
-                <p>Derrière POST, une équipe agile, créative et orientée performance.</p>
-            </div>
+    <main class="main-content">
+        <div class="articles-page-wrapper">
+            <header class="section-header-brut">
+                <div class="header-left">
+                    <h1>Documentaires</h1>
+                    <p>› Regarder le monde en face, à travers l'objectif de POST.</p>
+                </div>
+            </header>
 
-            <div class="team-list">
-                <!-- Renel ROSENE -->
-                <div class="team-item">
-                    <h2>Renel ROSENE</h2>
-                    <span class="role">CEO & Publishing Director</span>
+            <section class="standard-section">
+                <!-- Featured Documentary -->
+                <div class="doc-card-large">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop" alt="Featured Documentary">
+                    <div class="doc-content-overlay">
+                        <span class="doc-tag">SÉLECTION PREMIUM</span>
+                        <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 15px;">L'Ombre des Couloirs : Enquête sur Ti Bwa</h2>
+                        <p style="font-size: 18px; opacity: 0.9; max-width: 700px; margin-bottom: 25px;">Une immersion inédite de 52 minutes au cœur des quartiers de Carrefour, là où la loi de la République s'arrête.</p>
+                        <a href="#" class="play-btn" style="background: #ffcc00; color: #000; padding: 15px 35px; font-size: 16px;">
+                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="margin-right: 10px;"><path d="M8 5v14l11-7z"/></svg>
+                            VOIR LE DOCUMENTAIRE
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Renald ROSENE -->
-                <div class="team-item">
-                    <h2>Renald ROSENE</h2>
-                    <span class="role">CO‑FOUNDER & Head of Video / Image Production</span>
-                </div>
+                <!-- Documentary Grid -->
+                <div class="doc-grid-standard">
+                    <!-- Doc 1 -->
+                    <article class="doc-card">
+                        <div class="img-wrap">
+                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Doc 1">
+                            <div class="play-icon-overlay">▶</div>
+                        </div>
+                        <span class="selection-meta" style="font-size:11px; font-weight:900; color:#999; display:block; margin-bottom:10px;">SOCIÉTÉ • 24 MIN</span>
+                        <h3 style="font-size: 18px; font-weight: 800; line-height: 1.4;">Les Enfants de la Transition : Quel futur pour demain ?</h3>
+                    </article>
 
-                <!-- Vertho CADET -->
-                <div class="team-item">
-                    <h2>Vertho CADET</h2>
-                    <span class="role">Chief Content & Strategy Officer</span>
-                </div>
+                    <!-- Doc 2 -->
+                    <article class="doc-card">
+                        <div class="img-wrap">
+                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Doc 2">
+                            <div class="play-icon-overlay">▶</div>
+                        </div>
+                        <span class="selection-meta" style="font-size:11px; font-weight:900; color:#999; display:block; margin-bottom:10px;">ENVIRONNEMENT • 45 MIN</span>
+                        <h3 style="font-size: 18px; font-weight: 800; line-height: 1.4;">La Grand'Anse : Un paradis en sursis face au climat</h3>
+                    </article>
 
-                <!-- Juniro SAINT JUSTE -->
-                <div class="team-item">
-                    <h2>Juniro SAINT JUSTE</h2>
-                    <span class="role">Managing Editor – International</span>
+                    <!-- Doc 3 -->
+                    <article class="doc-card">
+                        <div class="img-wrap">
+                            <img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop" alt="Doc 3">
+                            <div class="play-icon-overlay">▶</div>
+                        </div>
+                        <span class="selection-meta" style="font-size:11px; font-weight:900; color:#999; display:block; margin-bottom:10px;">HISTOIRE • 38 MIN</span>
+                        <h3 style="font-size: 18px; font-weight: 800; line-height: 1.4;">Citadelle : Les gardiens silencieux de la liberté</h3>
+                    </article>
                 </div>
-
-                <!-- John Wathson PIERRE -->
-                <div class="team-item">
-                    <h2>John Wathson PIERRE</h2>
-                    <span class="role">Content Performance Analyst</span>
-                </div>
-            </div>
-
-            <div class="team-closing">
-                <p>POST s’appuie sur une approche qui allie rapidité, efficacité et durabilité, pour construire un média innovant capable de toucher le monde entier.</p>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
             <a href="index.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
-            
-            <div class="footer-sections-grid">
-                <div class="footer-section">
-                    <h4>Éditions</h4>
-                    <ul>
-                        <li><a href="#">Haïti</a></li>
-                        <li><a href="#">France</a></li>
-                        <li><a href="#">Canada</a></li>
-                        <li><a href="#">USA</a></li>
-                        <li><a href="#">International</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Catégories</h4>
-                    <ul>
-                        <li><a href="index.html">International</a></li>
-                        <li><a href="index.html#haiti-en-image">Haiti</a></li>
-                        <li><a href="index.html#societe">Politique</a></li>
-                        <li><a href="index.html#culture">Culture</a></li>
-                        <li><a href="sport.html">Sport</a></li>
-                        <li><a href="index.html#podcast">Podcast</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Corporate</h4>
-                    <ul>
-                        <li><a href="equipe.html">Équipe éditoriale</a></li>
-                        <li><a href="rejoindre.html">Nous rejoindre ↗</a></li>
-                        <li><a href="#">Nous contacter</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="footer-social-row-centered">
-                <a href="#" title="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg></a>
-                <a href="#" title="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
-            </div>
-
             <div class="footer-legal-centered">
                 <div class="copyright">P<span class="logo-play-o"></span>st © 2026</div>
+                <div class="footer-legal-links">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
             </div>
         </div>
     </footer>

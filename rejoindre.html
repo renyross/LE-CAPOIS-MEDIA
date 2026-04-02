@@ -151,101 +151,261 @@
             padding-top: 0 !important;
         }
 
-        /* Premium Sections Styling */
+        /* --- BRUT STYLE REJOINDRE --- */
         .premium-sections {
             background: #fff;
             color: #000;
         }
-        .premium-section {
-            padding: 140px 80px;
-            border-bottom: 0.5px solid #eee;
-        }
-        .premium-section:last-of-type {
-            border-bottom: none;
-        }
-        .premium-section.bg-light {
-            background-color: #f9f9f9;
-        }
-        .premium-section-grid {
-            display: grid;
-            grid-template-columns: 0.8fr 1.2fr;
-            gap: 120px;
-            max-width: 1400px;
+
+        /* --- Section Centered Intro (01) --- */
+        .brut-centered-section {
+            padding: 160px 20px;
+            text-align: center;
+            max-width: 900px;
             margin: 0 auto;
         }
-        .premium-section-title {
-            position: sticky;
-            top: 60px;
-            height: fit-content;
-        }
-        .section-number {
-            display: block;
+
+        .brut-centered-section .section-number {
             font-size: 14px;
             font-weight: 900;
-            margin-bottom: 25px;
-            letter-spacing: 0.25em;
+            letter-spacing: 0.3em;
             color: #888;
-        }
-        .premium-section-title h2 {
-            font-size: 56px;
-            font-weight: 900;
-            line-height: 1;
-            text-transform: uppercase;
-            letter-spacing: -0.05em;
-            margin: 0;
-            color: #000;
-        }
-        .premium-section-content p.lead-text {
-            font-size: 36px;
-            font-weight: 800;
-            line-height: 1.15;
-            margin-bottom: 50px;
-            color: #000;
-            letter-spacing: -0.03em;
-        }
-        .premium-section-content .detailed-text p {
-            font-size: 20px;
-            line-height: 1.7;
-            color: #444;
             margin-bottom: 30px;
-        }
-        .premium-section-content h3 {
-            font-size: 20px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 25px;
             display: block;
-            letter-spacing: 0.1em;
-            color: #000;
-        }
-        
-        .premium-grid-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        .premium-feature-item {
-            padding: 30px;
-            background: #fdfdfd;
-            border: 1px solid #eee;
-        }
-        .premium-feature-item strong {
-            display: block;
-            font-size: 16px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-            color: #d00;
         }
 
-        @media (max-width: 1100px) {
-            .premium-section { padding: 100px 40px; }
-            .premium-section-grid { grid-template-columns: 1fr; gap: 60px; }
-            .premium-section-title { position: static; }
-            .premium-section-title h2 { font-size: 42px; }
-            .premium-section-content p.lead-text { font-size: 28px; }
-            .premium-grid-2col { grid-template-columns: 1fr; }
+        .brut-centered-section h2 {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+            margin-bottom: 60px;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .brut-centered-section .intro-lead {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.5;
+            color: #111;
+            margin-bottom: 40px;
+        }
+
+        .brut-centered-section p {
+            font-size: 19px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- Section Split (02) --- */
+        .brut-split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 100vh;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .brut-split-content {
+            padding: 120px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .bg-yellow {
+            background-color: #ffcc00;
+            color: #000;
+        }
+
+        .brut-split-content h2 {
+            font-size: 52px;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 40px;
+            letter-spacing: -0.04em;
+            text-transform: uppercase;
+        }
+
+        .brut-split-content h3 {
+            font-size: 20px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: 40px;
+            margin-bottom: 25px;
+            letter-spacing: 0.1em;
+        }
+
+        .brut-split-image {
+            background-image: url('assets/img/office_brut_style.png');
+            background-size: cover;
+            background-position: center;
+            min-height: 500px;
+        }
+
+        /* --- Hero Section --- */
+        .brut-hero {
+            position: relative;
+            height: 90vh;
+            width: 100%;
+            background-image: url('assets/img/hero_rejoindre_post.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .brut-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+            z-index: 1;
+        }
+
+        .brut-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .brut-hero-content h1 {
+            font-size: 24px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 40px;
+        }
+
+        .brut-hero-actions {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-hero {
+            padding: 12px 35px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: #2563eb;
+            color: white;
+            border: none;
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
+            background: #1d4ed8;
+        }
+
+        .btn-hero.secondary {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            color: #fff;
+        }
+
+        .btn-hero.secondary:hover {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+        }
+
+        /* --- Section Benefits Grid (03) --- */
+        .brut-benefits-section {
+            padding: 140px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .brut-benefits-section h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+        }
+
+        .brut-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px 40px;
+            text-align: left;
+        }
+
+        .benefit-item h4 {
+            font-size: 18px;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #000;
+            letter-spacing: 0.05em;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .benefit-item h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: #ffcc00;
+            border-radius: 50%;
+        }
+
+        .benefit-item p {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #666;
+            padding-left: 20px;
+        }
+
+        /* --- Section Contact (04) --- */
+        .brut-contact-section {
+            padding: 140px 20px;
+            text-align: center;
+            background: #fafafa;
+        }
+
+        .brut-contact-section h2 {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .brut-contact-section p {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 900px) {
+            .brut-split-section { grid-template-columns: 1fr; }
+            .brut-split-content { padding: 80px 30px; }
+            .brut-centered-section h2 { font-size: 42px; }
+            .brut-benefits-grid { grid-template-columns: 1fr; gap: 40px; }
+            .brut-split-image { min-height: 350px; }
+            .brut-hero { height: 70vh; }
         }
     </style>
 </head>
@@ -255,58 +415,92 @@
     <aside class="sidebar">
         <div class="sidebar-branding">
             <div class="logo">
-                <a href="home.html">P<span class="logo-play-o"></span>st</a>
+                <a href="index.html">P<span class="logo-play-o"></span>st</a>
             </div>
         </div>
         
         <nav class="sidebar-nav">
             <ul>
                 <li>
-                    <a href="home.html">
+                    <a href="#" class="sidebar-actions-btn">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Rechercher
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
                         Accueil
                     </a>
                 </li>
                 <li>
-                    <a href="home.html#international">
+                    <a href="international.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                         International
                     </a>
                 </li>
                 <li>
-                    <a href="home.html#economie">
+                    <a href="haiti.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 20h3v-4H4v4zm6 0h3v-9h-3v9zm6 0h3v-14h-3v14z"/></svg>
-                        Économie
+                        Haiti
                     </a>
                 </li>
                 <li>
-                    <a href="home.html#politique">
+                    <a href="politique.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
                         Politique
                     </a>
                 </li>
                 <li>
-                    <a href="home.html#culture">
+                    <a href="culture.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
                         Culture
                     </a>
                 </li>
                 <li>
-                    <a href="home.html#sport">
+                    <a href="sport.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                         Sport
                     </a>
                 </li>
-                <li>
-                    <a href="home.html#podcast">
-                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-                        Podcast
+                <li class="has-dropdown">
+                    <a href="index.html#plus">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                        Plus
                     </a>
+                    <ul class="submenu">
+                        <li><a href="sante.html">Santé</a></li>
+                        <li><a href="technologie.html">Technologie</a></li>
+                        <li><a href="nature.html">Nature</a></li>
+                    </ul>
                 </li>
             </ul>
 
             <div class="sidebar-divider"></div>
 
+            <ul>
+                <li>
+                    <a href="articles.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="podcast.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
+                <li>
+                    <a href="documentaires.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                        Documentaires
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+            
             <div class="sidebar-edition-container">
                 <div class="edition-selector">
                     <span>Édition française</span>
@@ -318,7 +512,7 @@
 
     <header class="mobile-header">
         <div class="logo">
-            <a href="home.html">P<span class="logo-play-o"></span>st</a>
+            <a href="index.html">P<span class="logo-play-o"></span>st</a>
         </div>
         <div class="burger-menu" onclick="toggleMobileMenu()">
             <span></span>
@@ -328,116 +522,90 @@
     </header>
 
     <main>
-        <section class="rejoindre-hero">
-            <div class="rejoindre-hero-overlay"></div>
-            <div class="rejoindre-hero-content">
-                <h1>Découvrir P<span class="logo-play-o"></span>st</h1>
-                <div class="hero-btn-group">
-                    <a href="#" class="btn-hero btn-hero-blue">Se connecter</a>
-                    <a href="#" class="btn-hero btn-hero-white">Offres d'emploi</a>
+        <!-- Hero Section Section -->
+        <section class="brut-hero">
+            <div class="brut-hero-content">
+                <h1>Join us!</h1>
+                <div class="brut-hero-actions">
+                    <a href="#intro" class="btn-hero">Parcourir</a>
+                    <a href="#contact" class="btn-hero secondary">Postuler</a>
                 </div>
-            </div>
-            <div class="hero-arrow-down">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
             </div>
         </section>
-        
+
         <div class="premium-sections">
-            <!-- Section 01: Qui sommes-nous ? -->
-            <section class="premium-section" id="about">
-                <div class="premium-section-grid">
-                    <div class="premium-section-title">
-                        <span class="section-number">01</span>
-                        <h2>Qui sommes-nous ?</h2>
+            <!-- Section 01: Discover POST (Intro) -->
+            <section class="brut-centered-section" id="intro" style="padding-top: 100px;">
+                <span class="section-number">01</span>
+                <h2>Qui sommes-nous ?</h2>
+                <div class="intro-lead">POST est un média digital conçu pour une génération connectée, exigeante et en quête de sens.</div>
+                <p>Nous produisons des contenus courts, longs et immersifs qui permettent non seulement de suivre l’actualité, mais surtout de la comprendre.</p>
+                <p>À la croisée du storytelling, de la technologie et de la data, POST développe des formats pensés pour les usages d’aujourd’hui : mobiles, rapides et engageants.</p>
+                <p>Notre ambition est simple : créer un média capable de capter l’attention, de la retenir et de la transformer en compréhension.</p>
+                <p>POST est également un terrain d’expression pour les talents, les créateurs et les voix qui veulent avoir un impact réel.</p>
+            </section>
+
+            <!-- Section 02: Vision & Mission (Split Yellow) -->
+            <section class="brut-split-section" id="mission">
+                <div class="brut-split-content bg-yellow">
+                    <span class="section-number" style="color: rgba(0,0,0,0.5);">02</span>
+                    <h2>Impact & Vision</h2>
+                    <p style="font-size: 24px; font-weight: 800; line-height: 1.3;">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
+                    
+                    <h3>Notre mission</h3>
+                    <ul class="bullet-list-brut" style="list-style: none; padding: 0;">
+                        <li style="border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px 0; font-weight: 700;">Rendre les sujets complexes accessibles</li>
+                        <li style="border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px 0; font-weight: 700;">Produire des contenus à forte valeur ajoutée</li>
+                        <li style="border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px 0; font-weight: 700;">Engager des communautés actives et conscientes</li>
+                        <li style="padding: 15px 0; font-weight: 700;">Utiliser la data pour amplifier la portée et l’impact</li>
+                    </ul>
+                </div>
+                <div class="brut-split-image"></div>
+            </section>
+
+            <!-- Section 03: Nos Valeurs (Grid) -->
+            <section class="brut-benefits-section" id="values">
+                <span class="section-number">03</span>
+                <h2>Nos Valeurs</h2>
+                <div class="brut-benefits-grid">
+                    <div class="benefit-item">
+                        <h4>Clarté</h4>
+                        <p>Simplifier sans dénaturer la complexité du monde.</p>
                     </div>
-                    <div class="premium-section-content">
-                        <p class="lead-text">POST est un média digital conçu pour une génération connectée, exigeante et en quête de sens.</p>
-                        <div class="detailed-text">
-                            <p>Nous produisons des contenus courts, longs et immersifs qui permettent non seulement de suivre l’actualité, mais surtout de la comprendre.</p>
-                            <p>À la croisée du storytelling, de la technologie et de la data, POST développe des formats pensés pour les usages d’aujourd’hui : mobiles, rapides et engageants.</p>
-                            <p>Notre ambition est simple : créer un média capable de capter l’attention, de la retenir et de la transformer en compréhension.</p>
-                            <p>POST est également un terrain d’expression pour les talents, les créateurs et les voix qui veulent avoir un impact réel.</p>
-                        </div>
+                    <div class="benefit-item">
+                        <h4>Exigence</h4>
+                        <p>Produire un contenu précis, vérifié et pertinent.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Innovation</h4>
+                        <p>Tester, analyser et optimiser en continu nos formats.</p>
+                    </div>
+                    <div class="benefit-item">
+                        <h4>Responsabilité</h4>
+                        <p>Traiter l’information avec rigueur et intégrité.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Section 02: Vision & Mission -->
-            <section class="premium-section bg-light" id="vision">
-                <div class="premium-section-grid">
-                    <div class="premium-section-title">
-                        <span class="section-number">02</span>
-                        <h2>Impact & Vision</h2>
-                    </div>
-                    <div class="premium-section-content">
-                        <p class="lead-text">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
-                        <h3>Notre mission</h3>
-                        <ul class="bullet-list-brut">
-                            <li>Rendre les sujets complexes accessibles</li>
-                            <li>Produire des contenus à forte valeur ajoutée</li>
-                            <li>Engager des communautés actives et conscientes</li>
-                            <li>Utiliser la data pour amplifier la portée et l’impact</li>
-                        </ul>
-                    </div>
+            <!-- Section 04: Rejoindre l'équipe -->
+            <section class="brut-contact-section" id="contact">
+                <span class="section-number">04</span>
+                <h2>Rejoindre l'équipe</h2>
+                <p>POST est en construction permanente. Nous recherchons des profils capables de penser, créer et exécuter.</p>
+                <div style="max-width: 600px; margin: 0 auto 60px;">
+                    <p style="font-size: 18px; color: #888;">Que vous soyez créateur de contenu, data analyst, designer ou développeur, votre talent a sa place chez nous.</p>
                 </div>
-            </section>
-
-            <!-- Section 03: Valeurs -->
-            <section class="premium-section" id="values">
-                <div class="premium-section-grid">
-                    <div class="premium-section-title">
-                        <span class="section-number">03</span>
-                        <h2>Nos Valeurs</h2>
-                    </div>
-                    <div class="premium-section-content">
-                        <div class="premium-grid-2col">
-                            <div class="premium-feature-item">
-                                <strong>Clarté</strong>
-                                <p>Simplifier sans dénaturer la complexité du monde.</p>
-                            </div>
-                            <div class="premium-feature-item">
-                                <strong>Exigence</strong>
-                                <p>Produire un contenu précis, vérifié et pertinent.</p>
-                            </div>
-                            <div class="premium-feature-item">
-                                <strong>Innovation</strong>
-                                <p>Tester, analyser et optimiser en continu nos formats.</p>
-                            </div>
-                            <div class="premium-feature-item">
-                                <strong>Responsabilité</strong>
-                                <p>Traiter l’information avec rigueur et intégrité.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section 04: Opportunités -->
-            <section class="premium-section bg-light" id="opportunities">
-                <div class="premium-section-grid">
-                    <div class="premium-section-title">
-                        <span class="section-number">04</span>
-                        <h2>Rejoindre l'équipe</h2>
-                    </div>
-                    <div class="premium-section-content">
-                        <p class="lead-text">POST est en construction permanente. Nous recherchons des profils capables de penser, créer et exécuter.</p>
-                        <div class="detailed-text">
-                            <p>Que vous soyez créateur de contenu, data analyst, designer ou développeur, votre talent a sa place chez nous.</p>
-                        </div>
-                        <div class="contact-block">
-                            <h2>Nous contacter</h2>
-                            <p>Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
-                            <a href="mailto:contact@post.media" class="btn-contact">Envoyer un message</a>
-                        </div>
-                    </div>
-                </div>
+                
+                <h3 style="text-transform: uppercase; font-size: 14px; letter-spacing: 0.2em; color: #888; margin-bottom: 20px;">Nous contacter</h3>
+                <p style="font-weight: 800; color: #000; font-size: 24px; margin-bottom: 40px;">Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
+                <a href="mailto:contact@post.media" class="btn-contact" style="background: #000; padding: 20px 60px; border-radius: 0; font-size: 16px;">Envoyer un message</a>
             </section>
         </div>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
-            <a href="home.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
+            <a href="index.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
             
             <div class="footer-sections-grid">
                 <div class="footer-section">
@@ -453,12 +621,12 @@
                 <div class="footer-section">
                     <h4>Catégories</h4>
                     <ul>
-                        <li><a href="home.html">International</a></li>
-                        <li><a href="home.html#economie">Économie</a></li>
-                        <li><a href="home.html#societe">Politique</a></li>
-                        <li><a href="home.html#culture">Culture</a></li>
-                        <li><a href="home.html#sport">Sport</a></li>
-                        <li><a href="home.html#podcast">Podcast</a></li>
+                        <li><a href="index.html">International</a></li>
+                        <li><a href="index.html#haiti-en-image">Haiti</a></li>
+                        <li><a href="index.html#societe">Politique</a></li>
+                        <li><a href="index.html#culture">Culture</a></li>
+                        <li><a href="sport.html">Sport</a></li>
+                        <li><a href="index.html#podcast">Podcast</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -477,7 +645,7 @@
             </div>
 
             <div class="footer-legal-centered">
-                <div class="copyright">Post © 2026</div>
+                <div class="copyright">P<span class="logo-play-o"></span>st © 2026</div>
             </div>
         </div>
     </footer>

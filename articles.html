@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles — Les Dossiers de POST</title>
+    <meta name="description" content="Découvrez les analyses, enquêtes et dossiers exclusifs de la rédaction de POST.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
+    <link rel="stylesheet" href="style.css?v=4">
+</head>
+<body>
+    <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <aside class="sidebar">
+        <div class="sidebar-branding">
+            <div class="logo">
+                <a href="index.html">P<span class="logo-play-o"></span>st</a>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="#" class="sidebar-actions-btn">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Rechercher
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="international.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        International
+                    </a>
+                </li>
+                <li>
+                    <a href="haiti.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 20h3v-4H4v4zm6 0h3v-9h-3v9zm6 0h3v-14h-3v14z"/></svg>
+                        Haiti
+                    </a>
+                </li>
+                <li>
+                    <a href="politique.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        Politique
+                    </a>
+                </li>
+                <li>
+                    <a href="culture.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Culture
+                    </a>
+                </li>
+                <li>
+                    <a href="sport.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Sport
+                    </a>
+                </li>
+                <li class="has-dropdown">
+                    <a href="index.html#plus">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                        Plus
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="sante.html">Santé</a></li>
+                        <li><a href="technologie.html">Technologie</a></li>
+                        <li><a href="nature.html">Nature</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <ul>
+                <li>
+                    <a href="articles.html" class="active">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="podcast.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
+                <li>
+                    <a href="documentaires.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                        Documentaires
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+            
+            <div class="sidebar-edition-container">
+                <div class="edition-selector">
+                    <span>Édition française</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <header class="mobile-header">
+        <div class="logo">
+            <a href="index.html">P<span class="logo-play-o"></span>st</a>
+        </div>
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="articles-page-wrapper">
+            <header class="section-header-brut">
+                <div class="header-left">
+                    <h1>L’information par nos plumes:</h1>
+                    <p>Toute l’actualité, tout de suite</p>
+                </div>
+
+            </header>
+
+            <section class="article-featured-grid-v2">
+                <!-- Main Featured (Left) -->
+                <div class="featured-main-card">
+                    <div class="img-container">
+                        <img src="assets/img/news_summit.png" alt="Summit">
+                    </div>
+                    <div class="content">
+                        <div class="feature-meta">
+                            <span class="label-dot"></span>
+                            Summit • Article à la une
+                        </div>
+                        <h2>Nouveau Sommet Geopolitique : Les enjeux d'un monde en mutation</h2>
+                        <p class="description">Alors que les puissances mondiales se réunissent, POST analyse les conséquences stratégiques pour la zone Caraïbe et le rôle crucial de la diaspora dans les nouveaux équilibres.</p>
+                        <a href="article-krisla.html" class="btn-pill-black">Lire l'article</a>
+                    </div>
+                </div>
+
+                <!-- Side Articles (Right) -->
+                <div class="featured-side-list">
+                    <a href="#" class="side-article-card">
+                        <div class="thumb">
+                            <img src="assets/img/hero_tech.png" alt="Tech">
+                        </div>
+                        <div class="side-content">
+                            <div class="feature-meta" style="font-size: 11px;">
+                                <span class="label-dot" style="width: 7px; height: 7px;"></span>
+                                Prospective
+                            </div>
+                            <h4>Haiti 2030 : le manifeste pour une souveraineté digitale</h4>
+                        </div>
+                    </a>
+
+                    <a href="#" class="side-article-card">
+                        <div class="thumb">
+                            <img src="assets/img/economy_color_premium_1774478629301.png" alt="Economy">
+                        </div>
+                        <div class="side-content">
+                            <div class="feature-meta" style="font-size: 11px;">
+                                <span class="label-dot" style="width: 7px; height: 7px;"></span>
+                                Économie
+                            </div>
+                            <h4>Cap-Haïtien : nouveau hub technologique de la région ?</h4>
+                        </div>
+                    </a>
+
+                    <a href="#" class="side-article-card">
+                        <div class="thumb">
+                            <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Society">
+                        </div>
+                        <div class="side-content">
+                            <div class="feature-meta" style="font-size: 11px;">
+                                <span class="label-dot" style="width: 7px; height: 7px;"></span>
+                                Politique
+                            </div>
+                            <h4>Les nouveaux visages de l'engagement citoyen</h4>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+
+
+            <section class="standard-section redaction-articles-section">
+                <div class="reels-header">
+                    <div class="header-title-block">
+                        <h2 style="font-size: 20px; font-weight: 800;">Nos dernières publications</h2>
+                        <p style="font-size: 14px; color: #888; margin-top: 5px; font-weight: 400;">Explorez les archives et les grands formats de POST.</p>
+                    </div>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="articles-horizontal-grid">
+                        <!-- Card 1 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_tech.png" alt="Article 1">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 1</span>
+                                </div>
+                                <h4>Air Tahiti Nui aux côtés du requin, symbole du territoire...</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Article 4">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 4</span>
+                                </div>
+                                <h4>Gims passe par la case juge d'instruction après la fin de sa garde...</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_rejoindre_post.png" alt="Article 2">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 2</span>
+                                </div>
+                                <h4>Scandale sexuel qui secoue l'Allemagne: enquête pour...</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Article 5">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 5</span>
+                                </div>
+                                <h4>La mère de deux bébés congelés condamnée à 25 ans de prison</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/economy_color_premium_1774478629301.png" alt="Article 3">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 3</span>
+                                </div>
+                                <h4>Le policier qui a tué Olivio Gomes condamné à 10 ans de prison po...</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 6 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/news_summit.png" alt="Article 6">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 6</span>
+                                </div>
+                                <h4>Bolsonaro quitte l'hôpital pour sa résidence afin de purger sa peine à...</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 7 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_tech.png" alt="Article 7">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 7</span>
+                                </div>
+                                <h4>L'intelligence artificielle au service de l'agriculture haïtienne</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 10 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_capois_color_premium_1774478597130.png" alt="Article 10">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 10</span>
+                                </div>
+                                <h4>Infrastructures routières : le grand chantier du Grand Sud</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 8 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/economy_color_premium_1774478629301.png" alt="Article 8">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 8</span>
+                                </div>
+                                <h4>Le port de Port-au-Prince : défis et opportunités logistiques</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 11 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/news_summit.png" alt="Article 11">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 11</span>
+                                </div>
+                                <h4>Haïti au sommet régional : quelle voix pour la diaspora ?</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 9 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_culture.png" alt="Article 9">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 9</span>
+                                </div>
+                                <h4>L'artisanat local s'exporte : quand tradition rime avec design</h4>
+                            </div>
+                        </article>
+
+                        <!-- Card 12 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="assets/img/hero_rejoindre_post.png" alt="Article 12">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 12</span>
+                                </div>
+                                <h4>Énergie solaire : la solution pour l'électrification rurale ?</h4>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="grid-nav-brut">
+                        <button class="carousel-nav-btn prev" aria-label="Précédent">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button class="carousel-nav-btn next" aria-label="Suivant">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-centered-content">
+            <a href="index.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
+            <div class="footer-legal-centered">
+                <div class="copyright">P<span class="logo-play-o"></span>st © 2026</div>
+                <div class="footer-legal-links">
+                    <a href="#">Confidentialité</a>
+                    <a href="#">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.burger-menu').classList.toggle('open');
+            document.querySelector('.menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        // Carousel Navigation Logic
+        const grid = document.querySelector('.articles-horizontal-grid');
+        const prevBtn = document.querySelector('.carousel-nav-btn.prev');
+        const nextBtn = document.querySelector('.carousel-nav-btn.next');
+
+        if (grid && prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: grid.offsetWidth, behavior: 'smooth' });
+            });
+            prevBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: -grid.offsetWidth, behavior: 'smooth' });
+            });
+        }
+    </script>
+</body>
+</html>

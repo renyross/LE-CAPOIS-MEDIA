@@ -49,6 +49,7 @@ h1, h2, h3, h4, h5, h6 {
     border-bottom: 0.5px solid #eee;
 }
 
+
 /* Articles Horizontal Grid (Brut Style Carousel - 2 Columns) */
 .articles-horizontal-grid {
     display: grid;
@@ -141,6 +142,15 @@ h1, h2, h3, h4, h5, h6 {
     line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+/* Reductions for horizontal grid selection */
+.articles-horizontal-grid .card-label span {
+    font-size: 10px !important;
+}
+
+.articles-horizontal-grid .card-content h4 {
+    font-size: 14px !important;
 }
 
 /* Nav Buttons at bottom right */
@@ -301,12 +311,12 @@ body.no-scroll {
 .sidebar-nav li a {
     display: flex;
     align-items: center;
-    gap: 18px;
-    padding: 14px 40px;
+    gap: 15px; /* Slightly reduced gap */
+    padding: 12px 40px; /* Slightly reduced padding */
     text-decoration: none;
     color: var(--black);
-    font-size: 18px;
-    font-weight: 800 !important;
+    font-size: 15.5px; /* Reduced from 18px */
+    font-weight: 700 !important; /* Slightly lighter weight */
     transition: all 0.2s ease;
 }
 
@@ -332,6 +342,60 @@ body.no-scroll {
     background: var(--gray-medium);
     border-radius: 50%;
     margin-right: 8px;
+}
+
+/* Sidebar Submenu Dropdown */
+.sidebar-nav li.has-dropdown {
+    position: relative;
+}
+
+.sidebar-nav .submenu {
+    list-style: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #fcfcfc;
+}
+
+.sidebar-nav li.has-dropdown:hover .submenu {
+    max-height: 300px;
+    padding-bottom: 10px;
+}
+
+.sidebar-nav .submenu li a {
+    padding: 8px 40px 8px 75px;
+    font-size: 13px; /* Reduced from 14px */
+    font-weight: 500 !important;
+    color: #666;
+    border-left: none;
+}
+
+.sidebar-nav .submenu li a:hover {
+    color: var(--black);
+    background: #f5f5f5;
+}
+
+.sidebar-nav li.has-dropdown > a {
+    position: relative;
+}
+
+/* Dropdown arrow */
+.sidebar-nav li.has-dropdown > a::after {
+    content: '';
+    position: absolute;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-right: 1.5px solid #ccc;
+    border-bottom: 1.5px solid #ccc;
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-nav li.has-dropdown:hover > a::after {
+    transform: translateY(-30%) rotate(-135deg);
 }
 
 .sidebar-edition-container {
@@ -440,8 +504,8 @@ main {
     }
     
     .sidebar-nav li a {
-        font-size: 16px;
-        font-weight: 800 !important;
+        font-size: 14px; /* Reduced from 16px */
+        font-weight: 700 !important;
         padding: 8px 40px;
         gap: 15px;
         color: var(--black);
@@ -1004,6 +1068,14 @@ main {
     border-bottom: 0.5px solid #eee;
     width: 100%;
     cursor: pointer;
+}
+
+.selection-side .card-label span {
+    font-size: 10px !important;
+}
+
+.selection-side .card-content h4 {
+    font-size: 14px !important;
 }
 
 .selection-card:last-child {
@@ -1771,12 +1843,28 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+.nav-arrow-btn svg {
+    width: 20px;
+    height: 20px;
+}
 
-.video-carousel {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    text-align: left;
+@media (max-width: 1100px) {
+    .horizontal-selection-grid {
+        grid-template-columns: 1fr;
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .selection-card-horizontal {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .selection-card-horizontal .thumb {
+        width: 100%;
+        flex: 0 0 auto;
+    }
 }
 
 .video-card {
@@ -2879,12 +2967,6 @@ main {
     width: 100%;
 }
 
-@media (min-width: 1200px) {
-    .redaction-articles-section {
-        padding-right: 140px !important; /* Make it symmetrical with left padding */
-    }
-}
-
 .articles-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -3182,7 +3264,9 @@ main {
 
     /* Mobile Overrides (991px and below) */
     @media (max-width: 991px) {
-        .standard-section {
+        .standard-section,
+        .page-sport .standard-section,
+        .page-culture .standard-section {
             padding: 40px 20px;
         }
 
@@ -3200,7 +3284,7 @@ main {
         }
 
         .redaction-articles-section {
-            padding: 40px 20px;
+            padding: 10px 20px 40px;
         }
 
         .articles-horizontal-grid {
@@ -3575,7 +3659,7 @@ main {
 /* --- Section: La Sélection du Soir --- */
 .selection-soir-section {
     background: #fff;
-    padding: 80px 20px;
+    padding: 80px 140px;
 }
 
 .selection-soir-header {
@@ -3700,7 +3784,7 @@ main {
 }
 
 .selection-item h4 {
-    font-size: 18px !important;
+    font-size: 13px !important;
     font-weight: 800;
     line-height: 1.25;
     margin: 0;
@@ -3778,6 +3862,296 @@ main {
     border-bottom: 0.15em solid transparent;
     border-left: 0.22em solid #fff;
     margin-left: 0.06em;
+}
+
+.footer-logo-large {
+    display: inline-flex !important;
+    align-items: center;
+}
+
+/* --- ARTICLES PAGE SPECIFIC (V2) --- */
+/* --- ARTICLES PAGE HEADER (SECTION STYLE) --- */
+.section-header-brut {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 140px 20px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #efefef;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-header-brut .header-left h1 {
+    font-size: 28px;
+    font-weight: 900;
+    color: #111;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    text-transform: none;
+}
+
+.section-header-brut .header-left h1 span {
+    font-size: 24px;
+    color: #888;
+    font-weight: 400;
+}
+
+.section-header-brut .header-left p {
+    font-size: 16px;
+    color: #888;
+    margin-top: 5px;
+    font-weight: 400;
+}
+
+.section-header-brut .btn-tout-voir {
+    display: inline-block;
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px 25px;
+    border-radius: 40px;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.2s ease;
+}
+
+.section-header-brut .btn-tout-voir:hover {
+    background: #000;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+    .section-header-brut {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 0 20px 30px;
+    }
+    .section-header-brut .header-right {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+/* Featured Article Grid V2 */
+.article-featured-grid-v2 {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr;
+    gap: 50px;
+    padding: 0 140px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Main Featured Card (Left) */
+.featured-main-card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.featured-main-card .img-container {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.featured-main-card .img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.featured-main-card .content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.feature-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 900;
+    color: #888;
+    text-transform: uppercase;
+}
+
+.feature-meta .label-dot {
+    width: 10px;
+    height: 10px;
+    background: #FFEF00;
+    border-radius: 50%;
+}
+
+.featured-main-card h2 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #000;
+    letter-spacing: -0.04em;
+    margin: 0;
+}
+
+.featured-main-card .description {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #444;
+    max-width: 90%;
+}
+
+/* Featured Side List (Right) */
+.featured-side-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-article-card {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 20px;
+    padding: 25px 0;
+    border-top: 1px solid #efefef;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.side-article-card:first-child {
+    padding-top: 0;
+    border-top: none;
+}
+
+.side-article-card .thumb {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: #f5f5f5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.side-article-card .thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.side-article-card .side-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.side-article-card h4 {
+    font-size: 17px;
+    font-weight: 800;
+    line-height: 1.25;
+    color: #111;
+    margin: 0;
+}
+
+/* General Layout helpers & Responsive */
+@media (max-width: 991px) {
+    .article-featured-grid-v2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px 10px;
+    }
+    .featured-main-card h2 {
+        font-size: 38px;
+    }
+    .featured-main-card .description {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .side-article-card {
+        grid-template-columns: 100px 1fr;
+    }
+    .side-article-card h4 {
+        font-size: 15px;
+    }
+    .articles-page-intro h1 {
+        font-size: 32px;
+    }
+}
+
+/* Articles Feed Grid */
+.articles-feed-section {
+    padding: 80px 140px;
+    border-top: 1px solid #eee;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.articles-feed-section h3 {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+.articles-feed-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.article-feed-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.card-img-placeholder {
+    aspect-ratio: 16/9;
+    background: #f5f5f5;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.card-img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.article-feed-card .card-category {
+    font-size: 12px;
+    font-weight: 900;
+    color: #d00;
+    text-transform: uppercase;
+}
+
+.article-feed-card h4 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.4;
+    color: #111;
+}
+
+@media (max-width: 1000px) {
+    .articles-feed-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .articles-feed-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 .footer-logo-large {
