@@ -3815,9 +3815,12 @@ main {
 }
 
 @media (max-width: 900px) {
+    .selection-soir-section {
+        padding: 40px 20px !important;
+    }
     .selection-soir-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 40px;
     }
     .selection-soir-header {
         padding-left: 0;
@@ -3827,11 +3830,15 @@ main {
         aspect-ratio: 16/9; /* Standard landscape on mobile */
     }
     .selection-large-card h3 {
-        font-size: 32px;
+        font-size: 36px;
     }
     .selection-item .thumb {
-        flex: 0 0 120px;
-        height: 80px;
+        flex: 0 0 130px;
+        height: 90px;
+    }
+    .selection-item h4 {
+        font-size: 18px !important;
+        font-weight: 800 !important;
     }
     .selection-item-footer {
         justify-content: center;
