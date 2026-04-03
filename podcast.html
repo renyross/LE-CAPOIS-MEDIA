@@ -17,50 +17,661 @@
             padding: 80px 0;
             text-align: center;
         }
-        .podcast-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-        .podcast-card {
-            background: #fff;
-            border: 1px solid #eee;
-            border-radius: 8px;
+
+        /* --- PREMIUM AUDIO PLAYER HERO --- */
+        .audio-player-hero {
+            max-width: 1000px;
+            margin: 40px auto 20px;
+            background: url('assets/img/podcast-hero-bg.png') center/cover no-repeat;
+            border-radius: 4px;
             overflow: hidden;
-            transition: transform 0.3s ease;
+            position: relative;
+            font-family: 'Roboto', sans-serif;
         }
-        .podcast-card:hover {
-            transform: translateY(-5px);
+
+        .audio-hero-overlay {
+            background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.8) 100%);
+            backdrop-filter: blur(8px);
+            padding: 40px;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
         }
-        .podcast-card img {
+
+        .audio-hero-top {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .audio-hero-artwork {
+            flex-shrink: 0;
+            width: 140px;
+            height: 140px;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .audio-hero-artwork img {
             width: 100%;
-            aspect-ratio: 1;
+            height: 100%;
             object-fit: cover;
         }
-        .podcast-info {
-            padding: 20px;
+
+        .audio-hero-info {
+            flex-grow: 1;
         }
-        .podcast-info h3 {
-            margin: 0 0 10px;
-            font-size: 18px;
+
+        .audio-hero-info .series-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgba(255,255,255,0.6);
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+            display: block;
         }
-        .podcast-info p {
-            color: #666;
+
+        .audio-hero-info h1 {
+            font-size: 28px;
+            font-weight: 850;
+            line-height: 1.25;
+            color: #fff;
+            margin: 0;
+            max-width: 600px;
+        }
+
+        .audio-hero-menu-btn {
+            background: rgba(255,255,255,0.1);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .audio-hero-menu-btn:hover { background: rgba(255,255,255,0.2); }
+
+        .audio-hero-player-row {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+
+        .control-btn:hover { transform: scale(1.1); opacity: 0.8; }
+
+        .skip-btn {
+            position: relative;
+            width: 32px;
+            height: 32px;
+        }
+
+        .skip-btn span {
+            position: absolute;
+            font-size: 8px;
+            font-weight: 900;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .play-btn-circle {
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            color: #000;
+        }
+
+        .audio-waveform {
+            flex-grow: 1;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            gap: 2px;
+            overflow: hidden;
+            padding: 0 10px;
+        }
+
+        .wave-bar {
+            width: 2px;
+            height: 100%;
+            background: rgba(255,255,255,0.2);
+            border-radius: 1px;
+            transition: height 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .wave-bar.active {
+            background: rgba(255,255,255,0.7);
+        }
+
+        .audio-time-total {
+            font-size: 13px;
+            color: rgba(255,255,255,0.9);
+            font-weight: 600;
+            white-space: nowrap;
+            flex-shrink: 0;
+            font-family: monospace;
+            background: rgba(0,0,0,0.2);
+            padding: 4px 8px;
+            border-radius: 4px;
+        }
+
+        .audio-hero-footer {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 10px;
+        }
+
+        .audio-hero-footer span {
+            font-size: 20px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            color: #fff;
+            opacity: 1;
+        }
+
+        .audio-hero-menu-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .audio-hero-menu-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .audio-hero-menu-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .audio-hero-dropdown {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            background: rgba(30, 30, 30, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            min-width: 220px;
+            z-index: 100;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            padding: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        .audio-hero-dropdown.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
             font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            transition: background 0.2s ease;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .dropdown-item svg {
+            width: 18px;
+            height: 18px;
+            opacity: 0.7;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin: 8px 12px;
+        }
+
+        /* Reaction Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .reaction-modal {
+            background: rgba(30, 30, 30, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            width: 90%;
+            max-width: 500px;
+            padding: 40px;
+            position: relative;
+            transform: scale(0.9);
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        }
+
+        .modal-overlay.active .reaction-modal {
+            transform: scale(1);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: #fff;
+        }
+
+        .reaction-modal h2 {
+            font-size: 24px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .reaction-modal p {
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .reaction-form-group {
             margin-bottom: 20px;
         }
-        .play-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: #000;
+
+        .reaction-form-group label {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .reaction-form-group input, 
+        .reaction-form-group textarea {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            padding: 12px 14px;
             color: #fff;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 500;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .reaction-form-group input:focus, 
+        .reaction-form-group textarea:focus {
+            outline: none;
+            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .emoji-selector {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .emoji-btn {
+            font-size: 24px;
+            background: none;
+            border: 2px solid transparent;
+            border-radius: 4px;
+            cursor: pointer;
+            padding: 5px;
+            transition: all 0.2s ease;
+            filter: grayscale(100%);
+            opacity: 0.5;
+        }
+
+        .emoji-btn:hover, .emoji-btn.active {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        .emoji-btn.active {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .submit-reaction-btn {
+            width: 100%;
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 4px;
+            padding: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .submit-reaction-btn:hover {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .dropdown-item .chevron {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+            opacity: 0.5;
+        }
+
+        .dropdown-item.active .chevron {
+            transform: rotate(180deg);
+        }
+
+        .podcasts-multi-carousel-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-top: 0;
+        }
+        
+        .podcast-mini-carousel {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .carousel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 8px;
+        }
+
+        .carousel-title {
             font-size: 14px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .carousel-nav-controls {
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-control-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: #111;
+            padding: 0 5px;
+            transition: opacity 0.2s;
+            line-height: 1;
+        }
+
+        .nav-control-btn:hover { opacity: 0.6; }
+        
+        .carousel-track-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        
+        .carousel-track {
+            display: flex;
+            gap: 15px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            padding: 5px 0 10px 0;
+        }
+        
+        .carousel-track::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .podcast-mini-card {
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+            aspect-ratio: 1/1;
+            background: #000;
+            border-radius: 4px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            cursor: pointer;
+        }
+        
+        .podcast-mini-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .podcast-mini-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 0.85;
+        }
+        
+        .podcast-mini-card:hover img {
+            transform: scale(1.1);
+            opacity: 1;
+        }
+        
+        .podcast-mini-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 50%;
+            pointer-events: none;
+        }
+        
+        .podcast-mini-info h3 {
+            margin: 0 0 4px;
+            font-size: 16px;
+            font-weight: 850;
+            line-height: 1.2;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .podcast-mini-info p {
+            color: rgba(255,255,255,0.7);
+            font-size: 12px;
+            line-height: 1.3;
+            margin: 0 0 12px;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .podcast-mini-info .play-btn {
+            font-size: 10px;
+            font-weight: 900;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .podcast-mini-info .play-btn::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='12' height='12' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        /* Tous les épisodes section header spacing */
+        .section-header-tous {
+            margin-top: 20px;
+            margin-bottom: 5px;
+            padding-left: 140px; /* Aligned with standard section */
+        }
+        
+        .section-header-tous h1 {
+            font-size: 32px;
+            font-weight: 900;
+            color: #111;
+            margin: 0;
+        }
+
+        .section-header-tous p {
+            font-size: 15px;
+            color: #111;
+            margin: 5px 0 0;
+            font-weight: 850;
+        }
+
+        @media (max-width: 1024px) {
+            .section-header-tous { padding-left: 20px; }
+            .audio-player-hero { margin: 15px 0; }
+            .audio-hero-overlay { padding: 15px 20px; gap: 15px; }
+            
+            .audio-hero-artwork { 
+                width: 85px; 
+                height: 85px; 
+            }
+            
+            .audio-hero-info h1 { 
+                font-size: 18px; 
+                max-width: 100%;
+                line-height: 1.3;
+            }
+            
+            .audio-hero-info .series-label {
+                font-size: 11px;
+                margin-bottom: 4px;
+            }
+
+            .audio-hero-player-row {
+                padding-top: 10px;
+                gap: 12px;
+            }
+            
+            .play-btn-circle {
+                width: 44px;
+                height: 44px;
+            }
+            
+            .audio-hero-footer {
+                margin-top: 5px;
+            }
+
+            .audio-waveform { display: none; }
+            
+            .podcasts-multi-carousel-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+            /* Mobile: Stack categories, but use 2 columns for episodes within them */
+            .carousel-track {
+                display: grid !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
+                overflow-x: visible !important;
+                padding: 0 !important;
+            }
+            .podcast-mini-card {
+                flex: none !important;
+                width: 100% !important;
+            }
         }
     </style>
 </head>
@@ -132,7 +743,6 @@
                     <ul class="submenu">
                         <li><a href="sante.html">Santé</a></li>
                         <li><a href="technologie.html">Technologie</a></li>
-                        <li><a href="nature.html">Nature</a></li>
                     </ul>
                 </li>
             </ul>
@@ -187,67 +797,300 @@
             <header class="section-header-brut">
                 <div class="header-left">
                     <h1>Podcast</h1>
-                    <p>› L'information à écouter, où que vous soyez.</p>
+                    <p>› Toutes nos émissions sonores, en continu.</p>
                 </div>
             </header>
 
+            <!-- Section: Premium Audio Player Hero -->
+            <section class="standard-section" style="padding-top:0;">
+                <div class="audio-player-hero">
+                    <div class="audio-hero-overlay">
+                        <div class="audio-hero-top">
+                            <div class="audio-hero-artwork">
+                                <img src="/Users/renelrosene/.gemini/antigravity/brain/22b1eefb-29f1-4245-ab00-81e5db021c7c/podcast_hero_people_artwork_1775172257124.png" alt="L'entretien Stratégique Cover Art">
+                            </div>
+                            <div class="audio-hero-info">
+                                <span class="series-label">L'entretien Stratégique • des gens influents</span>
+                                <h1>Le Défi de la Reconstruction : Entretien exclusif avec les voix qui façonnent l'avenir d'Haïti</h1>
+                            </div>
+                            <div class="audio-hero-menu-container">
+                                <button class="audio-hero-menu-btn" onclick="toggleHeroMenu(event)">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                                </button>
+                                <div class="audio-hero-dropdown" id="heroDropdown">
+                                    <div class="dropdown-item" onclick="toggleSubmenu(event, 'shareSubmenu')">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                                        Partager
+                                        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                                    </div>
+                                    <div class="dropdown-submenu" id="shareSubmenu">
+                                        <div class="dropdown-item" onclick="sharePodcast('facebook')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                                            Facebook
+                                        </div>
+                                        <div class="dropdown-item" onclick="sharePodcast('whatsapp')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.396.015 12.03c0 2.12.541 4.191 1.57 6.011L0 24l6.117-1.605a11.803 11.803 0 005.925 1.586h.005c6.635 0 12.032-5.396 12.035-12.031a11.772 11.772 0 00-3.517-8.411"/></svg>
+                                            WhatsApp
+                                        </div>
+                                        <div class="dropdown-item" onclick="sharePodcast('twitter')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg>
+                                            Twitter (X)
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-item" onclick="toggleSubmenu(event, 'subscribeSubmenu')">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                                        S'abonner
+                                        <svg class="chevron" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                                    </div>
+                                    <div class="dropdown-submenu" id="subscribeSubmenu">
+                                        <div class="dropdown-item" onclick="window.open('#apple', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.029-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.51 12.09 1.002 1.44 2.188 3.054 3.726 3.008 1.482-.06 2.041-.956 3.828-.956s2.29.956 3.844.922c1.611-.026 2.656-1.464 3.644-2.906 1.139-1.665 1.61-3.273 1.636-3.359-.035-.015-3.141-1.204-3.176-4.783-.029-2.985 2.434-4.414 2.546-4.477-1.397-2.042-3.532-2.274-4.282-2.324-1.921-.157-3.41 1.077-4.331 1.077zM15.445 1.1c.097.012.193.027.288.046 1.503.208 2.766 1.42 3.256 2.89.043.13.082.261.116.394a3.86 3.86 0 0 1-1.066 3.298c-.144.15-.296.29-.456.417a4.2 4.2 0 0 1-1.745 1.001 3.518 3.518 0 0 1-.418.064c-.035.004-.07.006-.105.008-1.504.053-2.912-.907-3.565-2.235a4.015 4.015 0 0 1-.223-.746c-.015-.078-.027-.156-.036-.235a3.918 3.918 0 0 1 .465-2.616c.148-.255.32-.497.515-.722A4.07 4.07 0 0 1 15.445 1.1z"/></svg>
+                                            Apple Podcast
+                                        </div>
+                                        <div class="dropdown-item" onclick="window.open('#spotify', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.49 17.3c-.22.36-.68.48-1.04.26-2.58-1.58-5.83-1.94-9.66-1.06-.41.09-.83-.16-.92-.57-.09-.41.16-.83.57-.92 4.2-.96 7.8-.54 10.74 1.25.37.23.49.69.26 1.04zm1.46-3.26c-.28.45-.88.6-1.33.32-2.96-1.82-7.46-2.35-10.96-1.28-.51.15-1.04-.14-1.19-.65-.15-.51.14-1.04.65-1.19 4.01-1.22 9-1.28 12.35.79.45.28.6 1.4.32 1.85zM20.2 11.2C16.8 9.2 11.1 9 7.8 10c-.5.1-1-.2-1.1-.7s.2-1 .7-1.1c3.8-1.1 10.1-.9 14.1 1.5.5.3.6.9.3 1.4-.4.5-1 .6-1.4.3z"/></svg>
+                                            Spotify
+                                        </div>
+                                        <div class="dropdown-item" onclick="window.open('#deezer', '_blank')">
+                                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.58 17.48H24V24h-7.42zM0 17.48h7.42V24H0zm8.29 0h7.42V24H8.29zm8.29-8.49H24v6.52h-7.42zM8.29 8.99h7.42v6.52H8.29zm0-8.49h7.42v6.52H8.29zM16.58.5h7.42v6.52h-7.42z"/></svg>
+                                            Deezer
+                                        </div>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <div class="dropdown-item" onclick="openReactionModal()">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                                        Proposer une réaction
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="audio-hero-player-row">
+                            <div class="audio-controls">
+                                <button class="control-btn skip-btn">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+                                    <span>15</span>
+                                </button>
+                                <button class="control-btn play-btn-circle">
+                                    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                                </button>
+                                <button class="control-btn skip-btn">
+                                    <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/></svg>
+                                    <span>30</span>
+                                </button>
+                            </div>
+                            
+                            <div class="audio-waveform" id="hero-waveform">
+                                <!-- High-density professional recorder-style waveform (180+ bars) -->
+                                <div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 45%;"></div>
+                                <div class="wave-bar active" style="height: 60%;"></div><div class="wave-bar active" style="height: 50%;"></div><div class="wave-bar active" style="height: 65%;"></div><div class="wave-bar active" style="height: 80%;"></div><div class="wave-bar active" style="height: 60%;"></div><div class="wave-bar active" style="height: 75%;"></div>
+                                <div class="wave-bar active" style="height: 90%;"></div><div class="wave-bar active" style="height: 70%;"></div><div class="wave-bar active" style="height: 55%;"></div><div class="wave-bar active" style="height: 40%;"></div><div class="wave-bar active" style="height: 65%;"></div><div class="wave-bar active" style="height: 85%;"></div>
+                                <div class="wave-bar active" style="height: 75%;"></div><div class="wave-bar active" style="height: 60%;"></div><div class="wave-bar active" style="height: 45%;"></div><div class="wave-bar active" style="height: 30%;"></div><div class="wave-bar active" style="height: 25%;"></div><div class="wave-bar active" style="height: 40%;"></div>
+                                <div class="wave-bar active" style="height: 60%;"></div><div class="wave-bar active" style="height: 80%;"></div><div class="wave-bar active" style="height: 95%;"></div><div class="wave-bar active" style="height: 70%;"></div><div class="wave-bar active" style="height: 50%;"></div><div class="wave-bar active" style="height: 40%;"></div>
+                                <div class="wave-bar active" style="height: 60%;"></div><div class="wave-bar active" style="height: 45%;"></div><div class="wave-bar active" style="height: 30%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 15%;"></div>
+                                <div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 60%;"></div>
+                                <div class="wave-bar" style="height: 70%;"></div><div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 20%;"></div>
+                                <div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 20%;"></div>
+                                <div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 60%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 25%;"></div>
+                                <div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 10%;"></div>
+                                <div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 70%;"></div><div class="wave-bar" style="height: 60%;"></div><div class="wave-bar" style="height: 45%;"></div>
+                                <div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 65%;"></div><div class="wave-bar" style="height: 80%;"></div>
+                                <div class="wave-bar" style="height: 75%;"></div><div class="wave-bar" style="height: 60%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 35%;"></div>
+                                <div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 60%;"></div>
+                                <div class="wave-bar" style="height: 80%;"></div><div class="wave-bar" style="height: 70%;"></div><div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 25%;"></div>
+                                <div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 45%;"></div>
+                                <div class="wave-bar" style="height: 60%;"></div><div class="wave-bar" style="height: 75%;"></div><div class="wave-bar" style="height: 90%;"></div><div class="wave-bar" style="height: 80%;"></div><div class="wave-bar" style="height: 65%;"></div><div class="wave-bar" style="height: 50%;"></div>
+                                <div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 35%;"></div>
+                                <div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 65%;"></div><div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 20%;"></div>
+                                <div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 50%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 15%;"></div>
+                                <div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 70%;"></div><div class="wave-bar" style="height: 85%;"></div>
+                                <div class="wave-bar" style="height: 90%;"></div><div class="wave-bar" style="height: 75%;"></div><div class="wave-bar" style="height: 60%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 25%;"></div>
+                                <div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 45%;"></div><div class="wave-bar" style="height: 60%;"></div>
+                                <div class="wave-bar" style="height: 55%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 30%;"></div><div class="wave-bar" style="height: 45%;"></div>
+                                <div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 20%;"></div><div class="wave-bar" style="height: 10%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 40%;"></div><div class="wave-bar" style="height: 55%;"></div>
+                                <div class="wave-bar" style="height: 70%;"></div><div class="wave-bar" style="height: 85%;"></div><div class="wave-bar" style="height: 90%;"></div><div class="wave-bar" style="height: 75%;"></div><div class="wave-bar" style="height: 60%;"></div><div class="wave-bar" style="height: 45%;"></div>
+                                <div class="wave-bar" style="height: 35%;"></div><div class="wave-bar" style="height: 25%;"></div><div class="wave-bar" style="height: 15%;"></div><div class="wave-bar" style="height: 10%;"></div>
+                            </div>
+                            
+                            <div class="audio-time-total">- 1:03:54</div>
+                        </div>
+                        
+                        <div class="audio-hero-footer">
+                            <span>POST AUDIO</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <header class="section-header-tous">
+                <h1>Tous les épisodes</h1>
+                <p>› Retrouvez l'intégralité de nos productions sonores.</p>
+            </header>
+
             <section class="standard-section">
-                <div class="podcast-grid">
-                    <!-- Podcast 1 -->
-                    <article class="podcast-card">
-                        <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=600&auto=format&fit=crop" alt="Podcast Analysis">
-                        <div class="podcast-info">
-                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : ANALYSE HEBDO</span>
-                            <h3>Le Grand Décryptage : Épisode 12</h3>
-                            <p>Cette semaine, nous revenons sur les enjeux de la transition politique en Haïti avec nos invités.</p>
-                            <a href="#" class="play-btn">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                                ÉCOUTER MAINTENANT
-                            </a>
+                <div class="podcasts-multi-carousel-grid">
+                    <!-- Carousel 1: ANALYSE -->
+                    <div class="podcast-mini-carousel">
+                        <div class="carousel-header">
+                            <h2 class="carousel-title">Analyse</h2>
                         </div>
-                    </article>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-track">
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Le Grand Décryptage #12</h3>
+                                        <p>Enjeux de la transition politique en Haïti.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Perspectives Économiques</h3>
+                                        <p>Analyse des marchés émergents dans les Caraïbes.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Podcast 2 -->
-                    <article class="podcast-card">
-                        <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=600&auto=format&fit=crop" alt="Podcast Interview">
-                        <div class="podcast-info">
-                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : VOIX DU TERRAIN</span>
-                            <h3>Grand Sud : Paroles de Citoyens</h3>
-                            <p>Une immersion sonore au cœur des initiatives locales pour le développement durable.</p>
-                            <a href="#" class="play-btn">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                                ÉCOUTER MAINTENANT
-                            </a>
+                    <!-- Carousel 2: CULTURE -->
+                    <div class="podcast-mini-carousel">
+                        <div class="carousel-header">
+                            <h2 class="carousel-title">Culture</h2>
                         </div>
-                    </article>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-track">
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>L'Art de la Résilience</h3>
+                                        <p>Témoigner de la réalité haïtienne par l'art.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1514525253361-bee8718a34a1?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Mélodies de la Diaspora</h3>
+                                        <p>La musique comme pont entre les générations.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Podcast 3 -->
-                    <article class="podcast-card">
-                        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=600&auto=format&fit=crop" alt="Podcast Culture">
-                        <div class="podcast-info">
-                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : CULTURE & ARTS</span>
-                            <h3>L'Art de la Résilience</h3>
-                            <p>Entretien avec des artistes qui utilisent leur talent pour témoigner de la réalité haïtienne.</p>
-                            <a href="#" class="play-btn">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                                ÉCOUTER MAINTENANT
-                            </a>
+                    <!-- Carousel 3: TECH -->
+                    <div class="podcast-mini-carousel">
+                        <div class="carousel-header">
+                            <h2 class="carousel-title">Tech</h2>
                         </div>
-                    </article>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-track">
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Demain, le Digital</h3>
+                                        <p>Opportunités pour la jeunesse dans la tech.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>IA & Éthique</h3>
+                                        <p>Les défis de l'intelligence artificielle en 2026.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
 
-                    <!-- Podcast 4 -->
-                    <article class="podcast-card">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" alt="Podcast Tech">
-                        <div class="podcast-info">
-                            <span class="selection-meta" style="font-size:10px; color:#999; margin-bottom:5px; display:block;">SÉRIE : TECH & FUTUR</span>
-                            <h3>Demain, le Digital</h3>
-                            <p>Quelles opportunités pour la jeunesse haïtienne dans le secteur des nouvelles technologies ?</p>
-                            <a href="#" class="play-btn">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                                ÉCOUTER MAINTENANT
-                            </a>
+                    <!-- Carousel 4: INTERNATIONAL -->
+                    <div class="podcast-mini-carousel">
+                        <div class="carousel-header">
+                            <h2 class="carousel-title">International</h2>
                         </div>
-                    </article>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-track">
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1521295121812-af4624e797b3?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Chroniques Mondiales</h3>
+                                        <p>Le point sur les crises internationales actuelles.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Géopolitique du Climat</h3>
+                                        <p>L'impact du réchauffement sur les relations entre pays.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel 5: SOCIÉTÉ -->
+                    <div class="podcast-mini-carousel">
+                        <div class="carousel-header">
+                            <h2 class="carousel-title">Société</h2>
+                        </div>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-track">
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Grand Sud : Citoyens</h3>
+                                        <p>Immersion au cœur des initiatives locales.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Éducation & Avenir</h3>
+                                        <p>Les nouveaux défis pour le système éducatif.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel 6: ÉCONOMIE -->
+                    <div class="podcast-mini-carousel">
+                        <div class="carousel-header">
+                            <h2 class="carousel-title">Économie</h2>
+                        </div>
+                        <div class="carousel-track-wrapper">
+                            <div class="carousel-track">
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Le Sport comme Levier</h3>
+                                        <p>Investissement privé et développement économique.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                                <article class="podcast-mini-card" onclick="location.href='#'">
+                                    <img src="https://images.unsplash.com/photo-1454165833767-124698509923?q=80&w=400&auto=format&fit=crop" alt="Podcast">
+                                    <div class="podcast-mini-info">
+                                        <h3>Fintech en Haïti</h3>
+                                        <p>La révolution des services financiers mobiles.</p>
+                                        <div class="play-btn">ÉCOUTER</div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -265,7 +1108,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         function toggleMobileMenu() {
             document.querySelector('.sidebar').classList.toggle('open');
@@ -273,6 +1115,159 @@
             document.querySelector('.menu-overlay').classList.toggle('active');
             document.body.classList.toggle('no-scroll');
         }
+
+        function toggleHeroMenu(event) {
+            event.stopPropagation();
+            document.getElementById('heroDropdown').classList.toggle('active');
+            // Close all submenus when hero menu is toggled
+            document.querySelectorAll('.dropdown-submenu').forEach(sub => sub.classList.remove('active'));
+            document.querySelectorAll('.audio-hero-dropdown .dropdown-item').forEach(item => item.classList.remove('active'));
+        }
+
+        function toggleSubmenu(event, submenuId) {
+            event.stopPropagation();
+            const submenu = document.getElementById(submenuId);
+            const toggle = event.currentTarget;
+            
+            // Close other submenus
+            document.querySelectorAll('.dropdown-submenu').forEach(sub => {
+                if(sub.id !== submenuId) sub.classList.remove('active');
+            });
+            document.querySelectorAll('.audio-hero-dropdown .dropdown-item').forEach(item => {
+                if(item !== toggle) item.classList.remove('active');
+            });
+
+            submenu.classList.toggle('active');
+            toggle.classList.toggle('active');
+        }
+
+        function sharePodcast(platform) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent("Écoutez cet épisode exclusif sur POST : " + document.querySelector('.audio-hero-info h1').innerText);
+            let shareUrl = '';
+
+            switch(platform) {
+                case 'facebook':
+                    shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
+                    break;
+                case 'twitter':
+                    shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}`;
+                    break;
+                case 'whatsapp':
+                    shareUrl = `https://api.whatsapp.com/send?text=${text}%20${url}`;
+                    break;
+            }
+
+            if (shareUrl) {
+                window.open(shareUrl, '_blank', 'width=600,height=400');
+            }
+        }
+
+        window.onclick = function(event) {
+            const dropdown = document.getElementById('heroDropdown');
+            if (dropdown && dropdown.classList.contains('active')) {
+                dropdown.classList.remove('active');
+            }
+            
+            // Handle mobile menu close when clicking overlay
+            if (event.target.classList.contains('menu-overlay')) {
+                toggleMobileMenu();
+            }
+        }
+
+        function scrollCarousel(btn, direction) {
+            const carousel = btn.closest('.podcast-mini-carousel');
+            const track = carousel.querySelector('.carousel-track');
+            const scrollAmount = track.clientWidth;
+            track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+        }
+
+        // --- NEW REACTION MODAL LOGIC ---
+        function openReactionModal() {
+            document.getElementById('reactionModal').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent background scroll
+            document.getElementById('heroDropdown').classList.remove('active'); // Close menu
+        }
+
+        function closeReactionModal() {
+            document.getElementById('reactionModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function selectEmoji(btn) {
+            document.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        function handleReactionSubmit(event) {
+            event.preventDefault();
+            const btn = event.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'ENVOI EN COURS...';
+            btn.disabled = true;
+
+            // Simplified simulation
+            setTimeout(() => {
+                btn.innerText = 'MERCII !';
+                btn.style.background = '#4CAF50';
+                btn.style.color = '#fff';
+                
+                setTimeout(() => {
+                    closeReactionModal();
+                    // Reset button for next time
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                        btn.disabled = false;
+                        event.target.reset();
+                        document.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('active'));
+                    }, 500);
+                }, 2000);
+            }, 1500);
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeReactionModal();
+        });
     </script>
+
+    <!-- Reaction Modal Structure -->
+    <div class="modal-overlay" id="reactionModal" onclick="if(event.target === this) closeReactionModal()">
+        <div class="reaction-modal">
+            <button class="modal-close" onclick="closeReactionModal()">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <h2>Proposer une réaction</h2>
+            <p>Votre avis compte. Partagez votre ressenti sur cet épisode avec l'équipe de POST.</p>
+            
+            <form onsubmit="handleReactionSubmit(event)">
+                <div class="reaction-form-group">
+                    <label>Votre humeur</label>
+                    <div class="emoji-selector">
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">🔥</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">💡</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">👏</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">🤔</button>
+                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">❤️</button>
+                    </div>
+                </div>
+                
+                <div class="reaction-form-group">
+                    <label>E-mail (optionnel)</label>
+                    <input type="email" placeholder="votre@email.com">
+                </div>
+                
+                <div class="reaction-form-group">
+                    <label>Votre commentaire</label>
+                    <textarea rows="4" placeholder="Dites-nous ce que vous en avez pensé..." required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-reaction-btn">Envoyer ma réaction</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

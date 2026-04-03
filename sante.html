@@ -73,7 +73,6 @@
                     <ul class="submenu">
                         <li><a href="sante.html" class="active">Santé</a></li>
                         <li><a href="technologie.html">Technologie</a></li>
-                        <li><a href="nature.html">Nature</a></li>
                     </ul>
                 </li>
             </ul>
@@ -125,7 +124,7 @@
 
     <main class="main-content">
         <div class="articles-page-wrapper">
-            <header class="section-header-brut">
+            <header class="section-header-brut" style="margin-bottom: 0;">
                 <div class="header-left">
                     <h1>Santé</h1>
                     <p>› Les défis de la santé publique et les découvertes qui changent nos vies.</p>
@@ -213,34 +212,137 @@
                 </div>
             </section>
 
-            <!-- Tous nos articles -->
-            <section class="standard-section">
+            <!-- Section 3: Dernières publications (Horizontal Carousel) -->
+            <section class="standard-section redaction-articles-section" id="section-articles-carousel">
                 <div class="reels-header">
                     <h2 style="font-size: 20px; font-weight: 800;">Dernières publications</h2>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
                 </div>
-                <div class="articles-horizontal-grid">
-                    <article class="article-card-horizontal">
-                        <div class="card-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1504813184591-01592fd03cfd?q=80&w=800&auto=format&fit=crop" alt="Vaccination">
-                        </div>
-                        <div class="card-content">
-                            <span class="selection-meta">PRÉVENTION • CAMPAGNE</span>
-                            <h3>Vaccination : Le défi de l'immunité collective</h3>
-                            <p>Retour sur les grandes étapes de la campagne nationale de sensibilisation.</p>
-                            <a href="#" class="read-more">LIRE L'ARTICLE</a>
-                        </div>
-                    </article>
-                    <article class="article-card-horizontal">
-                        <div class="card-image-wrap">
-                            <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b85461?q=80&w=800&auto=format&fit=crop" alt="Labo">
-                        </div>
-                        <div class="card-content">
-                            <span class="selection-meta">SCIENCE • RECHERCHE</span>
-                            <h3>Antibiorésistance : Le combat invisible</h3>
-                            <p>Pourquoi l'usage abusif des antibiotiques devient une menace mondiale.</p>
-                            <a href="#" class="read-more">LIRE L'ARTICLE</a>
-                        </div>
-                    </article>
+
+                <div class="carousel-wrapper">
+                    <div class="articles-horizontal-grid" id="articles-carousel">
+                        <!-- Item 1: Vaccination -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1504813184591-01592fd03cfd?q=80&w=400&auto=format&fit=crop" alt="Vaccination">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #e74c3c;"></span>
+                                    <span>PRÉVENTION • CAMPAGNE</span>
+                                </div>
+                                <h4>Vaccination : Le défi de l'immunité collective</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 2: Labo -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1511174511562-5f7f18b85461?q=80&w=400&auto=format&fit=crop" alt="Labo">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #3498db;"></span>
+                                    <span>SCIENCE • RECHERCHE</span>
+                                </div>
+                                <h4>Antibiorésistance : Le combat invisible</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 3: Nutrition -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=400&auto=format&fit=crop" alt="Nutrition">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>BIEN-ÊTRE • NUTRITION</span>
+                                </div>
+                                <h4>Alimentation saine : Les piliers du régime méditerranéen</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 4: Stress -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=400&auto=format&fit=crop" alt="Stress">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #9b59b6;"></span>
+                                    <span>PSYCHOLOGIE • STRESS</span>
+                                </div>
+                                <h4>Gérer l'anxiété : La méditation de pleine conscience au quotidien</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 5: Sport -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=400&auto=format&fit=crop" alt="Sport">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #f1c40f;"></span>
+                                    <span>PHYSIQUE • VITALITÉ</span>
+                                </div>
+                                <h4>Sport et Santé : Pourquoi l'activité physique est votre meilleur médicament</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 6: Sommeil -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=400&auto=format&fit=crop" alt="Sommeil">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #2980b9;"></span>
+                                    <span>RÉCUPÉRATION • SOMMEIL</span>
+                                </div>
+                                <h4>L'art de bien dormir : Les secrets d'un sommeil réparateur</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 7: Hygiène -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?q=80&w=400&auto=format&fit=crop" alt="Hygiene">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #16a085;"></span>
+                                    <span>PUBLIQUE • HYGIÈNE</span>
+                                </div>
+                                <h4>Accès à l'eau : Un enjeu vital pour la santé des populations rurales</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 8: Technologie -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=400&auto=format&fit=crop" alt="Telemedecine">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #7f8c8d;"></span>
+                                    <span>DIGITAL • MÉDECINE</span>
+                                </div>
+                                <h4>Télémédecine : Comment le numérique transforme l'accès aux soins</h4>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Navigation Arrows at the Bottom -->
+                    <div class="grid-nav-brut">
+                        <button class="carousel-nav-btn prev" id="btn-articles-prev" aria-label="Précédent">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button class="carousel-nav-btn next" id="btn-articles-next" aria-label="Suivant">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
                 </div>
             </section>
         </div>
@@ -265,6 +367,49 @@
             document.querySelector('.burger-menu').classList.toggle('open');
             document.querySelector('.menu-overlay').classList.toggle('active');
             document.body.classList.toggle('no-scroll');
+        }
+
+        // Carousel Logic
+        document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
+            const grid = wrapper.querySelector('.videos-carousel-grid');
+            const prevBtn = wrapper.querySelector('.carousel-nav-btn.prev');
+            const nextBtn = wrapper.querySelector('.carousel-nav-btn.next');
+
+            if (grid && prevBtn && nextBtn) {
+                nextBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: 300, behavior: 'smooth' });
+                });
+                prevBtn.addEventListener('click', () => {
+                    grid.scrollBy({ left: -300, behavior: 'smooth' });
+                });
+            }
+        });
+
+        // --- Articles Carousel Logic (Nos derniers articles) ---
+        const articlesGrid = document.getElementById('articles-carousel');
+        const aPrevBtn = document.getElementById('btn-articles-prev');
+        const aNextBtn = document.getElementById('btn-articles-next');
+
+        if (articlesGrid && aPrevBtn && aNextBtn) {
+            aNextBtn.addEventListener('click', () => {
+                articlesGrid.scrollBy({ left: 400, behavior: 'smooth' });
+            });
+            aPrevBtn.addEventListener('click', () => {
+                articlesGrid.scrollBy({ left: -400, behavior: 'smooth' });
+            });
+
+            articlesGrid.addEventListener('scroll', () => {
+                const isAtStart = articlesGrid.scrollLeft <= 0;
+                const isAtEnd = articlesGrid.scrollLeft >= (articlesGrid.scrollWidth - articlesGrid.offsetWidth - 10);
+                aPrevBtn.style.opacity = isAtStart ? "0.3" : "1";
+                aNextBtn.style.opacity = isAtEnd ? "0.3" : "1";
+                aPrevBtn.disabled = isAtStart;
+                aNextBtn.disabled = isAtEnd;
+            });
+            
+            // Initial state
+            aPrevBtn.style.opacity = "0.3";
+            aPrevBtn.disabled = true;
         }
     </script>
 </body>

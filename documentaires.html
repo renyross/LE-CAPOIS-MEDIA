@@ -27,7 +27,7 @@
         .doc-card-large {
             position: relative;
             height: 500px;
-            border-radius: 12px;
+            border-radius: 4px;
             overflow: hidden;
             background: #111;
         }
@@ -64,51 +64,92 @@
         }
         .doc-grid-standard {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
         }
         .doc-card {
-            cursor: pointer;
-        }
-        .doc-card .img-wrap {
-            width: 100%;
-            aspect-ratio: 16/9;
-            border-radius: 8px;
+            aspect-ratio: 1/1;
+            background: #000;
+            border-radius: 4px;
             overflow: hidden;
-            margin-bottom: 20px;
             position: relative;
-            background: #eee;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-        .doc-card .img-wrap img {
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .doc-card img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.4s ease;
+            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            opacity: 0.8;
         }
-        .doc-card:hover .img-wrap img {
-            transform: scale(1.08);
+        .doc-card:hover img {
+            transform: scale(1.1);
+            opacity: 1;
         }
-        .play-icon-overlay {
+        .doc-info-overlay {
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: rgba(255,255,255,0.9);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            min-height: 60%;
+            pointer-events: none;
+        }
+        .doc-meta {
+            font-size: 11px;
+            font-weight: 900;
+            color: var(--accent-color, #ffcc00);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .doc-card h3 {
+            margin: 0 0 15px;
+            font-size: 18px;
+            font-weight: 850;
+            line-height: 1.25;
+            color: #fff;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .doc-play-btn {
+            font-size: 10px;
+            font-weight: 900;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .doc-play-btn::before {
+            content: '';
+            width: 28px;
+            height: 28px;
+            background: #fff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #000;
-            font-size: 24px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-        }
-        .doc-card:hover .play-icon-overlay {
-            background: #ffcc00;
-            transform: translate(-50%, -50%) scale(1.1);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='14' height='14' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: center;
         }
         @media (max-width: 768px) {
             .doc-card-large { height: 350px; }
@@ -178,7 +219,6 @@
                     <ul class="submenu">
                         <li><a href="sante.html">Santé</a></li>
                         <li><a href="technologie.html">Technologie</a></li>
-                        <li><a href="nature.html">Nature</a></li>
                     </ul>
                  </li>
             </ul>
@@ -243,7 +283,7 @@
                     <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop" alt="Featured Documentary">
                     <div class="doc-content-overlay">
                         <span class="doc-tag">SÉLECTION PREMIUM</span>
-                        <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 15px;">L'Ombre des Couloirs : Enquête sur Ti Bwa</h2>
+                        <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 15px; color: #fff;">L'Ombre des Couloirs : Enquête sur Ti Bwa</h2>
                         <p style="font-size: 18px; opacity: 0.9; max-width: 700px; margin-bottom: 25px;">Une immersion inédite de 52 minutes au cœur des quartiers de Carrefour, là où la loi de la République s'arrête.</p>
                         <a href="#" class="play-btn" style="background: #ffcc00; color: #000; padding: 15px 35px; font-size: 16px;">
                             <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="margin-right: 10px;"><path d="M8 5v14l11-7z"/></svg>
@@ -255,33 +295,45 @@
                 <!-- Documentary Grid -->
                 <div class="doc-grid-standard">
                     <!-- Doc 1 -->
-                    <article class="doc-card">
-                        <div class="img-wrap">
-                            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Doc 1">
-                            <div class="play-icon-overlay">▶</div>
+                    <article class="doc-card" onclick="location.href='#'">
+                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Doc 1">
+                        <div class="doc-info-overlay">
+                            <div class="doc-meta">
+                                <span>SOCIÉTÉ</span>
+                                <span style="opacity: 0.5;">•</span>
+                                <span>24 MIN</span>
+                            </div>
+                            <h3>Les Enfants de la Transition : Quel futur pour demain ?</h3>
+                            <div class="doc-play-btn">Regarder</div>
                         </div>
-                        <span class="selection-meta" style="font-size:11px; font-weight:900; color:#999; display:block; margin-bottom:10px;">SOCIÉTÉ • 24 MIN</span>
-                        <h3 style="font-size: 18px; font-weight: 800; line-height: 1.4;">Les Enfants de la Transition : Quel futur pour demain ?</h3>
                     </article>
 
                     <!-- Doc 2 -->
-                    <article class="doc-card">
-                        <div class="img-wrap">
-                            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Doc 2">
-                            <div class="play-icon-overlay">▶</div>
+                    <article class="doc-card" onclick="location.href='#'">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Doc 2">
+                        <div class="doc-info-overlay">
+                            <div class="doc-meta">
+                                <span>ENVIRONNEMENT</span>
+                                <span style="opacity: 0.5;">•</span>
+                                <span>45 MIN</span>
+                            </div>
+                            <h3>La Grand'Anse : Un paradis en sursis face au climat</h3>
+                            <div class="doc-play-btn">Regarder</div>
                         </div>
-                        <span class="selection-meta" style="font-size:11px; font-weight:900; color:#999; display:block; margin-bottom:10px;">ENVIRONNEMENT • 45 MIN</span>
-                        <h3 style="font-size: 18px; font-weight: 800; line-height: 1.4;">La Grand'Anse : Un paradis en sursis face au climat</h3>
                     </article>
 
                     <!-- Doc 3 -->
-                    <article class="doc-card">
-                        <div class="img-wrap">
-                            <img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop" alt="Doc 3">
-                            <div class="play-icon-overlay">▶</div>
+                    <article class="doc-card" onclick="location.href='#'">
+                        <img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop" alt="Doc 3">
+                        <div class="doc-info-overlay">
+                            <div class="doc-meta">
+                                <span>HISTOIRE</span>
+                                <span style="opacity: 0.5;">•</span>
+                                <span>38 MIN</span>
+                            </div>
+                            <h3>Citadelle : Les gardiens silencieux de la liberté</h3>
+                            <div class="doc-play-btn">Regarder</div>
                         </div>
-                        <span class="selection-meta" style="font-size:11px; font-weight:900; color:#999; display:block; margin-bottom:10px;">HISTOIRE • 38 MIN</span>
-                        <h3 style="font-size: 18px; font-weight: 800; line-height: 1.4;">Citadelle : Les gardiens silencieux de la liberté</h3>
                     </article>
                 </div>
             </section>
