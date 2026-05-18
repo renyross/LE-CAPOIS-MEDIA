@@ -78,85 +78,163 @@
             text-align: left;
         }
 
-        /* --- Section Split Dark Mode (02) --- */
-        .brut-split-section {
+        /* --- Section Split Overlapping Layout (02) --- */
+        .mission-split-section {
             display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            min-height: 85vh;
-            background: #0b0b0b;
-            color: #ffffff;
-            border-top: 1px solid #222;
-            border-bottom: 1px solid #222;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            padding: 100px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: center;
+            background: #ffffff;
         }
-
-        .brut-split-content {
-            padding: 100px 80px;
+        @media (max-width: 991px) {
+            .mission-split-section {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 60px 20px;
+            }
+        }
+        .image-overlap-container {
+            position: relative;
+            width: 100%;
+            height: 420px;
+            display: flex;
+            align-items: center;
+        }
+        .overlap-main {
+            width: 80%;
+            height: 360px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+            display: block;
+        }
+        .overlap-sub {
+            position: absolute;
+            bottom: 0;
+            right: 5%;
+            width: 45%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 6px solid #ffffff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+        }
+        @media (max-width: 576px) {
+            .image-overlap-container {
+                height: 300px;
+            }
+            .overlap-main {
+                height: 250px;
+            }
+            .overlap-sub {
+                height: 140px;
+            }
+        }
+        .mission-content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            text-align: left;
         }
-
-        .brut-split-content h2 {
-            font-size: 52px;
+        .mission-content .eyebrow {
+            font-size: 13px;
+            font-weight: 800;
+            color: #d00;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+        .mission-content h2 {
+            font-size: 42px;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 30px;
             letter-spacing: -0.04em;
-            text-transform: uppercase;
-            color: #ffffff;
+            margin: 0;
+            color: #000000;
+            text-transform: none; /* Keep premium editorial mixed-case */
+            border-bottom: none;
+            padding-bottom: 0;
         }
-
-        .brut-split-content h3 {
-            font-size: 20px;
+        .mission-content .lead-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+            margin: 0;
+            font-weight: 500;
+        }
+        .mission-content .mission-heading {
+            font-size: 18px;
             font-weight: 900;
             text-transform: uppercase;
-            margin-top: 40px;
-            margin-bottom: 25px;
-            letter-spacing: 0.15em;
-            color: #d00;
+            letter-spacing: 0.05em;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #000;
         }
-
-        /* Mission List */
-        .bullet-list-brut {
+        .mission-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            margin: 0 0 15px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            width: 100%;
         }
-
-        .bullet-list-brut li {
-            border-bottom: 1px solid #222;
-            padding: 20px 0;
-            font-size: 18px;
-            font-weight: 700;
-            color: #eee;
+        .mission-list li {
+            font-size: 16px;
+            font-weight: 600;
+            color: #444;
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 12px;
+            line-height: 1.4;
         }
-
-        .bullet-list-brut li::before {
-            content: "→";
+        .mission-list li::before {
+            content: "✓";
             color: #d00;
             font-weight: 900;
+            font-size: 18px;
         }
-
-        .brut-split-image {
-            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+        .btn-cta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: #d00;
+            color: #ffffff;
+            padding: 16px 40px;
+            font-size: 15px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(221, 0, 0, 0.15);
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .btn-cta-pill:hover {
+            background: #000000;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-3px);
+        }
+        .btn-cta-pill .arrow-circle {
+            background: #ffffff;
+            color: #d00;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 450px;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
         }
-        
-        .brut-split-image::after {
-            content: "ORA";
-            font-size: 12vw;
-            font-weight: 950;
-            color: rgba(255, 255, 255, 0.02);
-            letter-spacing: -0.08em;
-            user-select: none;
+        .btn-cta-pill:hover .arrow-circle {
+            color: #000;
+            transform: translateX(3px);
         }
 
         /* --- Section Benefits/Values Grid (03) --- */
@@ -522,22 +600,30 @@
                 <p>ORA est également un terrain d’expression pour les talents, les créateurs et les voix qui veulent avoir un impact réel.</p>
             </section>
 
-            <!-- Section 02: Vision & Mission (Split Premium Dark) -->
-            <section class="brut-split-section" id="mission">
-                <div class="brut-split-content">
-                    <span class="section-number">02</span>
+            <!-- Section 02: Vision & Mission (Overlapping Premium Layout) -->
+            <section class="mission-split-section" id="mission">
+                <div class="image-overlap-container">
+                    <img src="assets/img/news_summit.png" alt="ORA Editorial Summit" class="overlap-main">
+                    <img src="assets/img/hero_tech.png" alt="ORA Technology and Data Workspace" class="overlap-sub">
+                </div>
+                <div class="mission-content">
+                    <span class="eyebrow">02 — Impact & Vision</span>
                     <h2>Impact & Vision</h2>
-                    <p style="font-size: 24px; font-weight: 800; line-height: 1.4; color: #fff;">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
+                    <p class="lead-text">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
                     
-                    <h3>Notre mission</h3>
-                    <ul class="bullet-list-brut">
+                    <h3 class="mission-heading">Notre mission</h3>
+                    <ul class="mission-list">
                         <li>Rendre les sujets complexes accessibles</li>
                         <li>Produire des contenus à forte valeur ajoutée</li>
                         <li>Engager des communautés actives et conscientes</li>
                         <li>Utiliser la data pour amplifier la portée et l’impact</li>
                     </ul>
+                    
+                    <a href="#contact" class="btn-cta-pill">
+                        Rejoignez-nous
+                        <span class="arrow-circle">➜</span>
+                    </a>
                 </div>
-                <div class="brut-split-image"></div>
             </section>
 
             <!-- Section 03: Nos Valeurs (Grid) -->
