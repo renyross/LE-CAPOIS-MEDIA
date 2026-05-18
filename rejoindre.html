@@ -237,6 +237,35 @@
             transform: translateX(3px);
         }
 
+        /* --- Section Split Reverse Helper (04) --- */
+        .mission-split-section.reverse {
+            grid-template-columns: 0.9fr 1.1fr;
+        }
+        .mission-split-section.reverse .image-overlap-container {
+            justify-content: flex-end;
+        }
+        .mission-split-section.reverse .overlap-main {
+            margin-left: auto;
+            margin-right: 0;
+            width: 80%;
+        }
+        .mission-split-section.reverse .overlap-sub {
+            left: 5%;
+            right: auto;
+        }
+        @media (max-width: 991px) {
+            .mission-split-section.reverse {
+                grid-template-columns: 1fr;
+            }
+            .mission-split-section.reverse .image-overlap-container {
+                justify-content: center;
+                order: 2;
+            }
+            .mission-split-section.reverse .mission-content {
+                order: 1;
+            }
+        }
+
         /* --- Section Benefits/Values Grid (03) --- */
         .brut-benefits-section {
             padding: 120px 40px;
@@ -650,18 +679,26 @@
                 </div>
             </section>
 
-            <!-- Section 04: Rejoindre l'équipe -->
-            <section class="brut-contact-section" id="contact">
-                <span class="section-number">04</span>
-                <h2>Rejoindre l'équipe</h2>
-                <p>ORA est en construction permanente. Nous recherchons des profils capables de penser, créer et exécuter.</p>
-                <div style="max-width: 600px; margin: 0 auto 60px;">
-                    <p style="font-size: 18px; color: #888;">Que vous soyez créateur de contenu, data analyst, designer ou développeur, votre talent a sa place chez nous.</p>
+            <!-- Section 04: Rejoindre l'équipe & Contact (Overlapping Premium Layout) -->
+            <section class="mission-split-section reverse" id="contact">
+                <div class="mission-content">
+                    <span class="eyebrow">04 — Rejoindre l'équipe</span>
+                    <h2>Rejoindre l'équipe</h2>
+                    <p class="lead-text">ORA est en construction permanente. Nous recherchons des profils capables de penser, créer et exécuter.</p>
+                    <p style="color: #666; font-size: 16px; line-height: 1.6; margin: 0 0 10px 0;">Que vous soyez créateur de contenu, data analyst, designer ou développeur, votre talent a sa place chez nous.</p>
+                    
+                    <h3 class="mission-heading">Nous contacter</h3>
+                    <p style="color: #444; font-size: 16px; font-weight: 600; line-height: 1.4; margin: 0 0 15px 0;">Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
+                    
+                    <a href="mailto:contact@ora.media" class="btn-cta-pill">
+                        Envoyer un message
+                        <span class="arrow-circle">➜</span>
+                    </a>
                 </div>
-                
-                <h3 style="text-transform: uppercase; font-size: 14px; letter-spacing: 0.2em; color: #888; margin-bottom: 20px;">Nous contacter</h3>
-                <p style="font-weight: 800; color: #000; font-size: 24px; margin-bottom: 40px;">Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
-                <a href="mailto:contact@ora.media" class="btn-contact">Envoyer un message</a>
+                <div class="image-overlap-container">
+                    <img src="assets/img/hero_culture.png" alt="ORA Creative Team" class="overlap-main">
+                    <img src="assets/img/hero_geopolitique.png" alt="ORA Content Writers" class="overlap-sub">
+                </div>
             </section>
         </div>
     </main>
