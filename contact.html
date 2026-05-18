@@ -3,161 +3,201 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentaires — Les Dossiers de ORA</title>
-    <meta name="description" content="Découvrez nos grands formats documentaires, enquêtes au long cours et récits visuels exclusifs.">
+    <title>Contact — ORA</title>
+    <meta name="description" content="Une collaboration, une opportunité ou une idée ? Contactez l'équipe ORA.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="icon" type="image/png" href="assets/img/favicon-ora.png?v=2">
+    <link rel="icon" type="image/png" href="assets/img/favicon-ora.png?v=2">
     <link rel="stylesheet" href="style.css?v=13">
     <style>
-        .doc-hero {
-            background: #000;
-            color: #fff;
-            padding: 100px 0;
+        .contact-section {
+            max-width: 850px;
+            margin-bottom: 100px;
+        }
+        .contact-intro {
+            max-width: 900px;
+            margin-bottom: 60px;
             position: relative;
-            overflow: hidden;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #000;
         }
-        .doc-featured-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 40px;
-            margin-top: 40px;
-        }
-        .doc-card-large {
-            position: relative;
-            height: 500px;
-            border-radius: 4px;
-            overflow: hidden;
-            background: #111;
-        }
-        .doc-card-large img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.6;
-            transition: all 0.5s ease;
-        }
-        .doc-card-large:hover img {
-            opacity: 0.8;
-            transform: scale(1.05);
-        }
-        .doc-content-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            padding: 60px 40px;
-            background: linear-gradient(transparent, rgba(0,0,0,0.9));
-            color: #fff;
-        }
-        .doc-tag {
-            background: #ffcc00;
-            color: #000;
-            padding: 4px 12px;
-            font-size: 12px;
-            font-weight: 800;
-            text-transform: uppercase;
-            border-radius: 4px;
+        .contact-intro h1 {
+            font-size: 54px;
+            font-weight: 900;
+            letter-spacing: -0.05em;
             margin-bottom: 20px;
-            display: inline-block;
+            text-transform: uppercase;
+            line-height: 1.0;
+            background: linear-gradient(135deg, #000 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .doc-grid-standard {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            margin-top: 40px;
+        .contact-intro p {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #666;
+            font-weight: 500;
+            margin-top: 15px;
         }
-        .doc-card {
-            aspect-ratio: 1/1;
-            background: #000;
-            border-radius: 4px;
-            overflow: hidden;
+        
+        /* Premium Form Styling */
+        .premium-form-container {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 50px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
             position: relative;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
         }
-        .doc-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
         }
-        .doc-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-            opacity: 0.8;
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .premium-form-container {
+                padding: 30px 20px;
+            }
+            .contact-intro h1 {
+                font-size: 42px;
+            }
         }
-        .doc-card:hover img {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-        .doc-info-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: linear-gradient(0deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+        .form-group {
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
-            min-height: 60%;
-            pointer-events: none;
+            gap: 10px;
+            position: relative;
         }
-        .doc-meta {
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+        .form-group label {
             font-size: 11px;
             font-weight: 900;
-            color: var(--accent-color, #ffcc00);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 8px;
+            letter-spacing: 0.12em;
+            color: #000000;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            border: 1px solid #dcdcdc;
+            padding: 15px;
+            font-size: 16px;
+            font-family: inherit;
+            color: #000;
+            background: #fafafa;
+            border-radius: 0; /* Sharp editorial look */
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .form-group input:focus, 
+        .form-group select:focus, 
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #000000;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 180px;
+        }
+        
+        .btn-submit-container {
             display: flex;
-            align-items: center;
-            gap: 10px;
+            justify-content: flex-end;
         }
-        .doc-card h3 {
-            margin: 0 0 15px;
-            font-size: 18px;
-            font-weight: 850;
-            line-height: 1.25;
-            color: #fff;
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        .doc-play-btn {
-            font-size: 10px;
+        .btn-submit {
+            background: #000000;
+            color: #ffffff;
+            border: 2px solid #000000;
+            padding: 20px 50px;
+            font-size: 14px;
             font-weight: 900;
-            color: #fff;
-            display: flex;
-            align-items: center;
-            gap: 8px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.15em;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border-radius: 0;
+            width: 100%;
         }
-        .doc-play-btn::before {
-            content: '';
-            width: 28px;
-            height: 28px;
-            background: #fff;
+        @media (min-width: 768px) {
+            .btn-submit {
+                width: auto;
+            }
+        }
+        .btn-submit:hover {
+            background: #ffffff;
+            color: #000000;
+            letter-spacing: 0.22em;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+        
+        /* Success Overlay Screen */
+        .success-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.98);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.4s ease;
+            z-index: 10;
+            text-align: center;
+            padding: 40px;
+        }
+        .success-overlay.active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #d00;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='14' height='14' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
+            color: #fff;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(221, 0, 0, 0.2);
+            animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
         }
-        @media (max-width: 768px) {
-            .doc-card-large { height: 350px; }
-            .doc-grid-standard { grid-template-columns: 1fr; }
+        .success-overlay h2 {
+            font-size: 32px;
+            font-weight: 950;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+            margin-bottom: 15px;
+            color: #000;
+        }
+        .success-overlay p {
+            font-size: 18px;
+            color: #666;
+            max-width: 400px;
+            line-height: 1.6;
+        }
+        @keyframes popIn {
+            0% { transform: scale(0); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
     </style>
 </head>
-<body class="page-documentaires">
+<body>
     <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
 
     <aside class="sidebar">
@@ -220,7 +260,7 @@
                         <li><a href="sante.html">Santé</a></li>
                         <li><a href="technologie.html">Technologie</a></li>
                     </ul>
-                 </li>
+                </li>
             </ul>
 
             <div class="sidebar-divider"></div>
@@ -239,7 +279,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="documentaires.html" class="active">
+                    <a href="documentaires.html">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
                         Documentaires
                     </a>
@@ -268,76 +308,56 @@
         </div>
     </header>
 
-    <main class="main-content">
-        <div class="articles-page-wrapper">
-            <header class="section-header-brut">
-                <div class="header-left">
-                    <h1>Documentaires</h1>
-                    <p>› Regarder le monde en face, à travers l'objectif de POST.</p>
-                </div>
-            </header>
+    <main>
+        <section class="standard-section contact-section">
+            <div class="contact-intro">
+                <h1>Nous contacter</h1>
+                <p>Une collaboration, une opportunité, une proposition de sujet ou une idée ? Parlons-en.</p>
+            </div>
 
-            <section class="standard-section">
-                <!-- Featured Documentary -->
-                <div class="doc-card-large">
-                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop" alt="Featured Documentary">
-                    <div class="doc-content-overlay">
-                        <span class="doc-tag">SÉLECTION PREMIUM</span>
-                        <h2 style="font-size: 32px; font-weight: 900; margin-bottom: 15px; color: #fff;">L'Ombre des Couloirs : Enquête sur Ti Bwa</h2>
-                        <p style="font-size: 18px; opacity: 0.9; max-width: 700px; margin-bottom: 25px;">Une immersion inédite de 52 minutes au cœur des quartiers de Carrefour, là où la loi de la République s'arrête.</p>
-                        <a href="#" class="play-btn" style="background: #ffcc00; color: #000; padding: 15px 35px; font-size: 16px;">
-                            <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" style="margin-right: 10px;"><path d="M8 5v14l11-7z"/></svg>
-                            VOIR LE DOCUMENTAIRE
-                        </a>
+            <div class="premium-form-container">
+                <!-- Success Overlay Screen -->
+                <div class="success-overlay" id="successOverlay">
+                    <div class="success-icon">✓</div>
+                    <h2>Message envoyé</h2>
+                    <p>Merci pour votre intérêt. Notre équipe éditoriale analysera votre message et vous répondra dans les plus brefs délais.</p>
+                </div>
+
+                <form id="contactForm" onsubmit="submitForm(event)">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" required placeholder="Ex. Jean Dupont">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Adresse e-mail</label>
+                            <input type="email" id="email" required placeholder="Ex. jean.dupont@example.com">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="subject">Sujet de votre demande</label>
+                            <select id="subject" required>
+                                <option value="" disabled selected>Sélectionnez une option</option>
+                                <option value="collaboration">Collaboration / Partenariat</option>
+                                <option value="sujet">Proposition de sujet / Tribune libre</option>
+                                <option value="recrutement">Rejoindre l'équipe / Recrutement</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="message">Votre message</label>
+                            <textarea id="message" required placeholder="Rédigez votre demande ici..."></textarea>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Documentary Grid -->
-                <div class="doc-grid-standard">
-                    <!-- Doc 1 -->
-                    <article class="doc-card" onclick="location.href='#'">
-                        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Doc 1">
-                        <div class="doc-info-overlay">
-                            <div class="doc-meta">
-                                <span>SOCIÉTÉ</span>
-                                <span style="opacity: 0.5;">•</span>
-                                <span>24 MIN</span>
-                            </div>
-                            <h3>Les Enfants de la Transition : Quel futur pour demain ?</h3>
-                            <div class="doc-play-btn">Regarder</div>
-                        </div>
-                    </article>
-
-                    <!-- Doc 2 -->
-                    <article class="doc-card" onclick="location.href='#'">
-                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=600&auto=format&fit=crop" alt="Doc 2">
-                        <div class="doc-info-overlay">
-                            <div class="doc-meta">
-                                <span>ENVIRONNEMENT</span>
-                                <span style="opacity: 0.5;">•</span>
-                                <span>45 MIN</span>
-                            </div>
-                            <h3>La Grand'Anse : Un paradis en sursis face au climat</h3>
-                            <div class="doc-play-btn">Regarder</div>
-                        </div>
-                    </article>
-
-                    <!-- Doc 3 -->
-                    <article class="doc-card" onclick="location.href='#'">
-                        <img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=600&auto=format&fit=crop" alt="Doc 3">
-                        <div class="doc-info-overlay">
-                            <div class="doc-meta">
-                                <span>HISTOIRE</span>
-                                <span style="opacity: 0.5;">•</span>
-                                <span>38 MIN</span>
-                            </div>
-                            <h3>Citadelle : Les gardiens silencieux de la liberté</h3>
-                            <div class="doc-play-btn">Regarder</div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </div>
+                    <div class="btn-submit-container">
+                        <button type="submit" class="btn-submit">Envoyer le message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -402,6 +422,24 @@
             document.querySelector('.burger-menu').classList.toggle('open');
             document.querySelector('.menu-overlay').classList.toggle('active');
             document.body.classList.toggle('no-scroll');
+        }
+
+        function submitForm(event) {
+            event.preventDefault();
+            
+            // Show premium success overlay
+            const overlay = document.getElementById('successOverlay');
+            overlay.classList.add('active');
+            
+            // Asynchronously reset form after a short delay
+            setTimeout(() => {
+                document.getElementById('contactForm').reset();
+            }, 500);
+
+            // Close overlay after 4 seconds
+            setTimeout(() => {
+                overlay.classList.remove('active');
+            }, 4000);
         }
     </script>
 </body>
