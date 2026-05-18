@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De fausses pharmacies sans autorisation devant l'hôpital La Paix — ORA</title>
+    <meta name="description" content="Enquête exclusive sur le marché noir des médicaments sauvages devant l'Hôpital de la Paix en Haïti.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/img/favicon-ora.png?v=2">
+    <link rel="stylesheet" href="style.css?v=13">
+    <style>
+        /* Article specific overrides to ensure the Brutalist/Premium feel */
+        .article-main-body {
+            font-family: 'Roboto', sans-serif;
+        }
+        .article-main-body p {
+            margin-bottom: 30px;
+        }
+        .article-lead {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 40px;
+        }
+        .social-share {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #eee;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            transition: all 0.2s ease;
+        }
+        .social-icon:hover {
+            border-color: #000;
+            color: #000;
+            background: #f9f9f9;
+        }
+        .social-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+        @media (max-width: 1024px) {
+            .standard-section { 
+                padding-left: 0 !important; 
+                padding-right: 0 !important; 
+            }
+            .article-header, 
+            .article-hero-img, 
+            .article-content-wrapper { 
+                padding: 0 5px !important; 
+            }
+            .article-content-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .article-title {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-overlay" onclick="toggleMobileMenu()"></div>
+
+    <!-- Sidebar (Same as index.html) -->
+    <aside class="sidebar">
+        <div class="sidebar-branding">
+            <div class="logo">
+                <a href="index.html"><img src="assets/img/logo.png?v=2" alt="Ora." class="logo-img"></a>
+            </div>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <ul>
+                <li>
+                    <a href="search.html" class="sidebar-actions-btn">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        Rechercher
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+                        Accueil
+                    </a>
+                </li>
+                <li>
+                    <a href="international.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        International
+                    </a>
+                </li>
+                <li>
+                    <a href="haiti.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4 20h3v-4H4v4zm6 0h3v-9h-3v9zm6 0h3v-14h-3v14z"/></svg>
+                        Haiti
+                    </a>
+                </li>
+                <li>
+                    <a href="politique.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                        Politique
+                    </a>
+                </li>
+                <li>
+                    <a href="culture.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Culture
+                    </a>
+                </li>
+                <li>
+                    <a href="sport.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                        Sport
+                    </a>
+                </li>
+                <li class="has-dropdown">
+                    <a href="index.html#plus">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+                        Plus
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="sante.html">Santé</a></li>
+                        <li><a href="technologie.html">Technologie</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+
+            <ul>
+                <li>
+                    <a href="articles.html" class="active">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                        Articles
+                    </a>
+                </li>
+                <li>
+                    <a href="podcast.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
+                        Podcast
+                    </a>
+                </li>
+                <li>
+                    <a href="documentaires.html">
+                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+                        Documentaires
+                    </a>
+                </li>
+            </ul>
+
+            <div class="sidebar-divider"></div>
+            
+            <div class="sidebar-edition-container">
+                <div class="edition-selector">
+                    <span>Édition Haïtienne</span>
+                    <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </div>
+            </div>
+        </nav>
+    </aside>
+
+    <header class="mobile-header">
+        <div class="logo">
+            <a href="index.html"><img src="assets/img/logo.png?v=2" alt="Ora." class="logo-img"></a>
+        </div>
+        <div class="burger-menu" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <main>
+        <section class="standard-section">
+            <div class="container-full">
+                <!-- Article Header -->
+                <div class="article-header" style="max-width: 1000px; margin: 0 auto;">
+                    <span class="article-category">SANTÉ PUBLIQUE & ENQUÊTE</span>
+                    <h1 class="article-title">De fausses pharmacies sans autorisation devant l'hôpital La Paix</h1>
+                    <p class="article-subtitle">Une menace sanitaire rampante au cœur de la capitale haïtienne, sous les yeux des autorités impuissantes.</p>
+                    
+                    <div class="article-meta">
+                        PAR LA RÉDACTION — PUBLIÉ LE 18 MAI 2026 — 8 MIN DE LECTURE
+                        <div class="social-share">
+                            <a href="#" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.148-.67-1.613-.918-2.213-.242-.584-.487-.504-.67-.514-.173-.01-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-4.734 6.162h-.011c-2.13 0-4.218-.573-6.04-1.654L3 20l1.127-4.108c-1.189-2.062-1.819-4.417-1.819-6.812 0-7.391 6.012-13.403 13.404-13.403 3.582 0 6.95 1.394 9.481 3.926 2.532 2.533 3.926 5.9 3.925 9.477 0 7.392-6.013 13.404-13.405 13.404"/></svg></a>
+                            <a href="#" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.466 4.757l9.288 12.247-3.606 4.122-9.288-12.247 3.606-4.122zm-3.328-2.507L.636 14.5 4.242 18.622 12.744 6.37l-3.606-4.12zm14.228 14.228l-3.606 4.122 3.606-4.122z"/></svg></a>
+                            <a href="#" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hero Cover aligned with header margins - Landscape Rectangle Orientation -->
+                <div class="article-hero-cover" style="max-width: 1000px; margin: 40px auto 20px; aspect-ratio: 16/9; overflow: hidden; position: relative; border-radius: 4px;">
+                    <img src="assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Pharmacies Sauvages" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+                <p class="article-caption" style="max-width: 1000px; margin: 0 auto 20px; font-size: 13px; color: #999; font-style: italic;">Crédits : ARCHIVES POST MEDIA — Médicaments sauvages vendus à la sauvette devant l'Hôpital La Paix.</p>
+            </div>
+        </section>
+
+        <section class="standard-section" style="padding-top: 0;">
+            <div class="container-full">
+                <!-- Article Content Grid with Sidebar -->
+                <div class="article-content-wrapper" style="max-width: 1000px; margin: 0 auto; display: block;">
+                    <div class="article-main-body" style="max-width: 800px; margin: 0 auto;">
+                        <p class="article-lead">
+                            Devant les portes de l'Hôpital Universitaire de la Paix, à Delmas 33, le spectacle est quotidien mais terrifiant. Des étals improvisés, des boîtes en carton remplies de comprimés exposées au soleil de plomb et à la poussière de la rue, font office de pharmacies de fortune. Sans aucune autorisation du Ministère de la Santé Publique et de la Population (MSPP), des marchands ambulants distribuent des antibiotiques, des antalgiques et d'autres molécules sensibles, transformant les abords d'un des plus grands centres hospitaliers du pays en un marché de la mort à ciel ouvert.
+                        </p>
+
+                        <h3>L'anarchie médicamenteuse aux portes de l'hôpital</h3>
+                        <p>
+                            Le constat est sans appel. À quelques mètres seulement de l'entrée principale de l'hôpital La Paix, des dizaines de kiosques informels proposent à la vente une panoplie de médicaments dont la provenance et les conditions de conservation violent toutes les normes pharmaceutiques internationales. Le soleil brûlant d'Haïti altère les principes actifs de ces produits chimiques, les rendant soit inefficaces, soit extrêmement toxiques.
+                        </p>
+                        <p>
+                            "Les patients sortent de l'hôpital avec une ordonnance, et pour économiser quelques gourdes ou par simple commodité, ils achètent leurs produits directement sur le trottoir", déplore un médecin interne sous couvert d'anonymat. "Ce qu'ils ignorent, c'est qu'ils achètent souvent des poisons déguisés ou des contrefaçons inopérantes."
+                        </p>
+
+                        <div class="pull-quote">
+                            "Un médicament exposé au soleil et à la poussière n'est plus un remède, c'est un danger mortel pour l'organisme."
+                        </div>
+
+                        <h3>L'absence d'autorisation et le vide réglementaire</h3>
+                        <p>
+                            Aucune de ces structures informelles ne dispose d'une licence d'exploitation ou de la présence obligatoire d'un pharmacien diplômé. Les vendeurs, n'ayant reçu aucune formation médicale ou pharmaceutique, s'improvisent prescripteurs. Ils conseillent les dosages au jugé, encouragent l'automédication sauvage et distribuent des antibiotiques à large spectre sans aucune ordonnance.
+                        </p>
+                        <p>
+                            Cette prolifération sauvage témoigne d'un manque criant de régulation et de contrôle de la part de la Direction de la Pharmacie, du Médicament et de la Médecine Traditionnelle (DPM/MT) du MSPP. Malgré les nombreuses campagnes d'avertissement théoriques, aucune action concrète d'assainissement ou de saisie n'est entreprise sur le terrain pour nettoyer les alentours de l'Hôpital La Paix.
+                        </p>
+
+                        <h3>Un business de la misère aux conséquences mortelles</h3>
+                        <p>
+                            Ce marché noir du médicament prospère sur le terreau de la misère économique et de la défaillance du système de protection sociale. Face au coût élevé des pharmacies privées autorisées, le consommateur haïtien se tourne vers la solution la moins onéreuse, au péril de sa vie.
+                        </p>
+                        <p>
+                            Les cas d'insuffisances rénales aiguës, d'intoxications sévères et de résistance accrue aux antibiotiques se multiplient dans les salles d'urgence de l'hôpital lui-même, ironiquement provoqués par les produits achetés juste devant ses grilles. Pour les spécialistes de la santé, si rien n'est fait pour éradiquer ces pharmacies sauvages et réglementer strictement la distribution du médicament en Haïti, la crise sanitaire ne fera que s'aggraver.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VOUS POURRIEZ AIMER AUSSI - Horizontal Portrait Grid -->
+        <section class="standard-section" style="background: #ffffff; border-top: 1px solid #eee; padding: 40px 0 80px;">
+            <div class="container-full" style="max-width: 800px; margin: 0 auto;">
+                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 30px;">
+                    <span style="width: 12px; height: 12px; background: #ffcc00; border-radius: 50%;"></span>
+                    <h2 style="font-size: 20px; font-weight: 900; letter-spacing: 0.1em; margin: 0;">Vous pourriez aimer aussi</h2>
+                </div>
+                
+                <div class="carousel-wrapper" style="position: relative; width: 100%;">
+                    <button class="carousel-nav-btn prev" style="position: absolute; top: 50%; left: -50px; transform: translateY(-50%); width: 44px; height: 44px; background: white; border: none; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: #333; font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">‹</button>
+                    
+                    <div class="recommendations-portrait-grid" style="display: flex; overflow-x: auto; gap: 20px; scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; padding: 10px 0;">
+                        <style>
+                            .recommendations-portrait-grid::-webkit-scrollbar { display: none; }
+                            .portrait-rec-card { flex: 0 0 170px; scroll-snap-align: start; cursor: pointer; transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); min-width: 0; text-decoration: none; display: block; }
+                            .portrait-rec-card:hover { transform: translateY(-10px); }
+                            .portrait-rec-card .image-thumb { box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease; }
+                            .portrait-rec-card:hover .image-thumb { box-shadow: 0 12px 24px rgba(0,0,0,0.12); }
+                            
+                            @media (max-width: 900px) {
+                                .carousel-nav-btn { display: none !important; }
+                                .portrait-rec-card { flex: 0 0 150px; }
+                                .recommendations-portrait-grid { padding-left: 0; padding-right: 0; }
+                            }
+                        </style>
+                        
+                        <!-- Card 1 -->
+                        <a href="article-krisla.html" class="portrait-rec-card">
+                            <div class="image-thumb" style="width: 100%; aspect-ratio: 2/3; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: #f5f5f5;">
+                                <img src="assets/img/krisla-hero.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h4 style="font-size: 13px; font-weight: 800; line-height: 1.3; margin: 0; color: #111;">Le système de contrôle implacable de Krisla...</h4>
+                        </a>
+
+                        <!-- Card 2 -->
+                        <a href="index.html" class="portrait-rec-card">
+                            <div class="image-thumb" style="width: 100%; aspect-ratio: 2/3; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: #f5f5f5;">
+                                <img src="assets/img/selection_thumb_maritime_color_1774481105113.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h4 style="font-size: 13px; font-weight: 800; line-height: 1.3; margin: 0; color: #111;">Des bateaux paient les policiers de la...</h4>
+                        </a>
+
+                        <!-- Card 3 -->
+                        <a href="index.html" class="portrait-rec-card">
+                            <div class="image-thumb" style="width: 100%; aspect-ratio: 2/3; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: #f5f5f5;">
+                                <img src="assets/img/selection_thumb_sec_sports_color_1774481090048.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h4 style="font-size: 13px; font-weight: 800; line-height: 1.3; margin: 0; color: #111;">Des commissariats collectent des fonds...</h4>
+                        </a>
+
+                        <!-- Card 4 -->
+                        <a href="index.html" class="portrait-rec-card">
+                            <div class="image-thumb" style="width: 100%; aspect-ratio: 2/3; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: #f5f5f5;">
+                                <img src="assets/img/color_diplomacy_1774872692228.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h4 style="font-size: 13px; font-weight: 800; line-height: 1.3; margin: 0; color: #111;">Les nouvelles alliances en Caraïbe</h4>
+                        </a>
+
+                        <!-- Card 5 -->
+                        <a href="index.html" class="portrait-rec-card">
+                            <div class="image-thumb" style="width: 100%; aspect-ratio: 2/3; border-radius: 4px; overflow: hidden; margin-bottom: 12px; background: #f5f5f5;">
+                                <img src="assets/img/color_justice_1774872712222.png" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <h4 style="font-size: 13px; font-weight: 800; line-height: 1.3; margin: 0; color: #111;">Réforme du système judiciaire haïtien</h4>
+                        </a>
+                    </div>
+                    
+                    <button class="carousel-nav-btn next" style="position: absolute; top: 50%; right: -50px; transform: translateY(-50%); width: 44px; height: 44px; background: white; border: none; border-radius: 50%; box-shadow: 0 4px 15px rgba(0,0,0,0.1); color: #333; font-size: 24px; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 10; transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);">›</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-centered-content">
+            <a href="index.html" class="footer-logo-large"><img src="assets/img/logo-white.png?v=2" alt="Ora." class="footer-logo-img"></a>
+            
+            <div class="footer-sections-grid">
+                <div class="footer-section">
+                    <h4>Éditions</h4>
+                    <ul>
+                        <li><a href="#">Haïti</a></li>
+                        <li><a href="#">France</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">International</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#">International</a></li>
+                        <li><a href="#haiti-en-image">Haiti</a></li>
+                        <li><a href="#societe">Politique</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                        <li><a href="sport.html">Sport</a></li>
+                        <li><a href="#podcast">Podcast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="equipe.html">Équipe éditoriale</a></li>
+                        <li><a href="rejoindre.html">À propos</a></li>
+                        <li><a href="contact.html">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social-row-centered">
+                <a href="#" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg></a>
+                <a href="#" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="#" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="#" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.324v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+                <a href="#" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg></a>
+                <a href="#" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.208 24 24 23.227 24 22.271V1.729C24 .774 23.208 0 22.225 0z"/></svg></a>
+            </div>
+
+            <div class="footer-legal-centered">
+                <div class="copyright"><a href="index.html" style="color: inherit; text-decoration: none;"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 16px; width: auto; vertical-align: middle; margin-right: 5px;"></a> © 2026</div>
+                <div class="footer-legal-links">
+                    <a href="confidentialite.html">Politique de confidentialité</a>
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="cgu.html">CGU</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.burger-menu').classList.toggle('open');
+            document.querySelector('.menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        // Carousel Logic for recommendations
+        const grid = document.querySelector('.recommendations-portrait-grid');
+        const prevBtn = document.querySelector('.carousel-nav-btn.prev');
+        const nextBtn = document.querySelector('.carousel-nav-btn.next');
+
+        if (grid && prevBtn && nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: 360, behavior: 'smooth' });
+            });
+
+            prevBtn.addEventListener('click', () => {
+                grid.scrollBy({ left: -360, behavior: 'smooth' });
+            });
+
+            grid.addEventListener('scroll', () => {
+                prevBtn.style.opacity = grid.scrollLeft <= 5 ? '0.3' : '1';
+                prevBtn.style.cursor = grid.scrollLeft <= 5 ? 'not-allowed' : 'pointer';
+                
+                const isAtEnd = grid.scrollLeft + grid.offsetWidth >= grid.scrollWidth - 5;
+                nextBtn.style.opacity = isAtEnd ? '0.3' : '1';
+                nextBtn.style.cursor = isAtEnd ? 'not-allowed' : 'pointer';
+            });
+
+            // Initial state
+            prevBtn.style.opacity = '0.3';
+            prevBtn.style.cursor = 'not-allowed';
+        }
+    </script>
+</body>
+</html>

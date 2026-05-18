@@ -49,7 +49,7 @@ const searchIndex = [
     },
     {
         title: "De fausses pharmacies sans autorisation devant l'hôpital La Paix",
-        url: "index.html",
+        url: "article-pharmacie.html",
         category: "SANTÉ",
         type: "article",
         image: "assets/img/selection_thumb_med_legal_color_1774481073690.png",
