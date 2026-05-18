@@ -356,9 +356,8 @@
         /* --- V2 PREMIUM EPISODES GRID --- */
         .section-header-tous {
             max-width: 1000px;
-            padding: 80px 0 20px;
             margin: 0 auto;
-            border-top: 0.5px solid #eee;
+            padding: 0;
         }
 
         .section-header-tous h1 {
@@ -383,7 +382,7 @@
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 60px 40px;
-            padding: 40px 0 100px;
+            padding: 0;
         }
 
         .podcast-card-v2 {
@@ -477,13 +476,6 @@
             margin: 0;
         }
 
-        @media (max-width: 1200px) {
-            .section-header-tous, .episodes-grid-container {
-                padding-left: 40px;
-                padding-right: 40px;
-            }
-        }
-
         @media (max-width: 1024px) {
             .episodes-grid-container {
                 grid-template-columns: repeat(2, 1fr);
@@ -494,10 +486,6 @@
         @media (max-width: 600px) {
             .episodes-grid-container {
                 grid-template-columns: 1fr;
-            }
-            .section-header-tous, .episodes-grid-container {
-                padding-left: 20px;
-                padding-right: 20px;
             }
         }
     </style>
@@ -738,12 +726,14 @@
                     </div>
                 </div>
             <!-- Section: Tous les épisodes Grid -->
-            <header class="section-header-tous">
-                <h1>Tous les épisodes</h1>
-                <p>› Retrouvez l'intégralité de nos productions sonores.</p>
-            </header>
+            <section class="standard-section" style="border-top: 0.5px solid #eee; padding-top: 80px; padding-bottom: 20px; border-bottom: none;">
+                <header class="section-header-tous">
+                    <h1>Tous les épisodes</h1>
+                    <p>› Retrouvez l'intégralité de nos productions sonores.</p>
+                </header>
+            </section>
 
-            <section class="episodes-grid-section">
+            <section class="standard-section" style="padding-top: 20px; padding-bottom: 100px; border-bottom: none;">
                 <div class="episodes-grid-container">
                     <!-- Column 1: ANALYSE -->
                     <article class="podcast-card-v2">
