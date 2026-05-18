@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name= "viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast — Les Dossiers de POST</title>
+    <title>Podcast — Les Dossiers de ORA</title>
     <meta name="description" content="Écoutez les analyses, entretiens et récits audio exclusifs de la rédaction de POST.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="assets/img/favicon-post.svg">
-    <link rel="stylesheet" href="style.css?v=5">
+        <link rel="icon" type="image/png" href="assets/img/favicon-ora.png?v=2">
+    <link rel="stylesheet" href="style.css?v=11">
     <style>
         .podcast-hero {
             background: #000;
@@ -278,152 +278,33 @@
             margin: 8px 12px;
         }
 
-        /* Reaction Modal */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 2000;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .modal-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
-
-        .reaction-modal {
-            background: rgba(30, 30, 30, 0.9);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Dropdown Submenu (Sharing) */
+        .dropdown-submenu {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: rgba(255, 255, 255, 0.03);
             border-radius: 4px;
-            width: 90%;
-            max-width: 500px;
-            padding: 40px;
-            position: relative;
-            transform: scale(0.9);
-            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+            margin: 0 8px;
         }
 
-        .modal-overlay.active .reaction-modal {
-            transform: scale(1);
-        }
-
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            color: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .modal-close:hover {
-            color: #fff;
-        }
-
-        .reaction-modal h2 {
-            font-size: 24px;
-            font-weight: 800;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .reaction-modal p {
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 30px;
-            font-size: 14px;
-        }
-
-        .reaction-form-group {
-            margin-bottom: 20px;
-        }
-
-        .reaction-form-group label {
-            display: block;
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .dropdown-submenu.active {
+            max-height: 300px;
             margin-bottom: 8px;
+            padding: 4px 0;
         }
 
-        .reaction-form-group input, 
-        .reaction-form-group textarea {
-            width: 100%;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 4px;
-            padding: 12px 14px;
-            color: #fff;
-            font-family: inherit;
-            transition: all 0.3s ease;
+        .dropdown-submenu .dropdown-item {
+            padding: 10px 16px 10px 40px; /* Highly indented for clear hierarchy */
+            font-size: 13px;
+            opacity: 0.8;
         }
 
-        .reaction-form-group input:focus, 
-        .reaction-form-group textarea:focus {
-            outline: none;
-            border-color: rgba(255, 255, 255, 0.3);
+        .dropdown-submenu .dropdown-item:hover {
+            opacity: 1;
             background: rgba(255, 255, 255, 0.08);
         }
 
-        .emoji-selector {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 25px;
-        }
-
-        .emoji-btn {
-            font-size: 24px;
-            background: none;
-            border: 2px solid transparent;
-            border-radius: 4px;
-            cursor: pointer;
-            padding: 5px;
-            transition: all 0.2s ease;
-            filter: grayscale(100%);
-            opacity: 0.5;
-        }
-
-        .emoji-btn:hover, .emoji-btn.active {
-            filter: grayscale(0%);
-            opacity: 1;
-            transform: scale(1.2);
-        }
-
-        .emoji-btn.active {
-            border-color: rgba(255, 255, 255, 0.2);
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .submit-reaction-btn {
-            width: 100%;
-            background: #fff;
-            color: #000;
-            border: none;
-            border-radius: 4px;
-            padding: 15px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-        }
-
-        .submit-reaction-btn:hover {
-            background: rgba(255, 255, 255, 0.9);
-        }
 
         .dropdown-item .chevron {
             margin-left: auto;
@@ -435,192 +316,7 @@
             transform: rotate(180deg);
         }
 
-        .podcasts-multi-carousel-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-top: 0;
-        }
-        
-        .podcast-mini-carousel {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .carousel-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 8px;
-        }
-
-        .carousel-title {
-            font-size: 14px;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin: 0;
-        }
-
-        .carousel-nav-controls {
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-control-btn {
-            background: none;
-            border: none;
-            font-size: 20px;
-            cursor: pointer;
-            color: #111;
-            padding: 0 5px;
-            transition: opacity 0.2s;
-            line-height: 1;
-        }
-
-        .nav-control-btn:hover { opacity: 0.6; }
-        
-        .carousel-track-wrapper {
-            position: relative;
-            width: 100%;
-        }
-        
-        .carousel-track {
-            display: flex;
-            gap: 15px;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            padding: 5px 0 10px 0;
-        }
-        
-        .carousel-track::-webkit-scrollbar {
-            display: none;
-        }
-        
-        .podcast-mini-card {
-            flex: 0 0 100%;
-            scroll-snap-align: start;
-            aspect-ratio: 1/1;
-            background: #000;
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-            cursor: pointer;
-        }
-        
-        .podcast-mini-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-        
-        .podcast-mini-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-            opacity: 0.85;
-        }
-        
-        .podcast-mini-card:hover img {
-            transform: scale(1.1);
-            opacity: 1;
-        }
-        
-        .podcast-mini-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            min-height: 50%;
-            pointer-events: none;
-        }
-        
-        .podcast-mini-info h3 {
-            margin: 0 0 4px;
-            font-size: 16px;
-            font-weight: 850;
-            line-height: 1.2;
-            color: #fff;
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .podcast-mini-info p {
-            color: rgba(255,255,255,0.7);
-            font-size: 12px;
-            line-height: 1.3;
-            margin: 0 0 12px;
-            display: -webkit-box;
-            -webkit-line-clamp: 1;
-            line-clamp: 1;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        .podcast-mini-info .play-btn {
-            font-size: 10px;
-            font-weight: 900;
-            color: #fff;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            opacity: 0.9;
-        }
-
-        .podcast-mini-info .play-btn::before {
-            content: '';
-            width: 24px;
-            height: 24px;
-            background: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #000;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' width='12' height='12' fill='currentColor' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 5v14l11-7z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        /* Tous les épisodes section header spacing */
-        .section-header-tous {
-            margin-top: 20px;
-            margin-bottom: 5px;
-            padding-left: 140px; /* Aligned with standard section */
-        }
-        
-        .section-header-tous h1 {
-            font-size: 32px;
-            font-weight: 900;
-            color: #111;
-            margin: 0;
-        }
-
-        .section-header-tous p {
-            font-size: 15px;
-            color: #111;
-            margin: 5px 0 0;
-            font-weight: 850;
-        }
-
         @media (max-width: 1024px) {
-            .section-header-tous { padding-left: 20px; }
             .audio-player-hero { margin: 15px 0; }
             .audio-hero-overlay { padding: 15px 20px; gap: 15px; }
             
@@ -655,22 +351,151 @@
             }
 
             .audio-waveform { display: none; }
-            
-            .podcasts-multi-carousel-grid {
+        }
+
+        /* --- V2 PREMIUM EPISODES GRID --- */
+        .section-header-tous {
+            padding: 80px 140px 20px;
+            margin: 0;
+            border-top: 0.5px solid #eee;
+        }
+
+        .section-header-tous h1 {
+            font-size: 42px;
+            font-weight: 900;
+            margin: 0;
+            color: #000;
+            letter-spacing: -1.5px;
+            text-transform: uppercase;
+        }
+
+        .section-header-tous p {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 10px 0 0;
+            color: #666;
+        }
+
+        .episodes-grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 60px 40px;
+            padding: 40px 140px 100px;
+            margin: 0;
+        }
+
+        .podcast-card-v2 {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            background: #fff;
+            padding: 0;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+        }
+
+        .podcast-card-v2:hover {
+            transform: translateY(-5px);
+        }
+
+        .podcast-thumb-square {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            position: relative;
+            border-radius: 4px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .podcast-thumb-square img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+            transition: opacity 0.3s ease;
+        }
+
+        .podcast-card-v2:hover .podcast-thumb-square img {
+            opacity: 1;
+        }
+
+        .podcast-overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            pointer-events: none;
+        }
+
+        .podcast-brut-label {
+            font-size: 20px;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -0.05em;
+            line-height: 1;
+        }
+
+        .podcast-host-label {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 11px;
+            font-weight: 500;
+            color: #fff;
+            text-align: right;
+            line-height: 1.2;
+        }
+
+        .podcast-main-label {
+            font-size: 32px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 0.9;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+        }
+
+        .podcast-card-v2 h3 {
+            font-size: 22px;
+            font-weight: 900;
+            color: #000;
+            margin: 0;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .podcast-card-v2 p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #555;
+            margin: 0;
+        }
+
+        @media (max-width: 1200px) {
+            .section-header-tous, .episodes-grid-container {
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .episodes-grid-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .section-header-tous h1 { font-size: 32px; }
+        }
+
+        @media (max-width: 600px) {
+            .episodes-grid-container {
                 grid-template-columns: 1fr;
-                gap: 50px;
             }
-            /* Mobile: Stack categories, but use 2 columns for episodes within them */
-            .carousel-track {
-                display: grid !important;
-                grid-template-columns: repeat(2, 1fr) !important;
-                gap: 15px !important;
-                overflow-x: visible !important;
-                padding: 0 !important;
-            }
-            .podcast-mini-card {
-                flex: none !important;
-                width: 100% !important;
+            .section-header-tous, .episodes-grid-container {
+                padding-left: 20px;
+                padding-right: 20px;
             }
         }
     </style>
@@ -681,14 +506,14 @@
     <aside class="sidebar">
         <div class="sidebar-branding">
             <div class="logo">
-                <a href="index.html">P<span class="logo-play-o"></span>st</a>
+                <a href="index.html"><img src="assets/img/logo.png?v=2" alt="Ora." class="logo-img"></a>
             </div>
         </div>
         
         <nav class="sidebar-nav">
             <ul>
                 <li>
-                    <a href="#" class="sidebar-actions-btn">
+                    <a href="search.html" class="sidebar-actions-btn">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
                         Rechercher
                     </a>
@@ -729,14 +554,8 @@
                         Sport
                     </a>
                 </li>
-                <li>
-                    <a href="podcast.html" class="active">
-                        <svg class="sidebar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg>
-                        Podcast
-                    </a>
-                </li>
                 <li class="has-dropdown">
-                    <a href="index.html#plus">
+                    <a href="javascript:void(0)">
                         <svg class="sidebar-icon" viewBox="0 0 24 24" fill="currentColor"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
                         Plus
                     </a>
@@ -783,7 +602,7 @@
 
     <header class="mobile-header">
         <div class="logo">
-            <a href="index.html">P<span class="logo-play-o"></span>st</a>
+            <a href="index.html"><img src="assets/img/logo.png?v=2" alt="Ora." class="logo-img"></a>
         </div>
         <div class="burger-menu" onclick="toggleMobileMenu()">
             <span></span>
@@ -857,11 +676,6 @@
                                             Deezer
                                         </div>
                                     </div>
-                                    <div class="dropdown-divider"></div>
-                                    <div class="dropdown-item" onclick="openReactionModal()">
-                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                                        Proposer une réaction
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -917,180 +731,101 @@
                         </div>
                         
                         <div class="audio-hero-footer">
-                            <span>POST AUDIO</span>
+                            <span>ORA AUDIO</span>
                         </div>
                     </div>
                 </div>
-            </section>
-
+            <!-- Section: Tous les épisodes Grid -->
             <header class="section-header-tous">
                 <h1>Tous les épisodes</h1>
                 <p>› Retrouvez l'intégralité de nos productions sonores.</p>
             </header>
 
-            <section class="standard-section">
-                <div class="podcasts-multi-carousel-grid">
-                    <!-- Carousel 1: ANALYSE -->
-                    <div class="podcast-mini-carousel">
-                        <div class="carousel-header">
-                            <h2 class="carousel-title">Analyse</h2>
-                        </div>
-                        <div class="carousel-track-wrapper">
-                            <div class="carousel-track">
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Le Grand Décryptage #12</h3>
-                                        <p>Enjeux de la transition politique en Haïti.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Perspectives Économiques</h3>
-                                        <p>Analyse des marchés émergents dans les Caraïbes.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
+            <section class="episodes-grid-section">
+                <div class="episodes-grid-container">
+                    <!-- Column 1: ANALYSE -->
+                    <article class="podcast-card-v2">
+                        <div class="podcast-thumb-square">
+                            <img src="https://images.unsplash.com/photo-1478737270239-2f02b77fc618?q=80&w=600&auto=format&fit=crop" alt="Analyse">
+                            <div class="podcast-overlay">
+                                <div class="podcast-brut-label"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 18px; width: auto; vertical-align: middle; margin-bottom: 5px;"><br>podcast</div>
+                                <div class="podcast-host-label">avec la rédaction<br>L'élite</div>
+                                <div class="podcast-main-label">Analyse</div>
                             </div>
                         </div>
-                    </div>
+                        <h3>Le Grand Décryptage #12</h3>
+                        <p>Enjeux de la transition et perspectives d'avenir pour la région dans un contexte geopolitique complexe.</p>
+                    </article>
 
-                    <!-- Carousel 2: CULTURE -->
-                    <div class="podcast-mini-carousel">
-                        <div class="carousel-header">
-                            <h2 class="carousel-title">Culture</h2>
-                        </div>
-                        <div class="carousel-track-wrapper">
-                            <div class="carousel-track">
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>L'Art de la Résilience</h3>
-                                        <p>Témoigner de la réalité haïtienne par l'art.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1514525253361-bee8718a34a1?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Mélodies de la Diaspora</h3>
-                                        <p>La musique comme pont entre les générations.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
+                    <!-- Column 2: CULTURE -->
+                    <article class="podcast-card-v2">
+                        <div class="podcast-thumb-square">
+                            <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?q=80&w=600&auto=format&fit=crop" alt="Culture">
+                            <div class="podcast-overlay">
+                                <div class="podcast-brut-label"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 18px; width: auto; vertical-align: middle; margin-bottom: 5px;"><br>podcast</div>
+                                <div class="podcast-host-label">avec Sarah<br>Léger</div>
+                                <div class="podcast-main-label">Culture</div>
                             </div>
                         </div>
-                    </div>
+                        <h3>L'Art de la Résilience</h3>
+                        <p>Témoigner de la réalité à travers les expressions artistiques locales et la renaissance créative.</p>
+                    </article>
 
-                    <!-- Carousel 3: TECH -->
-                    <div class="podcast-mini-carousel">
-                        <div class="carousel-header">
-                            <h2 class="carousel-title">Tech</h2>
-                        </div>
-                        <div class="carousel-track-wrapper">
-                            <div class="carousel-track">
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Demain, le Digital</h3>
-                                        <p>Opportunités pour la jeunesse dans la tech.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>IA & Éthique</h3>
-                                        <p>Les défis de l'intelligence artificielle en 2026.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
+                    <!-- Column 3: TECH -->
+                    <article class="podcast-card-v2">
+                        <div class="podcast-thumb-square">
+                            <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=600&auto=format&fit=crop" alt="Tech">
+                            <div class="podcast-overlay">
+                                <div class="podcast-brut-label"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 18px; width: auto; vertical-align: middle; margin-bottom: 5px;"><br>podcast</div>
+                                <div class="podcast-host-label">avec Jean<br>Baptiste</div>
+                                <div class="podcast-main-label">Technologie</div>
                             </div>
                         </div>
-                    </div>
+                        <h3>Demain, le Digital</h3>
+                        <p>Opportunités pour la jeunesse dans l'économie numérique mondiale et le tissu social du Grand Nord.</p>
+                    </article>
 
-                    <!-- Carousel 4: INTERNATIONAL -->
-                    <div class="podcast-mini-carousel">
-                        <div class="carousel-header">
-                            <h2 class="carousel-title">International</h2>
-                        </div>
-                        <div class="carousel-track-wrapper">
-                            <div class="carousel-track">
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1521295121812-af4624e797b3?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Chroniques Mondiales</h3>
-                                        <p>Le point sur les crises internationales actuelles.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Géopolitique du Climat</h3>
-                                        <p>L'impact du réchauffement sur les relations entre pays.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
+                    <!-- Column 4: INTERNATIONAL -->
+                    <article class="podcast-card-v2">
+                        <div class="podcast-thumb-square">
+                            <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=600&auto=format&fit=crop" alt="International">
+                            <div class="podcast-overlay">
+                                <div class="podcast-brut-label"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 18px; width: auto; vertical-align: middle; margin-bottom: 5px;"><br>podcast</div>
+                                <div class="podcast-host-label">avec la rédaction<br>Monde</div>
+                                <div class="podcast-main-label">International</div>
                             </div>
                         </div>
-                    </div>
+                        <h3>Chroniques Mondiales</h3>
+                        <p>Le point sur les crises et les alliances stratégiques qui redéfinissent la diplomatie caribéenne.</p>
+                    </article>
 
-                    <!-- Carousel 5: SOCIÉTÉ -->
-                    <div class="podcast-mini-carousel">
-                        <div class="carousel-header">
-                            <h2 class="carousel-title">Société</h2>
-                        </div>
-                        <div class="carousel-track-wrapper">
-                            <div class="carousel-track">
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Grand Sud : Citoyens</h3>
-                                        <p>Immersion au cœur des initiatives locales.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Éducation & Avenir</h3>
-                                        <p>Les nouveaux défis pour le système éducatif.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
+                    <!-- Column 5: SOCIÉTÉ -->
+                    <article class="podcast-card-v2">
+                        <div class="podcast-thumb-square">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600&auto=format&fit=crop" alt="Société">
+                            <div class="podcast-overlay">
+                                <div class="podcast-brut-label"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 18px; width: auto; vertical-align: middle; margin-bottom: 5px;"><br>podcast</div>
+                                <div class="podcast-host-label">avec Mina<br>Soundiram</div>
+                                <div class="podcast-main-label">Société</div>
                             </div>
                         </div>
-                    </div>
+                        <h3>Grand Sud : Citoyens</h3>
+                        <p>Immersion au cœur des initiatives citoyennes pour le changement et les nouvelles dynamiques sociales.</p>
+                    </article>
 
-                    <!-- Carousel 6: ÉCONOMIE -->
-                    <div class="podcast-mini-carousel">
-                        <div class="carousel-header">
-                            <h2 class="carousel-title">Économie</h2>
-                        </div>
-                        <div class="carousel-track-wrapper">
-                            <div class="carousel-track">
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Le Sport comme Levier</h3>
-                                        <p>Investissement privé et développement économique.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
-                                <article class="podcast-mini-card" onclick="location.href='#'">
-                                    <img src="https://images.unsplash.com/photo-1454165833767-124698509923?q=80&w=400&auto=format&fit=crop" alt="Podcast">
-                                    <div class="podcast-mini-info">
-                                        <h3>Fintech en Haïti</h3>
-                                        <p>La révolution des services financiers mobiles.</p>
-                                        <div class="play-btn">ÉCOUTER</div>
-                                    </div>
-                                </article>
+                    <!-- Column 6: ÉCONOMIE -->
+                    <article class="podcast-card-v2">
+                        <div class="podcast-thumb-square">
+                            <img src="https://images.unsplash.com/photo-1454165833767-124698509923?q=80&w=600&auto=format&fit=crop" alt="Économie">
+                            <div class="podcast-overlay">
+                                <div class="podcast-brut-label"><img src="assets/img/logo-white.png?v=2" alt="Ora." style="height: 18px; width: auto; vertical-align: middle; margin-bottom: 5px;"><br>podcast</div>
+                                <div class="podcast-host-label">avec Jean<br>Baptiste</div>
+                                <div class="podcast-main-label">Économie</div>
                             </div>
                         </div>
-                    </div>
+                        <h3>Le Sport comme Levier</h3>
+                        <p>Investissement privé et développement durable par les infrastructures sportives et l'agro-industrie.</p>
+                    </article>
                 </div>
             </section>
         </div>
@@ -1098,11 +833,54 @@
 
     <footer class="site-footer">
         <div class="container footer-centered-content">
-            <a href="index.html" class="footer-logo-large">P<span class="logo-play-o"></span>st</a>
+            <a href="index.html" class="footer-logo-large"><img src="assets/img/logo-white.png?v=2" alt="Ora." class="footer-logo-img"></a>
+            
+            <div class="footer-sections-grid">
+                <div class="footer-section">
+                    <h4>Éditions</h4>
+                    <ul>
+                        <li><a href="#">Haïti</a></li>
+                        <li><a href="#">France</a></li>
+                        <li><a href="#">Canada</a></li>
+                        <li><a href="#">USA</a></li>
+                        <li><a href="#">International</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Catégories</h4>
+                    <ul>
+                        <li><a href="#">International</a></li>
+                        <li><a href="#haiti-en-image">Haiti</a></li>
+                        <li><a href="#societe">Politique</a></li>
+                        <li><a href="#culture">Culture</a></li>
+                        <li><a href="sport.html">Sport</a></li>
+                        <li><a href="#podcast">Podcast</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Corporate</h4>
+                    <ul>
+                        <li><a href="equipe.html">L'Equipe</a></li>
+                        <li><a href="rejoindre.html">À propos de nous</a></li>
+                        <li><a href="#">Nous contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social-row-centered">
+                <a href="#" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.89 2.89 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg></a>
+                <a href="#" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.266.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.058-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+                <a href="#" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                <a href="#" title="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.324v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+                <a href="#" title="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.045 4.126H5.078z"/></svg></a>
+                <a href="#" title="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.208 24 24 23.227 24 22.271V1.729C24 .774 23.208 0 22.225 0z"/></svg></a>
+            </div>
+
             <div class="footer-legal-centered">
-                <div class="copyright">P<span class="logo-play-o"></span>st © 2026</div>
+                <div class="copyright"><a href="index.html" style="color: inherit; text-decoration: none;">Post</a> © 2026</div>
                 <div class="footer-legal-links">
-                    <a href="#">Confidentialité</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Mentions légales</a>
                     <a href="#">CGU</a>
                 </div>
             </div>
@@ -1143,7 +921,7 @@
 
         function sharePodcast(platform) {
             const url = encodeURIComponent(window.location.href);
-            const text = encodeURIComponent("Écoutez cet épisode exclusif sur POST : " + document.querySelector('.audio-hero-info h1').innerText);
+            const text = encodeURIComponent("Écoutez cet épisode exclusif sur ORA : " + document.querySelector('.audio-hero-info h1').innerText);
             let shareUrl = '';
 
             switch(platform) {
@@ -1175,99 +953,7 @@
             }
         }
 
-        function scrollCarousel(btn, direction) {
-            const carousel = btn.closest('.podcast-mini-carousel');
-            const track = carousel.querySelector('.carousel-track');
-            const scrollAmount = track.clientWidth;
-            track.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
-        }
 
-        // --- NEW REACTION MODAL LOGIC ---
-        function openReactionModal() {
-            document.getElementById('reactionModal').classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent background scroll
-            document.getElementById('heroDropdown').classList.remove('active'); // Close menu
-        }
-
-        function closeReactionModal() {
-            document.getElementById('reactionModal').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-
-        function selectEmoji(btn) {
-            document.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-        }
-
-        function handleReactionSubmit(event) {
-            event.preventDefault();
-            const btn = event.target.querySelector('button');
-            const originalText = btn.innerText;
-            
-            btn.innerText = 'ENVOI EN COURS...';
-            btn.disabled = true;
-
-            // Simplified simulation
-            setTimeout(() => {
-                btn.innerText = 'MERCII !';
-                btn.style.background = '#4CAF50';
-                btn.style.color = '#fff';
-                
-                setTimeout(() => {
-                    closeReactionModal();
-                    // Reset button for next time
-                    setTimeout(() => {
-                        btn.innerText = originalText;
-                        btn.style.background = '';
-                        btn.style.color = '';
-                        btn.disabled = false;
-                        event.target.reset();
-                        document.querySelectorAll('.emoji-btn').forEach(b => b.classList.remove('active'));
-                    }, 500);
-                }, 2000);
-            }, 1500);
-        }
-
-        // Close modal on escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeReactionModal();
-        });
     </script>
-
-    <!-- Reaction Modal Structure -->
-    <div class="modal-overlay" id="reactionModal" onclick="if(event.target === this) closeReactionModal()">
-        <div class="reaction-modal">
-            <button class="modal-close" onclick="closeReactionModal()">
-                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
-            <h2>Proposer une réaction</h2>
-            <p>Votre avis compte. Partagez votre ressenti sur cet épisode avec l'équipe de POST.</p>
-            
-            <form onsubmit="handleReactionSubmit(event)">
-                <div class="reaction-form-group">
-                    <label>Votre humeur</label>
-                    <div class="emoji-selector">
-                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">🔥</button>
-                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">💡</button>
-                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">👏</button>
-                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">🤔</button>
-                        <button type="button" class="emoji-btn" onclick="selectEmoji(this)">❤️</button>
-                    </div>
-                </div>
-                
-                <div class="reaction-form-group">
-                    <label>E-mail (optionnel)</label>
-                    <input type="email" placeholder="votre@email.com">
-                </div>
-                
-                <div class="reaction-form-group">
-                    <label>Votre commentaire</label>
-                    <textarea rows="4" placeholder="Dites-nous ce que vous en avez pensé..." required></textarea>
-                </div>
-                
-                <button type="submit" class="submit-reaction-btn">Envoyer ma réaction</button>
-            </form>
-        </div>
-    </div>
 </body>
 </html>
