@@ -559,7 +559,7 @@ main {
     margin-bottom: 80px;
     position: relative;
     background: var(--black);
-    height: 85vh; /* Fixed height for better control */
+    height: 60vh; /* Perfectly balanced height */
     overflow: hidden;
 }
 
@@ -3178,7 +3178,7 @@ main {
         margin-right: 0;
         margin-top: 0; /* Align with header */
         margin-bottom: 40px;
-        height: 65vh; /* Responsive height */
+        height: 50vh; /* Balanced mobile height */
     }
 
     .hero-slider {
