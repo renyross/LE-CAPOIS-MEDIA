@@ -11,224 +11,99 @@
         <link rel="icon" type="image/png" href="assets/img/favicon-ora.png?v=2">
     <link rel="stylesheet" href="style.css?v=13">
     <style>
+        /* General Layout */
         .rejoindre-content {
-            max-width: 900px;
+            max-width: 1000px;
             margin-bottom: 100px;
         }
-        .rejoindre-header {
-            margin-bottom: 60px;
-        }
-        .rejoindre-header h1 {
-            font-size: 56px;
-            font-weight: 900;
-            letter-spacing: -0.05em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        .rejoindre-header p {
-            font-size: 24px;
-            font-weight: 600;
-            color: #d00;
-            margin: 0;
-        }
-        .section-block {
-            margin-bottom: 60px;
-        }
-        .section-block h2 {
-            font-size: 32px;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-            margin-bottom: 25px;
-            text-transform: uppercase;
-            border-bottom: 4px solid #000;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        .section-block h3 {
-            font-size: 20px;
-            font-weight: 800;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            color: #444;
-        }
-        .section-block p {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .values-list, .reasons-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 30px;
-        }
-        .value-item, .reason-item {
-            background: #f9f9f9;
-            padding: 25px;
-            border-left: 4px solid #d00;
-        }
-        .value-item strong, .reason-item strong {
-            display: block;
-            font-size: 16px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 8px;
-        }
-        .contact-block {
-            background: #000;
-            color: #fff;
-            padding: 50px;
-            text-align: center;
-            margin-top: 80px;
-        }
-        .contact-block h2 {
-            color: #fff;
-            border-color: #fff;
-        }
-        .contact-block p {
-            color: #ccc;
-            font-size: 20px;
-        }
-        .btn-contact {
-            display: inline-block;
-            background: #d00;
-            color: #fff;
-            padding: 15px 40px;
-            font-weight: 900;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin-top: 20px;
-            font-size: 18px;
-            transition: background 0.3s ease;
-        }
-        .bullet-list-brut {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-        }
-        .bullet-list-brut li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 12px;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-        .bullet-list-brut li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 10px;
-            width: 8px;
-            height: 8px;
-            background: #d00;
-        }
-        .bullet-list-brut li strong {
-            font-weight: 900;
-            text-transform: uppercase;
-            font-size: 16px;
-            margin-right: 5px;
-        }
-        @media (max-width: 768px) {
-            .rejoindre-header h1 { font-size: 38px; }
-            .values-list, .reasons-list { grid-template-columns: 1fr; }
-            .section-block h2 { font-size: 26px; }
-        }
-        .burger-menu {
-            display: none !important;
-        }
-
-        /* No Sidebar Layout */
-        body.no-sidebar-page .sidebar,
-        body.no-sidebar-page .mobile-header {
-            display: none !important;
-        }
-        body.no-sidebar-page main {
-            margin-left: 0 !important;
-            padding-top: 0 !important;
-        }
-
-        /* --- BRUT STYLE REJOINDRE --- */
+        
         .premium-sections {
-            background: #fff;
-            color: #000;
+            background: #ffffff;
+            color: #000000;
         }
 
         /* --- Section Centered Intro (01) --- */
         .brut-centered-section {
-            padding: 160px 20px;
+            padding: 120px 40px;
             text-align: center;
-            max-width: 900px;
+            max-width: 960px;
             margin: 0 auto;
         }
 
-        .brut-centered-section .section-number {
-            font-size: 14px;
+        .section-number {
+            font-size: 12px;
             font-weight: 900;
-            letter-spacing: 0.3em;
-            color: #888;
-            margin-bottom: 30px;
+            letter-spacing: 0.4em;
+            color: #d00;
+            margin-bottom: 25px;
             display: block;
-        }
-
-        .brut-centered-section h2 {
-            font-size: 64px;
-            font-weight: 900;
-            line-height: 1;
-            margin-bottom: 60px;
-            letter-spacing: -0.05em;
             text-transform: uppercase;
         }
 
-        .brut-centered-section .intro-lead {
-            font-size: 24px;
+        .brut-centered-section h2 {
+            font-size: 56px;
+            font-weight: 900;
+            line-height: 1.05;
+            margin-bottom: 50px;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #000 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .intro-lead {
+            font-size: 26px;
             font-weight: 700;
             line-height: 1.5;
             color: #111;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
+            letter-spacing: -0.02em;
+            border-left: 5px solid #000;
+            padding-left: 30px;
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .brut-centered-section p {
             font-size: 19px;
             line-height: 1.8;
             color: #555;
-            margin-bottom: 30px;
+            margin-bottom: 25px;
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-align: left;
         }
 
-        /* --- Section Split (02) --- */
+        /* --- Section Split Dark Mode (02) --- */
         .brut-split-section {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 100vh;
-            border-top: 1px solid #eee;
-            border-bottom: 1px solid #eee;
+            grid-template-columns: 1.2fr 0.8fr;
+            min-height: 85vh;
+            background: #0b0b0b;
+            color: #ffffff;
+            border-top: 1px solid #222;
+            border-bottom: 1px solid #222;
         }
 
         .brut-split-content {
-            padding: 120px 80px;
+            padding: 100px 80px;
             display: flex;
             flex-direction: column;
             justify-content: center;
-        }
-
-        .bg-yellow {
-            background-color: #ffcc00;
-            color: #000;
         }
 
         .brut-split-content h2 {
             font-size: 52px;
             font-weight: 900;
             line-height: 1.1;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             letter-spacing: -0.04em;
             text-transform: uppercase;
+            color: #ffffff;
         }
 
         .brut-split-content h3 {
@@ -237,22 +112,181 @@
             text-transform: uppercase;
             margin-top: 40px;
             margin-bottom: 25px;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.15em;
+            color: #d00;
+        }
+
+        /* Mission List */
+        .bullet-list-brut {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-list-brut li {
+            border-bottom: 1px solid #222;
+            padding: 20px 0;
+            font-size: 18px;
+            font-weight: 700;
+            color: #eee;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .bullet-list-brut li::before {
+            content: "→";
+            color: #d00;
+            font-weight: 900;
         }
 
         .brut-split-image {
-            background-image: url('assets/img/office_brut_style.png');
-            background-size: cover;
-            background-position: center;
-            min-height: 500px;
+            background: radial-gradient(circle at center, #1a1a1a 0%, #000 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 450px;
+        }
+        
+        .brut-split-image::after {
+            content: "ORA";
+            font-size: 12vw;
+            font-weight: 950;
+            color: rgba(255, 255, 255, 0.02);
+            letter-spacing: -0.08em;
+            user-select: none;
+        }
+
+        /* --- Section Benefits/Values Grid (03) --- */
+        .brut-benefits-section {
+            padding: 120px 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .brut-benefits-section h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+            background: linear-gradient(135deg, #000 0%, #444 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .brut-benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .benefit-item {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            padding: 40px;
+            text-align: left;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-5px);
+            border-color: #000000;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+        }
+        
+        .benefit-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+        
+        .benefit-item:hover::before {
+            background: #d00;
+        }
+
+        .benefit-item h4 {
+            font-size: 22px;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: #000;
+            letter-spacing: -0.02em;
+            margin: 0;
+        }
+
+        .benefit-item p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #666;
+            margin: 0;
+        }
+
+        /* --- Section Contact (04) --- */
+        .brut-contact-section {
+            padding: 120px 40px;
+            text-align: center;
+            background: #f7f7f7;
+            border-top: 1px solid #eee;
+        }
+
+        .brut-contact-section h2 {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: -0.04em;
+        }
+
+        .brut-contact-section p {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .btn-contact {
+            display: inline-block;
+            background: #000000;
+            color: #ffffff;
+            padding: 22px 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 15px;
+            letter-spacing: 0.15em;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 2px solid #000000;
+        }
+
+        .btn-contact:hover {
+            background: #ffffff;
+            color: #000000;
+            letter-spacing: 0.22em;
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
         }
 
         /* --- Hero Section --- */
         .brut-hero {
             position: relative;
-            height: 90vh;
+            height: 70vh;
             width: 100%;
-            background-image: url('assets/img/hero_rejoindre_post.png');
+            background-image: url('assets/img/hero_rejoindre_post_v2.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -270,142 +304,86 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+            background: rgba(0,0,0,0.5);
             z-index: 1;
         }
 
         .brut-hero-content {
             position: relative;
             z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
         }
 
         .brut-hero-content h1 {
-            font-size: 24px;
-            font-weight: 900;
+            font-size: 64px;
+            font-weight: 950;
             color: #ffffff;
-            text-shadow: 0 4px 20px rgba(0,0,0,0.8);
+            text-shadow: 0 4px 30px rgba(0,0,0,0.4);
             text-transform: uppercase;
-            letter-spacing: 0.15em;
+            letter-spacing: -0.04em;
             margin-bottom: 40px;
+            line-height: 1.0;
         }
 
         .brut-hero-actions {
             display: flex;
             gap: 20px;
+            justify-content: center;
         }
 
         .btn-hero {
-            padding: 12px 35px;
-            border-radius: 50px;
-            font-size: 14px;
-            font-weight: 800;
+            padding: 15px 40px;
+            font-size: 13px;
+            font-weight: 900;
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            background: #2563eb;
-            color: white;
-            border: none;
+            letter-spacing: 0.15em;
+            transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+            background: #ffffff;
+            color: #000;
+            border: 2px solid #ffffff;
         }
 
         .btn-hero:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.5);
-            background: #1d4ed8;
+            transform: translateY(-3px);
+            background: transparent;
+            color: #fff;
         }
 
         .btn-hero.secondary {
-            background: rgba(255, 255, 255, 0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.4);
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5);
             color: #fff;
         }
 
         .btn-hero.secondary:hover {
-            background: rgba(255, 255, 255, 0.25);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+            background: #ffffff;
+            color: #000000;
+            border-color: #ffffff;
         }
 
-        /* --- Section Benefits Grid (03) --- */
-        .brut-benefits-section {
-            padding: 140px 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .brut-benefits-section h2 {
-            font-size: 48px;
-            font-weight: 900;
-            margin-bottom: 80px;
-            text-transform: uppercase;
-            letter-spacing: -0.04em;
-        }
-
-        .brut-benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 60px 40px;
-            text-align: left;
-        }
-
-        .benefit-item h4 {
-            font-size: 18px;
-            font-weight: 900;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            color: #000;
-            letter-spacing: 0.05em;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .benefit-item h4::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            background: #ffcc00;
-            border-radius: 50%;
-        }
-
-        .benefit-item p {
-            font-size: 17px;
-            line-height: 1.7;
-            color: #666;
-            padding-left: 20px;
-        }
-
-        /* --- Section Contact (04) --- */
-        .brut-contact-section {
-            padding: 140px 20px;
-            text-align: center;
-            background: #fafafa;
-        }
-
-        .brut-contact-section h2 {
-            font-size: 42px;
-            font-weight: 900;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .brut-contact-section p {
-            font-size: 20px;
-            color: #666;
-            margin-bottom: 50px;
-        }
-
-        @media (max-width: 900px) {
+        /* Responsive Layouts */
+        @media (max-width: 991px) {
             .brut-split-section { grid-template-columns: 1fr; }
-            .brut-split-content { padding: 80px 30px; }
+            .brut-split-content { padding: 80px 40px; }
             .brut-centered-section h2 { font-size: 42px; }
-            .brut-benefits-grid { grid-template-columns: 1fr; gap: 40px; }
-            .brut-split-image { min-height: 350px; }
-            .brut-hero { height: 70vh; }
+            .brut-benefits-grid { grid-template-columns: 1fr; gap: 20px; }
+            .brut-hero-content h1 { font-size: 44px; }
+            .brut-hero { height: 60vh; }
+        }
+        
+        .burger-menu {
+            display: none !important;
+        }
+
+        body.no-sidebar-page .sidebar,
+        body.no-sidebar-page .mobile-header {
+            display: none !important;
+        }
+        body.no-sidebar-page main {
+            margin-left: 0 !important;
+            padding-top: 0 !important;
         }
     </style>
 </head>
@@ -524,7 +502,7 @@
         <!-- Hero Section Section -->
         <section class="brut-hero">
             <div class="brut-hero-content">
-                <h1>Join us!</h1>
+                <h1>REJOINDRE ORA</h1>
                 <div class="brut-hero-actions">
                     <a href="#intro" class="btn-hero">Parcourir</a>
                     <a href="#contact" class="btn-hero secondary">Postuler</a>
@@ -544,19 +522,19 @@
                 <p>ORA est également un terrain d’expression pour les talents, les créateurs et les voix qui veulent avoir un impact réel.</p>
             </section>
 
-            <!-- Section 02: Vision & Mission (Split Yellow) -->
+            <!-- Section 02: Vision & Mission (Split Premium Dark) -->
             <section class="brut-split-section" id="mission">
-                <div class="brut-split-content bg-yellow">
-                    <span class="section-number" style="color: rgba(0,0,0,0.5);">02</span>
+                <div class="brut-split-content">
+                    <span class="section-number">02</span>
                     <h2>Impact & Vision</h2>
-                    <p style="font-size: 24px; font-weight: 800; line-height: 1.3;">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
+                    <p style="font-size: 24px; font-weight: 800; line-height: 1.4; color: #fff;">Nous croyons en un monde où l’information est claire, accessible et digne de confiance.</p>
                     
                     <h3>Notre mission</h3>
-                    <ul class="bullet-list-brut" style="list-style: none; padding: 0;">
-                        <li style="border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px 0; font-weight: 700;">Rendre les sujets complexes accessibles</li>
-                        <li style="border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px 0; font-weight: 700;">Produire des contenus à forte valeur ajoutée</li>
-                        <li style="border-bottom: 1px solid rgba(0,0,0,0.1); padding: 15px 0; font-weight: 700;">Engager des communautés actives et conscientes</li>
-                        <li style="padding: 15px 0; font-weight: 700;">Utiliser la data pour amplifier la portée et l’impact</li>
+                    <ul class="bullet-list-brut">
+                        <li>Rendre les sujets complexes accessibles</li>
+                        <li>Produire des contenus à forte valeur ajoutée</li>
+                        <li>Engager des communautés actives et conscientes</li>
+                        <li>Utiliser la data pour amplifier la portée et l’impact</li>
                     </ul>
                 </div>
                 <div class="brut-split-image"></div>
@@ -597,7 +575,7 @@
                 
                 <h3 style="text-transform: uppercase; font-size: 14px; letter-spacing: 0.2em; color: #888; margin-bottom: 20px;">Nous contacter</h3>
                 <p style="font-weight: 800; color: #000; font-size: 24px; margin-bottom: 40px;">Une collaboration, une opportunité ou une idée ? Parlons-en.</p>
-                <a href="mailto:contact@ora.media" class="btn-contact" style="background: #000; padding: 20px 60px; border-radius: 0; font-size: 16px;">Envoyer un message</a>
+                <a href="mailto:contact@ora.media" class="btn-contact">Envoyer un message</a>
             </section>
         </div>
     </main>
