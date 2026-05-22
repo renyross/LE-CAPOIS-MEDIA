@@ -11,6 +11,12 @@ get_header(); ?>
     <?php
     if ( have_posts() ) :
         while ( have_posts() ) : the_post();
+            $is_elementor = get_post_meta( get_the_ID(), '_elementor_edit_mode', true );
+            
+            if ( $is_elementor ) :
+                the_content();
+            else :
+
             $categories = get_the_category();
             $cat_name = ! empty( $categories ) ? esc_html( $categories[0]->name ) : 'NEWS';
             $subtitle = get_post_meta( get_the_ID(), '_article_subtitle', true );
@@ -140,6 +146,7 @@ get_header(); ?>
                 </div>
             </section>
             <?php
+            endif;
         endwhile;
     endif;
     ?>

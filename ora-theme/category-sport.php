@@ -1,0 +1,526 @@
+<?php get_header(); ?>
+<main class="main-content">
+        <div class="articles-page-wrapper">
+            <header class="section-header-brut">
+                <div class="header-left">
+                    <h1>Sport</h1>
+                    <p>› Toute l’actualité sportive, en continu.</p>
+                </div>
+            </header>
+
+            <!-- À la une Section -->
+            <section class="standard-section selection-soir-section" id="a-la-une" style="margin-top: 0; padding-top: 0;">
+                <div class="selection-soir-grid">
+                    <!-- Main Featured Article (Left) -->
+                    <a href="#" class="selection-large-card">
+                        <div class="img-container" style="position:relative;">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/video_featured_immersion_color_1774831352596.png" alt="Grenadiers Strategy">
+                            <div class="reel-play-overlay" style="width:60px; height:60px; font-size:24px; opacity:1;">▶</div>
+                        </div>
+                        <div class="selection-meta">
+                            <span class="meta-dot" style="background: #e74c3c;"></span>
+                            Analyse Stratégique • Football
+                        </div>
+                        <h3>Grenadiers : La stratégie secrète pour la qualification 2026</h3>
+                    </a>
+
+                    <!-- Sidebar List (Right) -->
+                    <div class="selection-list">
+                        <!-- Item 1: Basketball -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/selection_thumb_diaspora_color_1774481124070.png" alt="Basketball Diaspora">
+                                <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #e67e22;"></span>
+                                    Basketball • Diaspora
+                                </div>
+                                <h4>Comment les talents d'outre-mer redynamisent la ligue locale</h4>
+                            </div>
+                        </a>
+
+                        <!-- Item 2: Infrastructure -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/office_hero_brut.png" alt="Sylvio Cator">
+                                <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #95a5a6;"></span>
+                                    Infrastructures • État
+                                </div>
+                                <h4>Stade Sylvio Cator : État des lieux d'un chantier prioritaire</h4>
+                            </div>
+                        </a>
+
+                        <!-- Item 3: Portrait Melchie -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/video_featured_color_1774871672937.png" alt="Melchie Dumornay">
+                                <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #27ae60;"></span>
+                                    Portrait • Football Féminin
+                                </div>
+                                <h4>Melchie Dumornay : L'ascension fulgurante de la pépite d'or</h4>
+                            </div>
+                        </a>
+
+                        <!-- Item 4: Economy Sport -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/economy_color_premium_1774478629301.png" alt="Economy Sport">
+                                <div class="reel-play-overlay" style="width:30px; height:30px; font-size:14px; opacity:1;">▶</div>
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #3498db;"></span>
+                                    Économie • Investissement
+                                </div>
+                                <h4>Le sport comme nouveau levier d'investissement privé en Haïti</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="standard-section story-accent-section" id="toutes-nos-videos">
+                <div class="reels-header">
+                    <div class="header-title-block">
+                        <h2 style="font-size: 20px; font-weight: 800;">Toutes nos vidéos</h2>
+                        <p style="font-size: 14px; color: #888; margin-top: 5px; font-weight: 400;">Explorez le sport sous tous ses angles.</p>
+                    </div>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <button class="carousel-nav-btn prev" aria-label="Précédent">‹</button>
+                    <div class="videos-carousel-grid">
+                        <!-- Card 1: Tennis -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/selection_thumb_sec_sports_color_1774481090013.png" alt="Tennis">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Tennis</span>
+                            </div>
+                            <h4>Grand Chelem : Les nouveaux espoirs</h4>
+                        </article>
+
+                        <!-- Card 2: Basketball -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_economie.png" alt="Basketball">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Basketball</span>
+                            </div>
+                            <h4>Vers une ligue professionnelle en Haïti</h4>
+                        </article>
+
+                        <!-- Card 3: Athlétisme -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_geopolitique.png" alt="Athlétisme">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Athlétisme</span>
+                            </div>
+                            <h4>Les nouveaux espoirs de la diaspora</h4>
+                        </article>
+
+                        <!-- Card 4: Infrastructures -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_culture.png" alt="Infrastructures">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Infrastructures</span>
+                            </div>
+                            <h4>Reconstruction des stades nationaux</h4>
+                        </article>
+
+                        <!-- Card 5: Football -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=400&auto=format&fit=crop" alt="Football">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Football</span>
+                            </div>
+                            <h4>Grenadiers : Analyse du prochain match</h4>
+                        </article>
+
+                        <!-- Card 6: Cyclisme -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1541625602330-2277a1cd43a7?q=80&w=400&auto=format&fit=crop" alt="Cyclisme">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Cyclisme</span>
+                            </div>
+                            <h4>Le tour d'Haïti : Une renaissance ?</h4>
+                        </article>
+
+                        <!-- Card 7: Natation -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=400&auto=format&fit=crop" alt="Natation">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Natation</span>
+                            </div>
+                            <h4>Bassins olympiques : Le manque de moyens</h4>
+                        </article>
+
+                        <!-- Card 8: Boxe -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=400&auto=format&fit=crop" alt="Boxe">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Boxe</span>
+                            </div>
+                            <h4>K-O technique : Les espoirs du ring</h4>
+                        </article>
+
+                        <!-- Card 9: Volleyball -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1592656670411-b91993efb20c?q=80&w=400&auto=format&fit=crop" alt="Volleyball">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Volleyball</span>
+                            </div>
+                            <h4>Ligue scolaire : Le pépinière du futur</h4>
+                        </article>
+
+                        <!-- Card 10: E-Sport -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&auto=format&fit=crop" alt="E-Sport">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>E-Sport</span>
+                            </div>
+                            <h4>Gaming : Une discipline à part entière</h4>
+                        </article>
+
+                        <!-- Card 11: Karaté -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?q=80&w=400&auto=format&fit=crop" alt="Karaté">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Arts Martiaux</span>
+                            </div>
+                            <h4>Discipline et honneur : Les dojos en Haïti</h4>
+                        </article>
+
+                        <!-- Card 12: Judo -->
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1579456209867-0c58e578a994?q=80&w=400&auto=format&fit=crop" alt="Judo">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label">
+                                <span class="label-dot" style="background: #27ae60;"></span>
+                                <span>Judo</span>
+                            </div>
+                            <h4>Judo Club : La quête du ruban noir</h4>
+                        </article>
+                    </div>
+                    <button class="carousel-nav-btn next" aria-label="Suivant">›</button>
+                </div>
+            </section>
+
+            <!-- Tous nos articles Section (Horizontal Carousel) -->
+            <section class="standard-section redaction-articles-section" id="section-articles-carousel">
+                <div class="reels-header">
+                    <h2 style="font-size: 20px; font-weight: 800;">Tous nos articles</h2>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="articles-horizontal-grid" id="articles-carousel">
+                        <!-- Item 1: JO 2028 -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_geopolitique.png" alt="JO 2028">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Olympisme • Exclusif</span>
+                                </div>
+                                <h4>Athlétisme : Les nouveaux espoirs de la diaspora pour les JO 2028</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 2: Mohammed Sanhadji -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/color_sport_sanhadji_1774872732973.png" alt="Mohammed Sanhadji">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Performance</span>
+                                </div>
+                                <h4>Mohammed Sanhadji : L'Architecte de la Performance de haut niveau</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 3: Tennis -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Tennis">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Excellence</span>
+                                </div>
+                                <h4>Tennis : Standards d'excellence et capitaux privés</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 4: Basketball -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_economie.png" alt="Basketball">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Ligue Pro</span>
+                                </div>
+                                <h4>Basketball : Vers une ligue professionnelle en Haïti ?</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 5: Football Melchie -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=400&auto=format&fit=crop" alt="Melchie Dumornay">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Football • International</span>
+                                </div>
+                                <h4>Melchie Dumornay : Son impact historique au sein de l'Olympique Lyonnais</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 6: Athlétisme Mixte -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1519315901367-f34ff9154487?q=80&w=400&auto=format&fit=crop" alt="Relais Athlétisme">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Athlétisme • Sprint</span>
+                                </div>
+                                <h4>Relais 4x100m : Le projet fou de la sélection mixte pour les mondiaux</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 7: Cyclisme -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1541625602330-2277a1cd43a7?q=80&w=400&auto=format&fit=crop" alt="Cyclisme">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Cyclisme • National</span>
+                                </div>
+                                <h4>Grand Prix de Port-au-Prince : Le retour de la ferveur sur deux roues</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 8: Boxe -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=400&auto=format&fit=crop" alt="Boxe">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Boxe • Combat</span>
+                                </div>
+                                <h4>Championnats Nationaux de Boxe : Les talents bruts frappent fort</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 9: Volleyball -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1592656670411-b91993efb20c?q=80&w=400&auto=format&fit=crop" alt="Volleyball">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Volleyball • Scolaire</span>
+                                </div>
+                                <h4>Ligue Inter-Scolaire de Volleyball : La pépinière des futurs Grenadiers</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 10: E-Sport -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=400&auto=format&fit=crop" alt="E-Sport">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>E-Sport • Digital</span>
+                                </div>
+                                <h4>Haitian Gaming League : Comment l'E-Sport redéfinit la compétition</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 11: Infrastructures -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_culture.png" alt="Sylvio Cator">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Infrastructures • État</span>
+                                </div>
+                                <h4>Rénovation du Stade Sylvio Cator : L’échéance 2026 est-elle réalisable ?</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 12: Judo/Arts Martiaux -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?q=80&w=400&auto=format&fit=crop" alt="Arts Martiaux">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #27ae60;"></span>
+                                    <span>Arts Martiaux • Discipline</span>
+                                </div>
+                                <h4>Judo Club National : Une quête vers la ceinture noire olympique</h4>
+                            </div>
+                        </article>
+
+                        <!-- Item 13: Grenadiers (Added to carousel) -->
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/selection_main_color_premium_1774478611922.png" alt="Grenadiers Strategy">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot" style="background: #e74c3c;"></span>
+                                    <span>Football • Analyse</span>
+                                </div>
+                                <h4>Grenadiers : La stratégie secrète pour la qualification 2026</h4>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Navigation Arrows at the Bottom -->
+                    <div class="grid-nav-brut">
+                        <button class="carousel-nav-btn prev" id="btn-articles-prev" aria-label="Précédent">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button class="carousel-nav-btn next" id="btn-articles-next" aria-label="Suivant">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+    </main>
+<script>
+        function toggleMobileMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.burger-menu').classList.toggle('open');
+            document.querySelector('.menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+
+        // --- Video Carousel Logic (Toutes nos vidéos) ---
+        const videoGrid = document.querySelector('.videos-carousel-grid');
+        const vPrevBtn = document.querySelector('.carousel-nav-btn.prev');
+        const vNextBtn = document.querySelector('.carousel-nav-btn.next');
+
+        if (videoGrid && vPrevBtn && vNextBtn) {
+            vNextBtn.addEventListener('click', () => {
+                videoGrid.scrollBy({ left: 300, behavior: 'smooth' });
+            });
+            vPrevBtn.addEventListener('click', () => {
+                videoGrid.scrollBy({ left: -300, behavior: 'smooth' });
+            });
+
+            videoGrid.addEventListener('scroll', () => {
+                const isAtStart = videoGrid.scrollLeft <= 0;
+                const isAtEnd = videoGrid.scrollLeft >= (videoGrid.scrollWidth - videoGrid.offsetWidth - 10);
+                vPrevBtn.style.opacity = isAtStart ? "0.3" : "1";
+                vNextBtn.style.opacity = isAtEnd ? "0.3" : "1";
+            });
+        }
+
+        // --- Articles Carousel Logic (Tous nos articles) ---
+        const articlesGrid = document.getElementById('articles-carousel');
+        const aPrevBtn = document.getElementById('btn-articles-prev');
+        const aNextBtn = document.getElementById('btn-articles-next');
+
+        if (articlesGrid && aPrevBtn && aNextBtn) {
+            aNextBtn.addEventListener('click', () => {
+                articlesGrid.scrollBy({ left: 400, behavior: 'smooth' });
+            });
+            aPrevBtn.addEventListener('click', () => {
+                articlesGrid.scrollBy({ left: -400, behavior: 'smooth' });
+            });
+
+            articlesGrid.addEventListener('scroll', () => {
+                const isAtStart = articlesGrid.scrollLeft <= 0;
+                const isAtEnd = articlesGrid.scrollLeft >= (articlesGrid.scrollWidth - articlesGrid.offsetWidth - 10);
+                aPrevBtn.style.opacity = isAtStart ? "0.3" : "1";
+                aNextBtn.style.opacity = isAtEnd ? "0.3" : "1";
+                aPrevBtn.disabled = isAtStart;
+                aNextBtn.disabled = isAtEnd;
+            });
+            
+            // Initial state
+            aPrevBtn.style.opacity = "0.3";
+            aPrevBtn.disabled = true;
+        }
+    </script>
+<?php get_footer(); ?>

@@ -79,3 +79,55 @@ function ora_estimated_reading_time() {
     $minutes = ceil( $words / 200 ); // Avg 200 words per minute
     return $minutes . ' min';
 }
+
+/**
+ * Auto-generate required pages and categories to match the HTML mockups.
+ */
+function ora_auto_generate_content() {
+    if ( get_option( 'ora_content_generated_v2' ) ) {
+        return;
+    }
+
+    // 1. Create Categories
+    $categories = array( 'International', 'Haiti', 'Politique', 'Culture', 'Sport', 'Sante', 'Technologie' );
+    foreach ( $categories as $cat ) {
+        if ( ! term_exists( $cat, 'category' ) ) {
+            wp_insert_term( $cat, 'category' );
+        }
+    }
+
+    // 2. Create Pages
+    $pages = array(
+        'Articles' => 'page-articles.php',
+        'Podcast' => 'page-podcast.php',
+        'Documentaires' => 'page-documentaires.php',
+        'Équipe' => 'page-equipe.php',
+        'Mentions légales' => 'page-mentions-legales.php',
+        'Confidentialite' => 'page-confidentialite.php',
+        'CGU' => 'page-cgu.php',
+        'Contact' => 'page-contact.php',
+        'Rejoindre' => 'page-rejoindre.php',
+        'Le système de contrôle implacable de Krisla à Carrefour' => 'template-article-krisla.php',
+        'De fausses pharmacies sans autorisation devant l\'hôpital La Paix' => 'template-article-pharmacie.php'
+    );
+
+    foreach ( $pages as $title => $template ) {
+        $page_check = get_page_by_title( $title );
+        if ( ! isset( $page_check->ID ) ) {
+            $new_page_id = wp_insert_post( array(
+                'post_title'   => $title,
+                'post_content' => 'Contenu en construction...',
+                'post_status'  => 'publish',
+                'post_author'  => 1,
+                'post_type'    => 'page'
+            ) );
+            if ( $new_page_id && ! empty( $template ) ) {
+                update_post_meta( $new_page_id, '_wp_page_template', $template );
+            }
+        }
+    }
+
+    // Mark as generated
+    update_option( 'ora_content_generated_v2', true );
+}
+add_action( 'init', 'ora_auto_generate_content' );

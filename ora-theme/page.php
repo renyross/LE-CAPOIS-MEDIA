@@ -12,12 +12,19 @@
  * @package ORA
  */
 
-get_header(); ?>
+get_header(); 
 
-<main class="page-content" style="padding-top: 40px; min-height: 70vh;">
+$is_elementor = get_post_meta( get_the_ID(), '_elementor_edit_mode', true );
+?>
+
+<main class="page-content" <?php echo ! $is_elementor ? 'style="padding-top: 40px; min-height: 70vh;"' : ''; ?>>
     <?php
     if ( have_posts() ) :
         while ( have_posts() ) : the_post();
+            if ( $is_elementor ) :
+                // Elementor handles its own structure
+                the_content();
+            else :
             ?>
             <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
                 <header class="section-header-brut" style="padding: 40px 20px; border-bottom: 2px solid #000; background: #000; color: #fff;">
@@ -37,6 +44,7 @@ get_header(); ?>
                 </div>
             </article>
             <?php
+            endif;
         endwhile;
     endif;
     ?>

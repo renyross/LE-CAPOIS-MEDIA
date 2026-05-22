@@ -1,89 +1,106 @@
 <?php
 /**
- * Template Name: Page Équipe
- *
- * The template for displaying the editorial and management team.
+ * Template Name: Équipe
  *
  * @package ORA
  */
 
-get_header(); ?>
+get_header(); 
 
-<main class="page-content" style="padding-top: 40px;">
-    <section class="standard-section">
-        <div class="team-intro" style="max-width: 800px; margin-bottom: 60px;">
-            <h1 style="font-size: 48px; font-weight: 900; letter-spacing: -0.04em; margin-bottom: 15px;">Équipe éditoriale ORA</h1>
-            <p style="font-size: 18px; color: #666; font-weight: 400; line-height: 1.4;">Derrière ORA, une équipe agile, créative et orientée performance.</p>
-        </div>
+$is_elementor = false;
+if ( is_page() ) {
+    $is_elementor = get_post_meta( get_the_ID(), '_elementor_edit_mode', true );
+}
+?>
 
-        <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 45px 30px; margin-bottom: 60px;">
-            <?php
-            // Define team members array
-            $team_members = array(
-                array(
-                    'name' => 'Renel ROSENE',
-                    'role' => 'CEO & Publishing Director',
-                    'img'  => '/assets/img/renel-rosene.jpg',
-                    'mono' => 'RR'
-                ),
-                array(
-                    'name' => 'Renald ROSENE',
-                    'role' => 'CO‑FOUNDER & Head of Video / Image Production',
-                    'img'  => '/assets/img/renald-rosene.png',
-                    'mono' => 'RR'
-                ),
-                array(
-                    'name' => 'Vertho CADET',
-                    'role' => 'Chief Content & Strategy Officer',
-                    'img'  => '',
-                    'mono' => 'VC'
-                ),
-                array(
-                    'name' => 'Juniro SAINT JUSTE',
-                    'role' => 'Managing Editor – International',
-                    'img'  => '/assets/img/junior-saint-juste.jpg',
-                    'mono' => 'JSJ'
-                ),
-                array(
-                    'name' => 'John Wathson PIERRE',
-                    'role' => 'Content Performance Analyst',
-                    'img'  => '/assets/img/john-wathson-pierre.jpg',
-                    'mono' => 'JWP'
-                )
-            );
+<?php if ( $is_elementor ) : ?>
+    <main class="page-content" style="padding-top: 40px; min-height: 80vh;">
+        <?php
+        if ( have_posts() ) :
+            while ( have_posts() ) : the_post();
+                the_content();
+            endwhile;
+        endif;
+        ?>
+    </main>
+<?php else : ?>
+<main>
+        <section class="standard-section">
+            <div class="team-intro">
+                <h1>Équipe éditoriale ORA</h1>
+                <p>Derrière ORA, une équipe agile, créative et orientée performance.</p>
+            </div>
 
-            foreach ( $team_members as $member ) :
-                ?>
-                <div class="team-card" style="display: flex; flex-direction: column; gap: 20px;">
-                    <div class="card-visual" style="width: 100%; aspect-ratio: 1/1; background: #111; overflow: hidden; border-radius: 4px; display: flex; align-items: center; justify-content: center; position: relative;">
-                        <?php if ( ! empty( $member['img'] ) && file_exists( get_template_directory() . $member['img'] ) ) : ?>
-                            <img src="<?php echo esc_url( get_template_directory_uri() . $member['img'] ); ?>" alt="<?php echo esc_attr( $member['name'] ); ?>" class="profile-img" style="width: 100%; height: 100%; object-fit: cover;">
-                        <?php else : ?>
-                            <span class="monogram" style="font-size: 38px; font-weight: 900; color: #fff; letter-spacing: 2px; text-transform: uppercase;">
-                                <?php echo esc_html( $member['mono'] ); ?>
-                            </span>
-                        <?php endif; ?>
+            <div class="team-grid">
+                <!-- Renel ROSENE -->
+                <div class="team-card">
+                    <div class="card-visual">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/renel-rosene.jpg" alt="Renel ROSENE" class="profile-img">
                     </div>
-                    <div class="card-info" style="display: flex; flex-direction: column; gap: 8px;">
-                        <span class="role-badge" style="font-size: 9px; font-weight: 900; letter-spacing: 0.15em; color: #ffcc00; text-transform: uppercase;">
-                            <?php echo esc_html( $member['role'] ); ?>
-                        </span>
-                        <h3 style="font-size: 18px; font-weight: 850; color: #111; margin: 0;">
-                            <?php echo esc_html( $member['name'] ); ?>
-                        </h3>
+                    <div class="card-info">
+                        <span class="role-badge">CEO & Publishing Director</span>
+                        <h3>Renel ROSENE</h3>
                     </div>
                 </div>
-                <?php
-            endforeach;
-            ?>
-        </div>
 
-        <div class="team-closing" style="max-width: 800px; margin-top: 60px; padding: 30px 0; border-top: 2px solid #000;">
-            <p style="font-size: 16px; color: #333; line-height: 1.6; font-style: italic;">
-                ORA s’appuie sur une approche qui allie rapidité, efficacité et durabilité, pour construire un média innovant capable de toucher le monde entier.
-            </p>
-        </div>
-    </section>
-</main>
+                <!-- Renald ROSENE -->
+                <div class="team-card">
+                    <div class="card-visual">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/renald-rosene.png" alt="Renald ROSENE" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <span class="role-badge">CO‑FOUNDER & Head of Video / Image Production</span>
+                        <h3>Renald ROSENE</h3>
+                    </div>
+                </div>
+
+                <!-- Vertho CADET -->
+                <div class="team-card">
+                    <div class="card-visual">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/vertho-cadet.jpg" alt="Vertho CADET" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <span class="role-badge">Chief Content & Strategy Officer</span>
+                        <h3>Vertho CADET</h3>
+                    </div>
+                </div>
+
+                <!-- Juniro SAINT JUSTE -->
+                <div class="team-card">
+                    <div class="card-visual">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/junior-saint-juste.jpg" alt="Juniro SAINT JUSTE" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <span class="role-badge">Managing Editor – International</span>
+                        <h3>Juniro SAINT JUSTE</h3>
+                    </div>
+                </div>
+
+                <!-- John Wathson PIERRE -->
+                <div class="team-card">
+                    <div class="card-visual">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/john-wathson-pierre.jpg" alt="John Wathson PIERRE" class="profile-img">
+                    </div>
+                    <div class="card-info">
+                        <span class="role-badge">Content Performance Analyst</span>
+                        <h3>John Wathson PIERRE</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-closing">
+                <p>ORA s’appuie sur une approche qui allie rapidité, efficacité et durabilité, pour construire un média innovant capable de toucher le monde entier.</p>
+            </div>
+        </section>
+    </main>
+<script>
+        function toggleMobileMenu() {
+            document.querySelector('.sidebar').classList.toggle('open');
+            document.querySelector('.burger-menu').classList.toggle('open');
+            document.querySelector('.menu-overlay').classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        }
+    </script>
+<?php endif; ?>
 
 <?php get_footer(); ?>

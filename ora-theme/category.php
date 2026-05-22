@@ -21,10 +21,10 @@ get_header(); ?>
         </header>
 
         <!-- Dynamic Category Posts Grid -->
+        <?php if ( have_posts() ) : ?>
         <section class="standard-section selection-soir-section" id="a-la-une" style="margin-top: 0; padding-top: 40px;">
             <div class="selection-soir-grid">
                 <?php
-                if ( have_posts() ) :
                     $post_index = 0;
                     $side_posts = array();
 
@@ -84,14 +84,11 @@ get_header(); ?>
                     }
                     ?>
                     </div> <!-- Close selection-list wrapper -->
-                <?php else : ?>
-                    <p style="text-align: center; font-size: 16px; color: #666; padding: 40px 0;">Aucun article disponible pour cette catégorie pour le moment.</p>
-                <?php endif; ?>
             </div>
         </section>
 
         <!-- Dynamic Category Archive Slider / Secondary Section -->
-        <?php if ( have_posts() && $wp_query->found_posts > 5 ) : ?>
+        <?php if ( $wp_query->found_posts > 5 ) : ?>
             <section class="standard-section story-accent-section" style="border-top: 1px solid #eee; padding-top: 60px;">
                 <div class="reels-header">
                     <h2>Autres publications</h2>
@@ -129,6 +126,117 @@ get_header(); ?>
                         ?>
                     </div>
                     <button class="carousel-nav-btn next">›</button>
+                </div>
+            </section>
+        <?php endif; ?>
+        <?php else : ?>
+            <!-- Section 1: À la une -->
+            <section class="standard-section selection-soir-section" id="a-la-une" style="margin-top: 0; padding-top: 0;">
+                <div class="selection-soir-grid">
+                    <!-- Main Card (Left) -->
+                    <a href="#" class="selection-large-card">
+                        <div class="img-container" style="position:relative;">
+                            <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?q=80&w=1200&auto=format&fit=crop" alt="Politique Haiti">
+                            <div class="reel-play-overlay" style="width:60px; height:60px; font-size:24px; opacity:1;">▶</div>
+                        </div>
+                        <div class="selection-meta">
+                            <span class="meta-dot" style="background: #2c3e50;"></span>
+                            Analyse • Gouvernance
+                        </div>
+                        <h3>Transition Politique : Les défis d'un consensus national durable</h3>
+                    </a>
+
+                    <!-- Sidebar List (Right) -->
+                    <div class="selection-list">
+                        <!-- Item 1 -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/color_justice_1774872712222.png" alt="Reforme">
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #e74c3c;"></span>
+                                    Réforme▶
+                                </div>
+                                <div class="selection-meta" style="margin-top:-8px; opacity:0.8; font-size:10px;">Institutions</div>
+                                <h4> Justice et souveraineté : Réforme du système judiciaire haïtien</h4>
+                            </div>
+                        </a>
+
+                        <!-- Item 2 -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_capois_color_premium_1774478597130.png" alt="Citoyen">
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #3498db;"></span>
+                                    Citoyenneté▶
+                                </div>
+                                <div class="selection-meta" style="margin-top:-8px; opacity:0.8; font-size:10px;">Engagement</div>
+                                <h4>Les nouveaux visages de l'engagement citoyen en Haïti</h4>
+                            </div>
+                        </a>
+
+                        <!-- Item 3 -->
+                        <a href="#" class="selection-item">
+                            <div class="thumb" style="position:relative;">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/economy_color_premium_1774478629301.png" alt="Eco Politic">
+                            </div>
+                            <div class="selection-item-content">
+                                <div class="selection-meta">
+                                    <span class="meta-dot" style="background: #f1c40f;"></span>
+                                    Économie▶
+                                </div>
+                                <div class="selection-meta" style="margin-top:-8px; opacity:0.8; font-size:10px;">Budget</div>
+                                <h4>Économie Politique : Quelle vision pour le développement du Grand Sud ?</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Politique en direct (Vidéos) -->
+            <section class="standard-section story-accent-section" id="politique-videos">
+                <div class="reels-header">
+                    <div class="header-title-block">
+                        <h2 style="font-size: 20px; font-weight: 800;">Catégorie en direct</h2>
+                        <p style="font-size: 14px; color: #888; margin-top: 5px; font-weight: 400;">Interviews, débats et reportages.</p>
+                    </div>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <button class="carousel-nav-btn prev" aria-label="Précédent">‹</button>
+                    <div class="videos-carousel-grid">
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1541873676947-975991138b48?q=80&w=400&auto=format&fit=crop" alt="Debat">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label"><span>Débat</span></div>
+                            <h4>Le Grand Format : Face à la Rédaction</h4>
+                        </article>
+                        
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1454165833222-d1d44d2752dd?q=80&w=400&auto=format&fit=crop" alt="Conf">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label"><span>Presse</span></div>
+                            <h4>Point de Presse : Les annonces de la semaine</h4>
+                        </article>
+
+                        <article class="video-reel-card">
+                            <div class="video-thumb-tall">
+                                <img src="https://images.unsplash.com/photo-1507537290036-79ec2646399c?q=80&w=400&auto=format&fit=crop" alt="Territoire">
+                                <div class="reel-play-overlay" style="opacity: 1;">▶</div>
+                            </div>
+                            <div class="card-label"><span>Territoire</span></div>
+                            <h4>Pouvoir local : La parole aux communes</h4>
+                        </article>
+                    </div>
+                    <button class="carousel-nav-btn next" aria-label="Suivant">›</button>
                 </div>
             </section>
         <?php endif; ?>

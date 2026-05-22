@@ -34,10 +34,10 @@ get_header(); ?>
         </header>
 
         <!-- Main General Posts Grid -->
+        <?php if ( have_posts() ) : ?>
         <section class="standard-section" style="padding: 60px 20px 120px; max-width: 1200px; margin: 0 auto;">
             <div class="discovery-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 30px;">
                 <?php 
-                if ( have_posts() ) : 
                     while ( have_posts() ) : the_post(); 
                         $thumb_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
                         if ( ! $thumb_url ) {
@@ -62,18 +62,11 @@ get_header(); ?>
                         </a>
                     <?php 
                     endwhile; 
-                else : 
-                    ?>
-                    <div style="grid-column: 1 / -1; text-align: center; padding: 60px 0;">
-                        <p style="font-size: 16px; color: #666;">Aucun article disponible pour le moment.</p>
-                    </div>
-                <?php 
-                endif; 
                 ?>
             </div>
 
             <!-- Custom Brutalist Pagination Buttons -->
-            <?php if ( have_posts() && ( get_previous_posts_link() || get_next_posts_link() ) ) : ?>
+            <?php if ( get_previous_posts_link() || get_next_posts_link() ) : ?>
                 <div class="grid-nav-brut" style="display: flex; justify-content: center; gap: 20px; margin-top: 60px;">
                     <?php
                     $prev_link = get_previous_posts_link('<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:24px; height:24px; display:block; margin:auto;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>');
@@ -94,6 +87,142 @@ get_header(); ?>
                 </div>
             <?php endif; ?>
         </section>
+        <?php else : ?>
+            <section class="article-featured-grid-v2">
+                <!-- Main Featured (Left) -->
+                <div class="featured-main-card">
+                    <div class="img-container">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/news_summit.png" alt="Summit">
+                    </div>
+                    <div class="content">
+                        <div class="feature-meta">
+                            <span class="label-dot"></span>
+                            Summit • Article à la une
+                        </div>
+                        <h2>Nouveau Sommet Geopolitique : Les enjeux d'un monde en mutation</h2>
+                        <p class="description">Alors que les puissances mondiales se réunissent, POST analyse les conséquences stratégiques pour la zone Caraïbe et le rôle crucial de la diaspora dans les nouveaux équilibres.</p>
+                        <a href="#" class="btn-pill-black">Lire l'article</a>
+                    </div>
+                </div>
+
+                <!-- Side Articles (Right) -->
+                <div class="featured-side-list">
+                    <a href="#" class="side-article-card">
+                        <div class="thumb">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_tech.png" alt="Tech">
+                        </div>
+                        <div class="side-content">
+                            <div class="feature-meta" style="font-size: 11px;">
+                                <span class="label-dot" style="width: 7px; height: 7px;"></span>
+                                Prospective
+                            </div>
+                            <h4>Haiti 2030 : le manifeste pour une souveraineté digitale</h4>
+                        </div>
+                    </a>
+
+                    <a href="#" class="side-article-card">
+                        <div class="thumb">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/selection_thumb_med_legal_color_1774481073690.png" alt="Pharmacies">
+                        </div>
+                        <div class="side-content">
+                            <div class="feature-meta" style="font-size: 11px;">
+                                <span class="label-dot" style="width: 7px; height: 7px;"></span>
+                                Santé Publique
+                            </div>
+                            <h4>De fausses pharmacies sans autorisation devant l'hôpital La Paix</h4>
+                        </div>
+                    </a>
+
+                    <a href="#" class="side-article-card">
+                        <div class="thumb">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_capois_color_premium_1774478597130.png" alt="Society">
+                        </div>
+                        <div class="side-content">
+                            <div class="feature-meta" style="font-size: 11px;">
+                                <span class="label-dot" style="width: 7px; height: 7px;"></span>
+                                Politique
+                            </div>
+                            <h4>Les nouveaux visages de l'engagement citoyen</h4>
+                        </div>
+                    </a>
+                </div>
+            </section>
+
+            <section class="standard-section redaction-articles-section">
+                <div class="reels-header">
+                    <div class="header-title-block">
+                        <h2 style="font-size: 20px; font-weight: 800;">Nos dernières publications</h2>
+                        <p style="font-size: 14px; color: #888; margin-top: 5px; font-weight: 400;">Explorez les archives et les grands formats de POST.</p>
+                    </div>
+                    <a href="#" class="btn-all-reels">Tout voir</a>
+                </div>
+
+                <div class="carousel-wrapper">
+                    <div class="articles-horizontal-grid">
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_tech.png" alt="Article 1">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 1</span>
+                                </div>
+                                <h4>Air Tahiti Nui aux côtés du requin, symbole du territoire...</h4>
+                            </div>
+                        </article>
+
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_capois_color_premium_1774478597130.png" alt="Article 4">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 4</span>
+                                </div>
+                                <h4>Gims passe par la case juge d'instruction après la fin de sa garde...</h4>
+                            </div>
+                        </article>
+
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/hero_rejoindre_post.png" alt="Article 2">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 2</span>
+                                </div>
+                                <h4>Scandale sexuel qui secoue l'Allemagne: enquête pour...</h4>
+                            </div>
+                        </article>
+
+                        <article class="article-horizontal-card">
+                            <div class="card-thumb">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/selection_thumb_sec_sports_color_1774481090048.png" alt="Article 5">
+                            </div>
+                            <div class="card-content">
+                                <div class="card-label">
+                                    <span class="label-dot"></span>
+                                    <span>Article 5</span>
+                                </div>
+                                <h4>La mère de deux bébés congelés condamnée à 25 ans de prison</h4>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="grid-nav-brut">
+                        <button class="carousel-nav-btn prev" aria-label="Précédent">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                        </button>
+                        <button class="carousel-nav-btn next" aria-label="Suivant">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
     </div>
 </main>
 
